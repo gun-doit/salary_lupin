@@ -3,6 +3,7 @@ import re
 from graphviz import Digraph
 import os
 import subprocess
+import copy
 
 blue = "#DAE8FC"
 red = "#F8CECC"
@@ -130,7 +131,10 @@ def convert_c_function(c_code):
     repeat_start_end_flag = ""
 
     if_index = -1
-    if_stack = [[] for i in range(100)]
+    if_stack = [[] for i in range(1000)]
+
+    bracket_lvl = 0
+    max_bracket_lvl = 0
 
     
 
@@ -139,13 +143,26 @@ def convert_c_function(c_code):
         line = line.replace("&&", "and").replace("||", "or")
 
         if any(e in line for e in exclude_code):
+            if '{' in line:
+                bracket_lvl += 1
+                if max_bracket_lvl < bracket_lvl:
+                    max_bracket_lvl = bracket_lvl
+            elif '}' in line:
+                bracket_lvl -= 1
+                
+                #if문 노드 연결
+                for i in range(max_bracket_lvl,-1):
+                    print(len(if_stack[i]),if_stack[i])
+                    for if_idx in range(len(if_stack[i]) - 1):
+                        graph.edge(if_stack[if_idx],if_stack[if_idx], label="False" )
+
             # 반복문 속일때
             if repeat_index >= 0:
                 if '{' in line:
+                    print(line)
                     repeat_bracket[repeat_index] += 1
                 elif '}' in line:
                     repeat_bracket[repeat_index] -= 1
-                    
                     # 반복문 종료
                     if repeat_flag[repeat_index] and repeat_bracket[repeat_index] == 0:
                         repeat_start_end_flag = "False"
@@ -202,6 +219,9 @@ def convert_c_function(c_code):
             condition = re.search(r'\((.*)\)', line).group(1)
             node_id = f'if_{condition}'
             graph.node(node_id, f"if {condition}", shape='diamond',style='filled', fillcolor=red)
+
+            # if문 스택
+            if_stack[bracket_lvl].append(copy.deepcopy(node_id))
             if prev_node:
                 graph.edge(prev_node, node_id, label=repeat_start_end_flag)
                 repeat_start_end_flag = ""
@@ -212,6 +232,11 @@ def convert_c_function(c_code):
             condition = re.search(r'\((.*)\)', line).group(1)
             node_id = f'else_if_{condition}'
             graph.node(node_id, f"else if {condition}", shape='diamond',style='filled', fillcolor=red)
+
+            
+            # if문 스택
+            if_stack[bracket_lvl].append(copy.deepcopy(node_id))
+            
             graph.edge(prev_node, node_id, label=repeat_start_end_flag)
             repeat_start_end_flag = ""  # 이전 'if' 또는 'else'와 연결
             prev_node = node_id
@@ -220,6 +245,10 @@ def convert_c_function(c_code):
         elif line.startswith("else"):
             node_id = f'else_{prev_node}'
             graph.node(node_id, "else", shape='diamond',style='filled', fillcolor=red)
+            
+            # if문 스택
+            if_stack[bracket_lvl].append(copy.deepcopy(node_id))
+
             graph.edge(prev_node, node_id, label=repeat_start_end_flag)
             repeat_start_end_flag = ""
             prev_node = node_id
@@ -232,6 +261,7 @@ def convert_c_function(c_code):
                 graph.edge(prev_node, node_id, label=repeat_start_end_flag)
                 repeat_start_end_flag = ""
             prev_node = node_id
+
 
     end_node_id = f'end'
     graph.node(end_node_id, f"end", shape="circle", style='filled', fillcolor=red)

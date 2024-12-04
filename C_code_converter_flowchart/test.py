@@ -1,8 +1,5 @@
-import wx
 import re
 from graphviz import Digraph
-import os
-import subprocess
 
 blue = "#DAE8FC"
 red = "#F8CECC"
@@ -129,13 +126,11 @@ def convert_c_function(c_code):
     repeat_condition = []
     repeat_start_end_flag = ""
 
-    if_index = -1
-    if_stack = [[] for i in range(100)]
-
     
 
     prev_node = None
     for line in c_code:
+        print(line)
         line = line.replace("&&", "and").replace("||", "or")
 
         if any(e in line for e in exclude_code):
@@ -235,59 +230,14 @@ def convert_c_function(c_code):
 
     end_node_id = f'end'
     graph.node(end_node_id, f"end", shape="circle", style='filled', fillcolor=red)
-    graph.edge(prev_node, end_node_id, label=repeat_start_end_flag)
+    graph.edge(prev_node, end_node_id)
     return graph
 
-class CFlowchartApp(wx.App):
-    def OnInit(self):
-        self.frame = CFlowchartFrame(None, "C Code Flowchart Generator")  # 부모창은 None으로 설정
-        self.frame.Show()
-        return True
+# C 코드 불러오기
+c_code = """
+"""
 
-class CFlowchartFrame(wx.Frame):
-    def __init__(self, parent, title):
-        # wx.Frame의 부모 및 제목 인자를 적절히 전달
-        super().__init__(parent, title=title, size=(600, 300))
-
-        panel = wx.Panel(self)
-        vbox = wx.BoxSizer(wx.VERTICAL)
-
-        # 텍스트 영역
-        self.text_ctrl = wx.TextCtrl(panel, style=wx.TE_MULTILINE, size=(400, 200))
-        vbox.Add(self.text_ctrl, 1, flag=wx.EXPAND | wx.ALL, border=10)
-
-        # Generate 버튼
-        self.generate_button = wx.Button(panel, label="Generate")
-        vbox.Add(self.generate_button, 0, flag=wx.ALIGN_CENTER | wx.ALL, border=10)
-        
-        # 이미지 표시 (Flowchart 이미지)
-        self.image_panel = wx.Panel(panel)
-        self.image_bitmap = None
-        vbox.Add(self.image_panel, 1, flag=wx.EXPAND | wx.ALL, border=10)
-
-        panel.SetSizer(vbox)
-
-        self.generate_button.Bind(wx.EVT_BUTTON, self.on_generate)
-
-    def on_generate(self, event):
-        c_code = self.text_ctrl.GetValue()
-        c_code = parse_c_comments(c_code)
-        graph = convert_c_function(c_code)
-        file_name = "test_output"
-        
-        # 저장 경로를 절대 경로로 지정
-        output_path = os.path.join(os.getcwd(), f'{file_name}')
-        graph.render(output_path, view=False)
-        
-        # 완료 메시지 박스
-        if os.path.exists(output_path):
-            wx.MessageBox(f"Flowchart saved as {file_name}.png", "Success", wx.ICON_INFORMATION)
-        else:
-            wx.MessageBox("Flowchart image generation failed!", "Error", wx.ICON_ERROR)
-
-  
-
-# 실행
-if __name__ == "__main__":
-    app = CFlowchartApp()
-    app.MainLoop()
+# Graphviz로 순서도 생성
+code = parse_c_comments(c_code)
+graph = convert_c_function(code)
+graph.render('example_flowchart', view=True)  # 'example_flowchart.png'로 저장 및 보기

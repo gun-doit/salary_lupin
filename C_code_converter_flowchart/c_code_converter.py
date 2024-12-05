@@ -7,12 +7,14 @@ import copy
 
 blue = "#DAE8FC"
 red = "#F8CECC"
+green = "#75FB94"
 
 def parse_c_comments(c_code):
     lines = c_code.splitlines()
 
     #if 0 and #ifdef 처리
     if_exclude_code = ['#if 0', '#ifdef WIRECAR']
+    if_exclude_code2 = ['#if 1', 'endif']
     if_flag = False
 
     # comments flag
@@ -37,6 +39,9 @@ def parse_c_comments(c_code):
             if_flag = True
             continue
 
+        elif any(e in line for e in if_exclude_code2):
+            continue
+        
         
         if if_flag == True:
             if line == "#endif":
@@ -82,22 +87,19 @@ def parse_c_comments(c_code):
             statements.append(temp_line.strip())
             temp_line = ""
 
+        #  스위치 문을 구분하기 위한 : 구분
+        if line.endswith((":")):
+            statements.append(temp_line.strip())
+            temp_line = ""
+
         
         temp_lines = re.split(r'([{}])', temp_line)
-        # print(temp_lines, len(temp_lines),":", temp_line)
         if(len(temp_lines) > 1):
             for tmp in temp_lines:
                 if(tmp == ''): continue
                 statements.append(tmp.strip())
                 temp_line = ""
 
-
-        # blines = re.split(r'(\{\})', line)
-        # print(len(blines),':', line, blines)
-        # if(len(blines) > 1):
-        #     for tmp in blines:
-        #         statements.append(tmp.strip())
-        #     temp_line = ""
     # 마지막 문장이 남은 경우 처리
     if temp_line:
         statements.append(temp_line.strip())
@@ -121,6 +123,10 @@ def convert_c_function(c_code):
     )  # 해상도 및 크기 조정
 
     exclude_code = ['{', '}']
+
+    # 헤드 노드
+    head_id = ""
+    function_name = ""
     
     # 반복문 처리
     repeat_index = -1
@@ -132,7 +138,8 @@ def convert_c_function(c_code):
 
     # 스위치 처리
     switch_flag = False
-    switch_node_id
+    switch_node_id = 0
+    switch_value = ""
 
     if_index = -1
     if_stack = []
@@ -145,12 +152,11 @@ def convert_c_function(c_code):
     prev_node = None
     for line_num, line in enumerate(c_code,start=1):
         line = line.replace("&&", "and").replace("||", "or")
-        print(line_num, " : ", line)
 
         if any(e in line for e in exclude_code):
-            if '{' in line:
+            if '{' in line:                 
                 bracket_lvl += 1
-                if max_bracket_lvl < bracket_lvl:
+                if max_bracket_lvl < bracket_lvl:   
                     max_bracket_lvl = bracket_lvl
             elif '}' in line:
                 bracket_lvl -= 1
@@ -177,26 +183,69 @@ def convert_c_function(c_code):
                         
             
             continue
-        if line.startsith("switch"):
-            switch_condition = re.search(r'\((.*)\)', line).group(1)
+        # 첫 노드인 함수 이름 생성
+        if line_num == 1:
+            head_id = f'{line_num}_line_{line}'
+            head_node_id = line.strip()
+            function_name = re.search(r'\b(?:\w+\s*\([^)]*\)\s*)?(\w+)\s*\(', line).group(1)
             
-            node_id = f'{line_num}_switch_{switch_condition}'
+            # 노드 생성 및 연결
+            graph.node(head_id, f'{line}', shape='box',style='filled', fillcolor=green)
+            prev_node = head_id
+
+        elif line.startswith("switch"):
+            switch_condition = re.search(r'switch\s*\((.*?)\)', line).group(1)
+            switch_parsing_name = switch_condition.strip()
+            
+            node_id = f'{line_num}_switch_{switch_parsing_name}'
+            switch_value = switch_parsing_name
 
             #현재 스위치 문 저장
             switch_flag = bracket_lvl
             switch_node_id = node_id
 
             #노드 생성
-            graph.node(node_id,f'{switch_condition}', shape="diamond", style='filled', fillcolor=red)
+            graph.node(node_id,f'{switch_parsing_name}', shape='box',style='filled', fillcolor=blue)
             graph.edge(prev_node,node_id)
             prev_node = node_id
 
         
-        if switch_flag and line.startswith("case"):
-            case_condition = line.split(" ")[1][:-1]
-            
+        elif switch_flag and (line.startswith("case") or line.startswith("default")):
+            if "case" in line: case_condition =  re.search(r'case\s+(\w+):', line).group(1) 
+            else: case_condition = "defualt"
 
-        if line.startswith("for"):
+            node_id = f'{line_num}_switch_case_{case_condition}'
+
+            #이전 노드 변경
+            prev_node = switch_node_id
+            
+            #노드 생성
+            graph.node(node_id, f'{switch_value} == {case_condition}', shape="diamond", style='filled', fillcolor=red)
+            graph.edge(prev_node, node_id)
+            prev_node = node_id
+
+        
+        elif switch_flag and line.startswith("break"):
+            # 모든 if, for문 정리
+                    
+            # 반복문 처리
+            repeat_index = -1
+            repeat_flag = [False for i in range(100)]
+            repeat_bracket = [0 for i in range(100)]
+            repeat_condition_node_id = []
+            repeat_condition = []
+            repeat_start_end_flag = ""
+
+            if_index = -1
+            if_stack = []
+            continue
+        
+        elif switch_flag == bracket_lvl:
+            #스위치문 빠져나옴
+            prev_node = switch_node_id
+            switch_flag = 0
+
+        elif line.startswith("for"):
             loop_condition = re.search(r'\((.*)\)', line).group(1)
             loop_parsing = loop_condition.split(';')  # for문은 세미콜론으로 구분됨
 
@@ -303,9 +352,10 @@ def convert_c_function(c_code):
 
 
     end_node_id = f'end'
-    graph.node(end_node_id, f"end", shape="circle", style='filled', fillcolor=red)
+    graph.node(end_node_id, f"end", shape="circle", style='filled', fillcolor=green)
     graph.edge(prev_node, end_node_id, label=repeat_start_end_flag)
-    return graph
+    
+    return function_name, graph
 
 class CFlowchartApp(wx.App):
     def OnInit(self):
@@ -336,12 +386,11 @@ class CFlowchartFrame(wx.Frame):
     def on_generate(self, event):
         c_code = self.text_ctrl.GetValue()
         c_code = parse_c_comments(c_code)
-        graph = convert_c_function(c_code)
-        file_name = "test_output"
+        file_name, graph = convert_c_function(c_code)
         
         # 저장 경로를 절대 경로로 지정
         output_path = os.path.join(os.getcwd(), f'{file_name}')
-        graph.render(output_path, view=False)
+        graph.render(output_path, format="png", view=True)  # PNG 이미지로 저장
         
         # 완료 메시지 박스
         if os.path.exists(output_path):

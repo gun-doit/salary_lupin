@@ -4,6 +4,7 @@ from graphviz import Digraph
 import os
 import subprocess
 import copy
+from dataclasses import dataclass
 
 blue = "#DAE8FC"
 red = "#F8CECC"
@@ -144,8 +145,8 @@ def convert_c_function(c_code):
     switch_node_id = 0
     switch_value = ""
 
-    if_index = -1
-    if_stack = []
+    IF_DIVIDE_POINT = []
+    IF_END_POINT = []
 
     bracket_lvl = 0
     max_bracket_lvl = 0
@@ -161,9 +162,11 @@ def convert_c_function(c_code):
                     max_bracket_lvl = bracket_lvl
             elif '}' in line:
                 bracket_lvl -= 1
-
-                if len(if_stack) > 0 and if_stack[-1][1] == bracket_lvl:
-                    label_comment = "False"
+                
+                # IF문 종료 처리
+                while len(IF_DIVIDE_POINT) > 0 and IF_DIVIDE_POINT[-1][1] >= bracket_lvl:
+                    IF_END_POINT.append(IF_DIVIDE_POINT[-1][0])
+                    IF_DIVIDE_POINT.pop()
 
             # 반복문 속일때
             if repeat_index >= 0:
@@ -211,8 +214,14 @@ def convert_c_function(c_code):
             switch_node_id = node_id
 
             #노드 생성
-            graph.node(node_id,f'{switch_parsing_name}', shape='box',style='filled', fillcolor=blue)
-            graph.edge(prev_node,node_id)
+            graph.node(node_id,f'switch({switch_parsing_name})', shape='box',style='filled', fillcolor=blue)
+
+            while len(IF_END_POINT) > 0:
+                prev_node = IF_END_POINT[-1]
+                IF_END_POINT.pop()
+                graph.edge(prev_node,node_id)
+                label_comment = ""
+            else: graph.edge(prev_node,node_id)
             prev_node = node_id
 
         
@@ -241,10 +250,8 @@ def convert_c_function(c_code):
             repeat_condition = []
             label_comment = ""
 
-            if_index = bracket_lvl
-            if len(if_stack) > 0:
-                while(if_stack[-1][1] > bracket_lvl):
-                    if_stack.pop()
+            IF_DIVIDE_POINT = []
+            IF_END_POINT = []
             continue
         
         elif switch_flag == bracket_lvl:
@@ -265,7 +272,12 @@ def convert_c_function(c_code):
             
             # 노드 생성 및 연결
             graph.node(while_head_id, f"while", shape='box', style="filled", fillcolor=blue)
-            graph.edge(prev_node,while_head_id,label=label_comment)
+            while len(IF_END_POINT) > 0:
+                prev_node = IF_END_POINT[-1]
+                IF_END_POINT.pop()
+                graph.edge(prev_node,node_id)
+                label_comment = ""
+            else: graph.edge(prev_node,while_head_id,label=label_comment)
 
             # WHILE문 조건문 노드 생성 및 연결
             graph.node(while_condition_id, f"{loop_condition}", shape='diamond', style="filled", fillcolor=red)
@@ -289,11 +301,10 @@ def convert_c_function(c_code):
             repeat_condition_node_id = []
             repeat_condition = []
             label_comment = "False"
-
-            if_index = bracket_lvl
-            if len(if_stack) > 0:
-                while if_stack[-1][1] > bracket_lvl:
-                    if_stack.pop()
+            
+            IF_DIVIDE_POINT = []
+            IF_END_POINT = []
+            
             continue
             
 
@@ -313,8 +324,12 @@ def convert_c_function(c_code):
             repeat_init_id = f'{line_num}_for_{temp}'
             
             graph.node(repeat_init_id, f"{temp}", shape='box',style='filled', fillcolor=blue)
-            if prev_node:
-                graph.edge(prev_node, repeat_init_id)
+            while len(IF_END_POINT) > 0:
+                prev_node = IF_END_POINT[-1]
+                IF_END_POINT.pop()
+                graph.edge(prev_node,node_id)
+                label_comment = ""
+            else: graph.edge(prev_node, repeat_init_id)
             prev_node = repeat_init_id
 
             # 조건 부분
@@ -329,28 +344,28 @@ def convert_c_function(c_code):
             prev_node = repeat_condition_id
             continue
 
-        # 'if' 문 처리
+        # IF 조건문 처리
         elif line.startswith("if"):
             condition = re.search(r'\((.*)\)', line).group(1)
             node_id = f'{line_num}_if_{condition}'
             graph.node(node_id, f"if {condition}", shape='diamond',style='filled', fillcolor=red)
 
-            #이전 조건문 확인
-            if len(if_stack) > 0:
-                while if_stack[-1][1] > bracket_lvl:
-                    if_stack.pop()
-                if if_stack[-1][1] == bracket_lvl:
-                    prev_node, tmp = if_stack.pop()
 
-            if prev_node:
-                graph.edge(prev_node, node_id, label=label_comment)
-                label_comment = ""
+            #if 문 스택에 추가 개선 로직
+            # 이전 스택 확인 후 제거후 삽입
+            if len(IF_DIVIDE_POINT) > 0 and bracket_lvl <= IF_DIVIDE_POINT[-1][1]:
+                while IF_DIVIDE_POINT[-1][1] > bracket_lvl:
+                    IF_DIVIDE_POINT.pop()
+                prev_node, tmp = IF_DIVIDE_POINT.pop()
+            IF_DIVIDE_POINT.append([node_id, bracket_lvl])
+
+            # 노드 연결
+            graph.edge(prev_node, node_id, label=label_comment)
             prev_node = node_id
 
-            #if 문 스택에 추가
-            if_stack.append([node_id, bracket_lvl])
-
             label_comment = "True"
+
+            
 
         # 'else if' 문 처리
         elif line.startswith("else if"):
@@ -360,51 +375,43 @@ def convert_c_function(c_code):
 
             
             # 이전 조건문으로 분기
-            prev_node, tmp = if_stack.pop()
+            IF_DIVIDE_POINT.append([node_id, bracket_lvl])
+            prev_node, tmp = IF_DIVIDE_POINT.pop()
+            label_comment = "False"
 
             graph.edge(prev_node, node_id, label=label_comment)
-            label_comment = ""  # 이전 'if' 또는 'else'와 연결
+            label_comment = ""
             prev_node = node_id
+
             
-            #if 문 스택에 추가
-            if_stack.append([node_id, bracket_lvl])
         
         # 'else' 문 처리
         elif line.startswith("else"):
             # node_id = f'{line_num}_else_{prev_node}'
             # graph.node(node_id, "else", shape='diamond',style='filled', fillcolor=red)
             
-            #이전 조건문 확인
-            if len(if_stack) > 0:
-                while if_stack[-1][1] > bracket_lvl:
-                    if_stack.pop()
-                if if_stack[-1][1] == bracket_lvl:
-                    prev_node, tmp = if_stack.pop()
-
-
-            # graph.edge(prev_node, node_id, label=label_comment)
-            # label_comment = ""
-            # prev_node = node_id
+            #이전 조건문에서 분기
+            IF_DIVIDE_POINT.append([node_id, bracket_lvl])
+            prev_node, tmp = IF_DIVIDE_POINT.pop()
+            label_comment = "False"
             
-            #if 문 스택에 추가
-            if_stack.append([node_id, bracket_lvl])
+
         
         # 그 외의 일반문은 네모로 처리
         elif line:
             node_id = f'{line_num}_line_{line}'
             graph.node(node_id, line, shape='box',style='filled', fillcolor=blue)
-            #이전 조건문 확인
-            if len(if_stack) > 0:
-                while if_stack[-1][1] > bracket_lvl:
-                    if_stack.pop()
-                if if_stack[-1][1] == bracket_lvl:
-                    prev_node, tmp = if_stack.pop()
-            if prev_node:
+        
+            while len(IF_END_POINT) > 0:
+                graph.edge(IF_END_POINT.pop(),node_id, label="False")
+                
+            else: 
                 graph.edge(prev_node, node_id, label=label_comment)
-                label_comment = ""
+
+            label_comment = ""
             prev_node = node_id
 
-
+    ## END 포인트
     # end_node_id = f'end'
     # graph.node(end_node_id, f"end", shape="circle", style='filled', fillcolor=green)
     # graph.edge(prev_node, end_node_id, label=label_comment)

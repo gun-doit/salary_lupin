@@ -131,7 +131,7 @@ def convert_c_function(c_code):
     repeat_start_end_flag = ""
 
     if_index = -1
-    if_stack = [[] for i in range(1000)]
+    if_stack = []
 
     bracket_lvl = 0
     max_bracket_lvl = 0
@@ -139,8 +139,9 @@ def convert_c_function(c_code):
     
 
     prev_node = None
-    for line in c_code:
+    for line_num, line in enumerate(c_code,start=1):
         line = line.replace("&&", "and").replace("||", "or")
+        print(line_num, " : ", line)
 
         if any(e in line for e in exclude_code):
             if '{' in line:
@@ -149,17 +150,10 @@ def convert_c_function(c_code):
                     max_bracket_lvl = bracket_lvl
             elif '}' in line:
                 bracket_lvl -= 1
-                
-                #if문 노드 연결
-                for i in range(max_bracket_lvl,-1):
-                    print(len(if_stack[i]),if_stack[i])
-                    for if_idx in range(len(if_stack[i]) - 1):
-                        graph.edge(if_stack[if_idx],if_stack[if_idx], label="False" )
 
             # 반복문 속일때
             if repeat_index >= 0:
                 if '{' in line:
-                    print(line)
                     repeat_bracket[repeat_index] += 1
                 elif '}' in line:
                     repeat_bracket[repeat_index] -= 1
@@ -167,7 +161,7 @@ def convert_c_function(c_code):
                     if repeat_flag[repeat_index] and repeat_bracket[repeat_index] == 0:
                         repeat_start_end_flag = "False"
                         # 루프 종료 후 증감 처리
-                        increment_node_id = f'increment_{repeat_condition[repeat_index]}'
+                        increment_node_id = f'{line_num}_increment_{repeat_condition[repeat_index]}'
                         graph.node(increment_node_id, f"{repeat_condition[repeat_index]}", shape='box',style='filled', fillcolor=blue)
                         graph.edge(prev_node, increment_node_id)
                         graph.edge(increment_node_id, repeat_condition_node_id[repeat_index], label=repeat_start_end_flag)
@@ -180,6 +174,7 @@ def convert_c_function(c_code):
             
             continue
         if line.startswith("for"):
+            print("for문 체크")
             loop_condition = re.search(r'\((.*)\)', line).group(1)
             loop_parsing = loop_condition.split(';')  # for문은 세미콜론으로 구분됨
 
@@ -192,7 +187,7 @@ def convert_c_function(c_code):
 
             # 반복문 시작
             temp = ' '.join(loop_parsing[0].split(' ')[1:])
-            repeat_init_id = f'for_{temp}'
+            repeat_init_id = f'{line_num}_for_{temp}'
             
             graph.node(repeat_init_id, f"{temp}", shape='box',style='filled', fillcolor=blue)
             if prev_node:
@@ -200,7 +195,7 @@ def convert_c_function(c_code):
             prev_node = repeat_init_id
 
             # 조건 부분
-            repeat_condition_id = f'condition_{loop_parsing[1]}'
+            repeat_condition_id = f'{line_num}_condition_{loop_parsing[1]}'
             repeat_condition_node_id.append(repeat_condition_id)
             graph.node(repeat_condition_id, f"{loop_parsing[1]}", shape='diamond',style='filled', fillcolor=red)
             graph.edge(repeat_init_id, repeat_condition_id)
@@ -211,52 +206,74 @@ def convert_c_function(c_code):
             prev_node = repeat_condition_id
             continue
 
-
-    
-
         # 'if' 문 처리
         elif line.startswith("if"):
             condition = re.search(r'\((.*)\)', line).group(1)
-            node_id = f'if_{condition}'
+            node_id = f'{line_num}_if_{condition}'
             graph.node(node_id, f"if {condition}", shape='diamond',style='filled', fillcolor=red)
 
-            # if문 스택
-            if_stack[bracket_lvl].append(copy.deepcopy(node_id))
+            #이전 조건문 확인
+            if len(if_stack) > 0:
+                while if_stack[-1][1] > bracket_lvl:
+                    if_stack.pop()
+                if if_stack[-1][1] == bracket_lvl:
+                    prev_node, tmp = if_stack.pop()
+
             if prev_node:
                 graph.edge(prev_node, node_id, label=repeat_start_end_flag)
                 repeat_start_end_flag = ""
             prev_node = node_id
 
+            #if 문 스택에 추가
+            if_stack.append([node_id, bracket_lvl])
+
         # 'else if' 문 처리
         elif line.startswith("else if"):
             condition = re.search(r'\((.*)\)', line).group(1)
-            node_id = f'else_if_{condition}'
+            node_id = f'{line_num}_else_if_{condition}'
             graph.node(node_id, f"else if {condition}", shape='diamond',style='filled', fillcolor=red)
 
             
-            # if문 스택
-            if_stack[bracket_lvl].append(copy.deepcopy(node_id))
-            
+            # 이전 조건문으로 분기
+            prev_node, tmp = if_stack.pop()
+
             graph.edge(prev_node, node_id, label=repeat_start_end_flag)
             repeat_start_end_flag = ""  # 이전 'if' 또는 'else'와 연결
             prev_node = node_id
+            
+            #if 문 스택에 추가
+            if_stack.append([node_id, bracket_lvl])
         
         # 'else' 문 처리
         elif line.startswith("else"):
-            node_id = f'else_{prev_node}'
-            graph.node(node_id, "else", shape='diamond',style='filled', fillcolor=red)
+            # node_id = f'{line_num}_else_{prev_node}'
+            # graph.node(node_id, "else", shape='diamond',style='filled', fillcolor=red)
             
-            # if문 스택
-            if_stack[bracket_lvl].append(copy.deepcopy(node_id))
+            #이전 조건문 확인
+            if len(if_stack) > 0:
+                while if_stack[-1][1] > bracket_lvl:
+                    if_stack.pop()
+                if if_stack[-1][1] == bracket_lvl:
+                    prev_node, tmp = if_stack.pop()
 
-            graph.edge(prev_node, node_id, label=repeat_start_end_flag)
-            repeat_start_end_flag = ""
-            prev_node = node_id
+
+            # graph.edge(prev_node, node_id, label=repeat_start_end_flag)
+            # repeat_start_end_flag = ""
+            # prev_node = node_id
+            
+            #if 문 스택에 추가
+            if_stack.append([node_id, bracket_lvl])
         
         # 그 외의 일반문은 네모로 처리
         elif line:
-            node_id = f'line_{line}'
+            node_id = f'{line_num}_line_{line}'
             graph.node(node_id, line, shape='box',style='filled', fillcolor=blue)
+            #이전 조건문 확인
+            if len(if_stack) > 0:
+                while if_stack[-1][1] > bracket_lvl:
+                    if_stack.pop()
+                if if_stack[-1][1] == bracket_lvl:
+                    prev_node, tmp = if_stack.pop()
             if prev_node:
                 graph.edge(prev_node, node_id, label=repeat_start_end_flag)
                 repeat_start_end_flag = ""

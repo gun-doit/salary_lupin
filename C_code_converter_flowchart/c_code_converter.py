@@ -130,6 +130,10 @@ def convert_c_function(c_code):
     repeat_condition = []
     repeat_start_end_flag = ""
 
+    # 스위치 처리
+    switch_flag = False
+    switch_node_id
+
     if_index = -1
     if_stack = []
 
@@ -173,8 +177,26 @@ def convert_c_function(c_code):
                         
             
             continue
+        if line.startsith("switch"):
+            switch_condition = re.search(r'\((.*)\)', line).group(1)
+            
+            node_id = f'{line_num}_switch_{switch_condition}'
+
+            #현재 스위치 문 저장
+            switch_flag = bracket_lvl
+            switch_node_id = node_id
+
+            #노드 생성
+            graph.node(node_id,f'{switch_condition}', shape="diamond", style='filled', fillcolor=red)
+            graph.edge(prev_node,node_id)
+            prev_node = node_id
+
+        
+        if switch_flag and line.startswith("case"):
+            case_condition = line.split(" ")[1][:-1]
+            
+
         if line.startswith("for"):
-            print("for문 체크")
             loop_condition = re.search(r'\((.*)\)', line).group(1)
             loop_parsing = loop_condition.split(';')  # for문은 세미콜론으로 구분됨
 
@@ -306,11 +328,6 @@ class CFlowchartFrame(wx.Frame):
         # Generate 버튼
         self.generate_button = wx.Button(panel, label="Generate")
         vbox.Add(self.generate_button, 0, flag=wx.ALIGN_CENTER | wx.ALL, border=10)
-        
-        # 이미지 표시 (Flowchart 이미지)
-        self.image_panel = wx.Panel(panel)
-        self.image_bitmap = None
-        vbox.Add(self.image_panel, 1, flag=wx.EXPAND | wx.ALL, border=10)
 
         panel.SetSizer(vbox)
 

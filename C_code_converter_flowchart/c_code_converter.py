@@ -125,7 +125,7 @@ def convert_c_function(c_code):
     exclude_code = ['{', '}']
 
     # 헤드 노드
-    head_id = ""
+    head_id = None
     function_name = ""
     
     # 반복문 처리
@@ -134,7 +134,10 @@ def convert_c_function(c_code):
     repeat_bracket = [0 for i in range(100)]
     repeat_condition_node_id = []
     repeat_condition = []
-    repeat_start_end_flag = ""
+    label_comment = ""
+
+    while_flag = False
+    while_node_id = None
 
     # 스위치 처리
     switch_flag = False
@@ -146,8 +149,6 @@ def convert_c_function(c_code):
 
     bracket_lvl = 0
     max_bracket_lvl = 0
-
-    
 
     prev_node = None
     for line_num, line in enumerate(c_code,start=1):
@@ -161,6 +162,9 @@ def convert_c_function(c_code):
             elif '}' in line:
                 bracket_lvl -= 1
 
+                if len(if_stack) > 0 and if_stack[-1][1] == bracket_lvl:
+                    label_comment = "False"
+
             # 반복문 속일때
             if repeat_index >= 0:
                 if '{' in line:
@@ -169,12 +173,13 @@ def convert_c_function(c_code):
                     repeat_bracket[repeat_index] -= 1
                     # 반복문 종료
                     if repeat_flag[repeat_index] and repeat_bracket[repeat_index] == 0:
-                        repeat_start_end_flag = "False"
+                        label_comment = "False"
                         # 루프 종료 후 증감 처리
                         increment_node_id = f'{line_num}_increment_{repeat_condition[repeat_index]}'
                         graph.node(increment_node_id, f"{repeat_condition[repeat_index]}", shape='box',style='filled', fillcolor=blue)
                         graph.edge(prev_node, increment_node_id)
-                        graph.edge(increment_node_id, repeat_condition_node_id[repeat_index], label=repeat_start_end_flag)
+                        graph.edge(increment_node_id, repeat_condition_node_id[repeat_index], label=label_comment)
+                        label_comment = ""
                         prev_node = repeat_condition_node_id[repeat_index]
 
                         #반복문 플래그 종료
@@ -192,6 +197,7 @@ def convert_c_function(c_code):
             # 노드 생성 및 연결
             graph.node(head_id, f'{line}', shape='box',style='filled', fillcolor=green)
             prev_node = head_id
+            continue
 
         elif line.startswith("switch"):
             switch_condition = re.search(r'switch\s*\((.*?)\)', line).group(1)
@@ -224,7 +230,6 @@ def convert_c_function(c_code):
             graph.edge(prev_node, node_id)
             prev_node = node_id
 
-        
         elif switch_flag and line.startswith("break"):
             # 모든 if, for문 정리
                     
@@ -234,16 +239,63 @@ def convert_c_function(c_code):
             repeat_bracket = [0 for i in range(100)]
             repeat_condition_node_id = []
             repeat_condition = []
-            repeat_start_end_flag = ""
+            label_comment = ""
 
-            if_index = -1
-            if_stack = []
+            if_index = bracket_lvl
+            if len(if_stack) > 0:
+                while(if_stack[-1][1] > bracket_lvl):
+                    if_stack.pop()
             continue
         
         elif switch_flag == bracket_lvl:
             #스위치문 빠져나옴
             prev_node = switch_node_id
             switch_flag = 0
+
+        # WHILE
+        elif line.startswith("while"):
+            loop_condition = re.search(r'while\((.*)\)', line).group(1)
+
+            while_condition_id = f'{line_num}_while_{loop_condition}'
+            while_head_id = f'{line_num}_while'
+
+            # 현재 반복문 저장
+            while_flag = bracket_lvl
+            while_node_id = while_condition_id
+            
+            # 노드 생성 및 연결
+            graph.node(while_head_id, f"while", shape='box', style="filled", fillcolor=blue)
+            graph.edge(prev_node,while_head_id,label=label_comment)
+
+            # WHILE문 조건문 노드 생성 및 연결
+            graph.node(while_condition_id, f"{loop_condition}", shape='diamond', style="filled", fillcolor=red)
+            graph.edge(while_head_id,while_condition_id)
+
+            label_comment = "True"
+            prev_node = while_condition_id
+
+        elif while_flag == bracket_lvl:
+            # while문 루프 종료
+            graph.edge(prev_node, while_node_id,label=label_comment)
+            prev_node = while_node_id
+            while_flag = 0
+            
+            # 모든 if, for문 정리
+                    
+            # 반복문 처리
+            repeat_index = -1
+            repeat_flag = [False for i in range(100)]
+            repeat_bracket = [0 for i in range(100)]
+            repeat_condition_node_id = []
+            repeat_condition = []
+            label_comment = "False"
+
+            if_index = bracket_lvl
+            if len(if_stack) > 0:
+                while if_stack[-1][1] > bracket_lvl:
+                    if_stack.pop()
+            continue
+            
 
         elif line.startswith("for"):
             loop_condition = re.search(r'\((.*)\)', line).group(1)
@@ -254,7 +306,7 @@ def convert_c_function(c_code):
             repeat_flag[repeat_index] = True
             repeat_bracket[repeat_index] += 1
             repeat_condition.append(loop_parsing[2])
-            repeat_start_end_flag = "True"
+            label_comment = "True"
 
             # 반복문 시작
             temp = ' '.join(loop_parsing[0].split(' ')[1:])
@@ -262,15 +314,15 @@ def convert_c_function(c_code):
             
             graph.node(repeat_init_id, f"{temp}", shape='box',style='filled', fillcolor=blue)
             if prev_node:
-                graph.edge(prev_node, repeat_init_id, )
+                graph.edge(prev_node, repeat_init_id)
             prev_node = repeat_init_id
 
             # 조건 부분
             repeat_condition_id = f'{line_num}_condition_{loop_parsing[1]}'
             repeat_condition_node_id.append(repeat_condition_id)
             graph.node(repeat_condition_id, f"{loop_parsing[1]}", shape='diamond',style='filled', fillcolor=red)
-            graph.edge(repeat_init_id, repeat_condition_id)
-            
+            graph.edge(repeat_init_id, repeat_condition_id,label=label_comment)
+            label_comment = ""
             # 루프 조건 재확인
             # graph.edge(increment_node_id, condition_node_id, label="Repeat")
 
@@ -291,12 +343,14 @@ def convert_c_function(c_code):
                     prev_node, tmp = if_stack.pop()
 
             if prev_node:
-                graph.edge(prev_node, node_id, label=repeat_start_end_flag)
-                repeat_start_end_flag = ""
+                graph.edge(prev_node, node_id, label=label_comment)
+                label_comment = ""
             prev_node = node_id
 
             #if 문 스택에 추가
             if_stack.append([node_id, bracket_lvl])
+
+            label_comment = "True"
 
         # 'else if' 문 처리
         elif line.startswith("else if"):
@@ -308,8 +362,8 @@ def convert_c_function(c_code):
             # 이전 조건문으로 분기
             prev_node, tmp = if_stack.pop()
 
-            graph.edge(prev_node, node_id, label=repeat_start_end_flag)
-            repeat_start_end_flag = ""  # 이전 'if' 또는 'else'와 연결
+            graph.edge(prev_node, node_id, label=label_comment)
+            label_comment = ""  # 이전 'if' 또는 'else'와 연결
             prev_node = node_id
             
             #if 문 스택에 추가
@@ -328,8 +382,8 @@ def convert_c_function(c_code):
                     prev_node, tmp = if_stack.pop()
 
 
-            # graph.edge(prev_node, node_id, label=repeat_start_end_flag)
-            # repeat_start_end_flag = ""
+            # graph.edge(prev_node, node_id, label=label_comment)
+            # label_comment = ""
             # prev_node = node_id
             
             #if 문 스택에 추가
@@ -346,14 +400,14 @@ def convert_c_function(c_code):
                 if if_stack[-1][1] == bracket_lvl:
                     prev_node, tmp = if_stack.pop()
             if prev_node:
-                graph.edge(prev_node, node_id, label=repeat_start_end_flag)
-                repeat_start_end_flag = ""
+                graph.edge(prev_node, node_id, label=label_comment)
+                label_comment = ""
             prev_node = node_id
 
 
-    end_node_id = f'end'
-    graph.node(end_node_id, f"end", shape="circle", style='filled', fillcolor=green)
-    graph.edge(prev_node, end_node_id, label=repeat_start_end_flag)
+    # end_node_id = f'end'
+    # graph.node(end_node_id, f"end", shape="circle", style='filled', fillcolor=green)
+    # graph.edge(prev_node, end_node_id, label=label_comment)
     
     return function_name, graph
 

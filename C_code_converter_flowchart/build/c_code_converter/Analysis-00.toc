@@ -1,0 +1,1258 @@
+(['C:\\Users\\keyang\\Desktop\\장건수\\99. '
+  'ETC\\salary_lupin\\C_code_converter_flowchart\\c_code_converter.py'],
+ ['C:\\Users\\keyang\\Desktop\\장건수\\99. '
+  'ETC\\salary_lupin\\C_code_converter_flowchart'],
+ ['graphviz', 'wx'],
+ [('C:\\Users\\keyang\\Desktop\\장건수\\99. '
+   'ETC\\python-3.9.0-embed-amd64\\Lib\\site-packages\\numpy\\_pyinstaller',
+   0),
+  ('C:\\Users\\keyang\\Desktop\\장건수\\99. '
+   'ETC\\python-3.9.0-embed-amd64\\Lib\\site-packages\\_pyinstaller_hooks_contrib\\stdhooks',
+   -1000),
+  ('C:\\Users\\keyang\\Desktop\\장건수\\99. '
+   'ETC\\python-3.9.0-embed-amd64\\Lib\\site-packages\\_pyinstaller_hooks_contrib',
+   -1000)],
+ {},
+ [],
+ [],
+ False,
+ {},
+ 0,
+ [],
+ [],
+ '3.9.0 (tags/v3.9.0:9cf6752, Oct  5 2020, 15:34:40) [MSC v.1927 64 bit '
+ '(AMD64)]',
+ [('pyi_rth_inspect',
+   'C:\\Users\\keyang\\Desktop\\장건수\\99. '
+   'ETC\\python-3.9.0-embed-amd64\\Lib\\site-packages\\PyInstaller\\hooks\\rthooks\\pyi_rth_inspect.py',
+   'PYSOURCE'),
+  ('pyi_rth_pkgutil',
+   'C:\\Users\\keyang\\Desktop\\장건수\\99. '
+   'ETC\\python-3.9.0-embed-amd64\\Lib\\site-packages\\PyInstaller\\hooks\\rthooks\\pyi_rth_pkgutil.py',
+   'PYSOURCE'),
+  ('pyi_rth_multiprocessing',
+   'C:\\Users\\keyang\\Desktop\\장건수\\99. '
+   'ETC\\python-3.9.0-embed-amd64\\Lib\\site-packages\\PyInstaller\\hooks\\rthooks\\pyi_rth_multiprocessing.py',
+   'PYSOURCE'),
+  ('c_code_converter',
+   'C:\\Users\\keyang\\Desktop\\장건수\\99. '
+   'ETC\\salary_lupin\\C_code_converter_flowchart\\c_code_converter.py',
+   'PYSOURCE')],
+ [('multiprocessing.spawn',
+   'C:\\Users\\keyang\\Desktop\\장건수\\99. '
+   'ETC\\python-3.9.0-embed-amd64\\python39.zip\\multiprocessing\\spawn.pyc',
+   'PYMODULE'),
+  ('multiprocessing.resource_tracker',
+   'C:\\Users\\keyang\\Desktop\\장건수\\99. '
+   'ETC\\python-3.9.0-embed-amd64\\python39.zip\\multiprocessing\\resource_tracker.pyc',
+   'PYMODULE'),
+  ('threading',
+   'C:\\Users\\keyang\\Desktop\\장건수\\99. '
+   'ETC\\python-3.9.0-embed-amd64\\python39.zip\\threading.pyc',
+   'PYMODULE'),
+  ('_threading_local',
+   'C:\\Users\\keyang\\Desktop\\장건수\\99. '
+   'ETC\\python-3.9.0-embed-amd64\\python39.zip\\_threading_local.pyc',
+   'PYMODULE'),
+  ('contextlib',
+   'C:\\Users\\keyang\\Desktop\\장건수\\99. '
+   'ETC\\python-3.9.0-embed-amd64\\python39.zip\\contextlib.pyc',
+   'PYMODULE'),
+  ('_strptime',
+   'C:\\Users\\keyang\\Desktop\\장건수\\99. '
+   'ETC\\python-3.9.0-embed-amd64\\python39.zip\\_strptime.pyc',
+   'PYMODULE'),
+  ('datetime',
+   'C:\\Users\\keyang\\Desktop\\장건수\\99. '
+   'ETC\\python-3.9.0-embed-amd64\\python39.zip\\datetime.pyc',
+   'PYMODULE'),
+  ('calendar',
+   'C:\\Users\\keyang\\Desktop\\장건수\\99. '
+   'ETC\\python-3.9.0-embed-amd64\\python39.zip\\calendar.pyc',
+   'PYMODULE'),
+  ('argparse',
+   'C:\\Users\\keyang\\Desktop\\장건수\\99. '
+   'ETC\\python-3.9.0-embed-amd64\\python39.zip\\argparse.pyc',
+   'PYMODULE'),
+  ('textwrap',
+   'C:\\Users\\keyang\\Desktop\\장건수\\99. '
+   'ETC\\python-3.9.0-embed-amd64\\python39.zip\\textwrap.pyc',
+   'PYMODULE'),
+  ('shutil',
+   'C:\\Users\\keyang\\Desktop\\장건수\\99. '
+   'ETC\\python-3.9.0-embed-amd64\\python39.zip\\shutil.pyc',
+   'PYMODULE'),
+  ('zipfile',
+   'C:\\Users\\keyang\\Desktop\\장건수\\99. '
+   'ETC\\python-3.9.0-embed-amd64\\python39.zip\\zipfile.pyc',
+   'PYMODULE'),
+  ('py_compile',
+   'C:\\Users\\keyang\\Desktop\\장건수\\99. '
+   'ETC\\python-3.9.0-embed-amd64\\python39.zip\\py_compile.pyc',
+   'PYMODULE'),
+  ('importlib.machinery',
+   'C:\\Users\\keyang\\Desktop\\장건수\\99. '
+   'ETC\\python-3.9.0-embed-amd64\\python39.zip\\importlib\\machinery.pyc',
+   'PYMODULE'),
+  ('importlib',
+   'C:\\Users\\keyang\\Desktop\\장건수\\99. '
+   'ETC\\python-3.9.0-embed-amd64\\python39.zip\\importlib\\__init__.pyc',
+   'PYMODULE'),
+  ('importlib._bootstrap',
+   'C:\\Users\\keyang\\Desktop\\장건수\\99. '
+   'ETC\\python-3.9.0-embed-amd64\\python39.zip\\importlib\\_bootstrap.pyc',
+   'PYMODULE'),
+  ('importlib._bootstrap_external',
+   'C:\\Users\\keyang\\Desktop\\장건수\\99. '
+   'ETC\\python-3.9.0-embed-amd64\\python39.zip\\importlib\\_bootstrap_external.pyc',
+   'PYMODULE'),
+  ('importlib.metadata',
+   'C:\\Users\\keyang\\Desktop\\장건수\\99. '
+   'ETC\\python-3.9.0-embed-amd64\\python39.zip\\importlib\\metadata.pyc',
+   'PYMODULE'),
+  ('importlib.abc',
+   'C:\\Users\\keyang\\Desktop\\장건수\\99. '
+   'ETC\\python-3.9.0-embed-amd64\\python39.zip\\importlib\\abc.pyc',
+   'PYMODULE'),
+  ('typing',
+   'C:\\Users\\keyang\\Desktop\\장건수\\99. '
+   'ETC\\python-3.9.0-embed-amd64\\python39.zip\\typing.pyc',
+   'PYMODULE'),
+  ('configparser',
+   'C:\\Users\\keyang\\Desktop\\장건수\\99. '
+   'ETC\\python-3.9.0-embed-amd64\\python39.zip\\configparser.pyc',
+   'PYMODULE'),
+  ('pathlib',
+   'C:\\Users\\keyang\\Desktop\\장건수\\99. '
+   'ETC\\python-3.9.0-embed-amd64\\python39.zip\\pathlib.pyc',
+   'PYMODULE'),
+  ('urllib.parse',
+   'C:\\Users\\keyang\\Desktop\\장건수\\99. '
+   'ETC\\python-3.9.0-embed-amd64\\python39.zip\\urllib\\parse.pyc',
+   'PYMODULE'),
+  ('urllib',
+   'C:\\Users\\keyang\\Desktop\\장건수\\99. '
+   'ETC\\python-3.9.0-embed-amd64\\python39.zip\\urllib\\__init__.pyc',
+   'PYMODULE'),
+  ('email',
+   'C:\\Users\\keyang\\Desktop\\장건수\\99. '
+   'ETC\\python-3.9.0-embed-amd64\\python39.zip\\email\\__init__.pyc',
+   'PYMODULE'),
+  ('email.parser',
+   'C:\\Users\\keyang\\Desktop\\장건수\\99. '
+   'ETC\\python-3.9.0-embed-amd64\\python39.zip\\email\\parser.pyc',
+   'PYMODULE'),
+  ('email._policybase',
+   'C:\\Users\\keyang\\Desktop\\장건수\\99. '
+   'ETC\\python-3.9.0-embed-amd64\\python39.zip\\email\\_policybase.pyc',
+   'PYMODULE'),
+  ('email.utils',
+   'C:\\Users\\keyang\\Desktop\\장건수\\99. '
+   'ETC\\python-3.9.0-embed-amd64\\python39.zip\\email\\utils.pyc',
+   'PYMODULE'),
+  ('email._parseaddr',
+   'C:\\Users\\keyang\\Desktop\\장건수\\99. '
+   'ETC\\python-3.9.0-embed-amd64\\python39.zip\\email\\_parseaddr.pyc',
+   'PYMODULE'),
+  ('socket',
+   'C:\\Users\\keyang\\Desktop\\장건수\\99. '
+   'ETC\\python-3.9.0-embed-amd64\\python39.zip\\socket.pyc',
+   'PYMODULE'),
+  ('selectors',
+   'C:\\Users\\keyang\\Desktop\\장건수\\99. '
+   'ETC\\python-3.9.0-embed-amd64\\python39.zip\\selectors.pyc',
+   'PYMODULE'),
+  ('random',
+   'C:\\Users\\keyang\\Desktop\\장건수\\99. '
+   'ETC\\python-3.9.0-embed-amd64\\python39.zip\\random.pyc',
+   'PYMODULE'),
+  ('statistics',
+   'C:\\Users\\keyang\\Desktop\\장건수\\99. '
+   'ETC\\python-3.9.0-embed-amd64\\python39.zip\\statistics.pyc',
+   'PYMODULE'),
+  ('decimal',
+   'C:\\Users\\keyang\\Desktop\\장건수\\99. '
+   'ETC\\python-3.9.0-embed-amd64\\python39.zip\\decimal.pyc',
+   'PYMODULE'),
+  ('_pydecimal',
+   'C:\\Users\\keyang\\Desktop\\장건수\\99. '
+   'ETC\\python-3.9.0-embed-amd64\\python39.zip\\_pydecimal.pyc',
+   'PYMODULE'),
+  ('contextvars',
+   'C:\\Users\\keyang\\Desktop\\장건수\\99. '
+   'ETC\\python-3.9.0-embed-amd64\\python39.zip\\contextvars.pyc',
+   'PYMODULE'),
+  ('fractions',
+   'C:\\Users\\keyang\\Desktop\\장건수\\99. '
+   'ETC\\python-3.9.0-embed-amd64\\python39.zip\\fractions.pyc',
+   'PYMODULE'),
+  ('numbers',
+   'C:\\Users\\keyang\\Desktop\\장건수\\99. '
+   'ETC\\python-3.9.0-embed-amd64\\python39.zip\\numbers.pyc',
+   'PYMODULE'),
+  ('hashlib',
+   'C:\\Users\\keyang\\Desktop\\장건수\\99. '
+   'ETC\\python-3.9.0-embed-amd64\\python39.zip\\hashlib.pyc',
+   'PYMODULE'),
+  ('logging',
+   'C:\\Users\\keyang\\Desktop\\장건수\\99. '
+   'ETC\\python-3.9.0-embed-amd64\\python39.zip\\logging\\__init__.pyc',
+   'PYMODULE'),
+  ('pickle',
+   'C:\\Users\\keyang\\Desktop\\장건수\\99. '
+   'ETC\\python-3.9.0-embed-amd64\\python39.zip\\pickle.pyc',
+   'PYMODULE'),
+  ('pprint',
+   'C:\\Users\\keyang\\Desktop\\장건수\\99. '
+   'ETC\\python-3.9.0-embed-amd64\\python39.zip\\pprint.pyc',
+   'PYMODULE'),
+  ('_compat_pickle',
+   'C:\\Users\\keyang\\Desktop\\장건수\\99. '
+   'ETC\\python-3.9.0-embed-amd64\\python39.zip\\_compat_pickle.pyc',
+   'PYMODULE'),
+  ('string',
+   'C:\\Users\\keyang\\Desktop\\장건수\\99. '
+   'ETC\\python-3.9.0-embed-amd64\\python39.zip\\string.pyc',
+   'PYMODULE'),
+  ('bisect',
+   'C:\\Users\\keyang\\Desktop\\장건수\\99. '
+   'ETC\\python-3.9.0-embed-amd64\\python39.zip\\bisect.pyc',
+   'PYMODULE'),
+  ('email.feedparser',
+   'C:\\Users\\keyang\\Desktop\\장건수\\99. '
+   'ETC\\python-3.9.0-embed-amd64\\python39.zip\\email\\feedparser.pyc',
+   'PYMODULE'),
+  ('email.message',
+   'C:\\Users\\keyang\\Desktop\\장건수\\99. '
+   'ETC\\python-3.9.0-embed-amd64\\python39.zip\\email\\message.pyc',
+   'PYMODULE'),
+  ('email.policy',
+   'C:\\Users\\keyang\\Desktop\\장건수\\99. '
+   'ETC\\python-3.9.0-embed-amd64\\python39.zip\\email\\policy.pyc',
+   'PYMODULE'),
+  ('email.contentmanager',
+   'C:\\Users\\keyang\\Desktop\\장건수\\99. '
+   'ETC\\python-3.9.0-embed-amd64\\python39.zip\\email\\contentmanager.pyc',
+   'PYMODULE'),
+  ('email.quoprimime',
+   'C:\\Users\\keyang\\Desktop\\장건수\\99. '
+   'ETC\\python-3.9.0-embed-amd64\\python39.zip\\email\\quoprimime.pyc',
+   'PYMODULE'),
+  ('email.headerregistry',
+   'C:\\Users\\keyang\\Desktop\\장건수\\99. '
+   'ETC\\python-3.9.0-embed-amd64\\python39.zip\\email\\headerregistry.pyc',
+   'PYMODULE'),
+  ('email.generator',
+   'C:\\Users\\keyang\\Desktop\\장건수\\99. '
+   'ETC\\python-3.9.0-embed-amd64\\python39.zip\\email\\generator.pyc',
+   'PYMODULE'),
+  ('email.iterators',
+   'C:\\Users\\keyang\\Desktop\\장건수\\99. '
+   'ETC\\python-3.9.0-embed-amd64\\python39.zip\\email\\iterators.pyc',
+   'PYMODULE'),
+  ('email._encoded_words',
+   'C:\\Users\\keyang\\Desktop\\장건수\\99. '
+   'ETC\\python-3.9.0-embed-amd64\\python39.zip\\email\\_encoded_words.pyc',
+   'PYMODULE'),
+  ('base64',
+   'C:\\Users\\keyang\\Desktop\\장건수\\99. '
+   'ETC\\python-3.9.0-embed-amd64\\python39.zip\\base64.pyc',
+   'PYMODULE'),
+  ('getopt',
+   'C:\\Users\\keyang\\Desktop\\장건수\\99. '
+   'ETC\\python-3.9.0-embed-amd64\\python39.zip\\getopt.pyc',
+   'PYMODULE'),
+  ('quopri',
+   'C:\\Users\\keyang\\Desktop\\장건수\\99. '
+   'ETC\\python-3.9.0-embed-amd64\\python39.zip\\quopri.pyc',
+   'PYMODULE'),
+  ('uu',
+   'C:\\Users\\keyang\\Desktop\\장건수\\99. '
+   'ETC\\python-3.9.0-embed-amd64\\python39.zip\\uu.pyc',
+   'PYMODULE'),
+  ('optparse',
+   'C:\\Users\\keyang\\Desktop\\장건수\\99. '
+   'ETC\\python-3.9.0-embed-amd64\\python39.zip\\optparse.pyc',
+   'PYMODULE'),
+  ('email._header_value_parser',
+   'C:\\Users\\keyang\\Desktop\\장건수\\99. '
+   'ETC\\python-3.9.0-embed-amd64\\python39.zip\\email\\_header_value_parser.pyc',
+   'PYMODULE'),
+  ('email.header',
+   'C:\\Users\\keyang\\Desktop\\장건수\\99. '
+   'ETC\\python-3.9.0-embed-amd64\\python39.zip\\email\\header.pyc',
+   'PYMODULE'),
+  ('email.base64mime',
+   'C:\\Users\\keyang\\Desktop\\장건수\\99. '
+   'ETC\\python-3.9.0-embed-amd64\\python39.zip\\email\\base64mime.pyc',
+   'PYMODULE'),
+  ('email.charset',
+   'C:\\Users\\keyang\\Desktop\\장건수\\99. '
+   'ETC\\python-3.9.0-embed-amd64\\python39.zip\\email\\charset.pyc',
+   'PYMODULE'),
+  ('email.encoders',
+   'C:\\Users\\keyang\\Desktop\\장건수\\99. '
+   'ETC\\python-3.9.0-embed-amd64\\python39.zip\\email\\encoders.pyc',
+   'PYMODULE'),
+  ('email.errors',
+   'C:\\Users\\keyang\\Desktop\\장건수\\99. '
+   'ETC\\python-3.9.0-embed-amd64\\python39.zip\\email\\errors.pyc',
+   'PYMODULE'),
+  ('csv',
+   'C:\\Users\\keyang\\Desktop\\장건수\\99. '
+   'ETC\\python-3.9.0-embed-amd64\\python39.zip\\csv.pyc',
+   'PYMODULE'),
+  ('tokenize',
+   'C:\\Users\\keyang\\Desktop\\장건수\\99. '
+   'ETC\\python-3.9.0-embed-amd64\\python39.zip\\tokenize.pyc',
+   'PYMODULE'),
+  ('token',
+   'C:\\Users\\keyang\\Desktop\\장건수\\99. '
+   'ETC\\python-3.9.0-embed-amd64\\python39.zip\\token.pyc',
+   'PYMODULE'),
+  ('struct',
+   'C:\\Users\\keyang\\Desktop\\장건수\\99. '
+   'ETC\\python-3.9.0-embed-amd64\\python39.zip\\struct.pyc',
+   'PYMODULE'),
+  ('importlib.util',
+   'C:\\Users\\keyang\\Desktop\\장건수\\99. '
+   'ETC\\python-3.9.0-embed-amd64\\python39.zip\\importlib\\util.pyc',
+   'PYMODULE'),
+  ('tarfile',
+   'C:\\Users\\keyang\\Desktop\\장건수\\99. '
+   'ETC\\python-3.9.0-embed-amd64\\python39.zip\\tarfile.pyc',
+   'PYMODULE'),
+  ('gzip',
+   'C:\\Users\\keyang\\Desktop\\장건수\\99. '
+   'ETC\\python-3.9.0-embed-amd64\\python39.zip\\gzip.pyc',
+   'PYMODULE'),
+  ('_compression',
+   'C:\\Users\\keyang\\Desktop\\장건수\\99. '
+   'ETC\\python-3.9.0-embed-amd64\\python39.zip\\_compression.pyc',
+   'PYMODULE'),
+  ('lzma',
+   'C:\\Users\\keyang\\Desktop\\장건수\\99. '
+   'ETC\\python-3.9.0-embed-amd64\\python39.zip\\lzma.pyc',
+   'PYMODULE'),
+  ('bz2',
+   'C:\\Users\\keyang\\Desktop\\장건수\\99. '
+   'ETC\\python-3.9.0-embed-amd64\\python39.zip\\bz2.pyc',
+   'PYMODULE'),
+  ('fnmatch',
+   'C:\\Users\\keyang\\Desktop\\장건수\\99. '
+   'ETC\\python-3.9.0-embed-amd64\\python39.zip\\fnmatch.pyc',
+   'PYMODULE'),
+  ('gettext',
+   'C:\\Users\\keyang\\Desktop\\장건수\\99. '
+   'ETC\\python-3.9.0-embed-amd64\\python39.zip\\gettext.pyc',
+   'PYMODULE'),
+  ('signal',
+   'C:\\Users\\keyang\\Desktop\\장건수\\99. '
+   'ETC\\python-3.9.0-embed-amd64\\python39.zip\\signal.pyc',
+   'PYMODULE'),
+  ('multiprocessing.util',
+   'C:\\Users\\keyang\\Desktop\\장건수\\99. '
+   'ETC\\python-3.9.0-embed-amd64\\python39.zip\\multiprocessing\\util.pyc',
+   'PYMODULE'),
+  ('multiprocessing.forkserver',
+   'C:\\Users\\keyang\\Desktop\\장건수\\99. '
+   'ETC\\python-3.9.0-embed-amd64\\python39.zip\\multiprocessing\\forkserver.pyc',
+   'PYMODULE'),
+  ('multiprocessing.connection',
+   'C:\\Users\\keyang\\Desktop\\장건수\\99. '
+   'ETC\\python-3.9.0-embed-amd64\\python39.zip\\multiprocessing\\connection.pyc',
+   'PYMODULE'),
+  ('multiprocessing.resource_sharer',
+   'C:\\Users\\keyang\\Desktop\\장건수\\99. '
+   'ETC\\python-3.9.0-embed-amd64\\python39.zip\\multiprocessing\\resource_sharer.pyc',
+   'PYMODULE'),
+  ('xmlrpc.client',
+   'C:\\Users\\keyang\\Desktop\\장건수\\99. '
+   'ETC\\python-3.9.0-embed-amd64\\python39.zip\\xmlrpc\\client.pyc',
+   'PYMODULE'),
+  ('xmlrpc',
+   'C:\\Users\\keyang\\Desktop\\장건수\\99. '
+   'ETC\\python-3.9.0-embed-amd64\\python39.zip\\xmlrpc\\__init__.pyc',
+   'PYMODULE'),
+  ('xml.parsers.expat',
+   'C:\\Users\\keyang\\Desktop\\장건수\\99. '
+   'ETC\\python-3.9.0-embed-amd64\\python39.zip\\xml\\parsers\\expat.pyc',
+   'PYMODULE'),
+  ('xml.parsers',
+   'C:\\Users\\keyang\\Desktop\\장건수\\99. '
+   'ETC\\python-3.9.0-embed-amd64\\python39.zip\\xml\\parsers\\__init__.pyc',
+   'PYMODULE'),
+  ('xml',
+   'C:\\Users\\keyang\\Desktop\\장건수\\99. '
+   'ETC\\python-3.9.0-embed-amd64\\python39.zip\\xml\\__init__.pyc',
+   'PYMODULE'),
+  ('xml.sax.expatreader',
+   'C:\\Users\\keyang\\Desktop\\장건수\\99. '
+   'ETC\\python-3.9.0-embed-amd64\\python39.zip\\xml\\sax\\expatreader.pyc',
+   'PYMODULE'),
+  ('xml.sax.saxutils',
+   'C:\\Users\\keyang\\Desktop\\장건수\\99. '
+   'ETC\\python-3.9.0-embed-amd64\\python39.zip\\xml\\sax\\saxutils.pyc',
+   'PYMODULE'),
+  ('urllib.request',
+   'C:\\Users\\keyang\\Desktop\\장건수\\99. '
+   'ETC\\python-3.9.0-embed-amd64\\python39.zip\\urllib\\request.pyc',
+   'PYMODULE'),
+  ('getpass',
+   'C:\\Users\\keyang\\Desktop\\장건수\\99. '
+   'ETC\\python-3.9.0-embed-amd64\\python39.zip\\getpass.pyc',
+   'PYMODULE'),
+  ('ftplib',
+   'C:\\Users\\keyang\\Desktop\\장건수\\99. '
+   'ETC\\python-3.9.0-embed-amd64\\python39.zip\\ftplib.pyc',
+   'PYMODULE'),
+  ('netrc',
+   'C:\\Users\\keyang\\Desktop\\장건수\\99. '
+   'ETC\\python-3.9.0-embed-amd64\\python39.zip\\netrc.pyc',
+   'PYMODULE'),
+  ('shlex',
+   'C:\\Users\\keyang\\Desktop\\장건수\\99. '
+   'ETC\\python-3.9.0-embed-amd64\\python39.zip\\shlex.pyc',
+   'PYMODULE'),
+  ('mimetypes',
+   'C:\\Users\\keyang\\Desktop\\장건수\\99. '
+   'ETC\\python-3.9.0-embed-amd64\\python39.zip\\mimetypes.pyc',
+   'PYMODULE'),
+  ('http.cookiejar',
+   'C:\\Users\\keyang\\Desktop\\장건수\\99. '
+   'ETC\\python-3.9.0-embed-amd64\\python39.zip\\http\\cookiejar.pyc',
+   'PYMODULE'),
+  ('http',
+   'C:\\Users\\keyang\\Desktop\\장건수\\99. '
+   'ETC\\python-3.9.0-embed-amd64\\python39.zip\\http\\__init__.pyc',
+   'PYMODULE'),
+  ('nturl2path',
+   'C:\\Users\\keyang\\Desktop\\장건수\\99. '
+   'ETC\\python-3.9.0-embed-amd64\\python39.zip\\nturl2path.pyc',
+   'PYMODULE'),
+  ('ssl',
+   'C:\\Users\\keyang\\Desktop\\장건수\\99. '
+   'ETC\\python-3.9.0-embed-amd64\\python39.zip\\ssl.pyc',
+   'PYMODULE'),
+  ('urllib.response',
+   'C:\\Users\\keyang\\Desktop\\장건수\\99. '
+   'ETC\\python-3.9.0-embed-amd64\\python39.zip\\urllib\\response.pyc',
+   'PYMODULE'),
+  ('urllib.error',
+   'C:\\Users\\keyang\\Desktop\\장건수\\99. '
+   'ETC\\python-3.9.0-embed-amd64\\python39.zip\\urllib\\error.pyc',
+   'PYMODULE'),
+  ('xml.sax',
+   'C:\\Users\\keyang\\Desktop\\장건수\\99. '
+   'ETC\\python-3.9.0-embed-amd64\\python39.zip\\xml\\sax\\__init__.pyc',
+   'PYMODULE'),
+  ('xml.sax.handler',
+   'C:\\Users\\keyang\\Desktop\\장건수\\99. '
+   'ETC\\python-3.9.0-embed-amd64\\python39.zip\\xml\\sax\\handler.pyc',
+   'PYMODULE'),
+  ('xml.sax._exceptions',
+   'C:\\Users\\keyang\\Desktop\\장건수\\99. '
+   'ETC\\python-3.9.0-embed-amd64\\python39.zip\\xml\\sax\\_exceptions.pyc',
+   'PYMODULE'),
+  ('xml.sax.xmlreader',
+   'C:\\Users\\keyang\\Desktop\\장건수\\99. '
+   'ETC\\python-3.9.0-embed-amd64\\python39.zip\\xml\\sax\\xmlreader.pyc',
+   'PYMODULE'),
+  ('http.client',
+   'C:\\Users\\keyang\\Desktop\\장건수\\99. '
+   'ETC\\python-3.9.0-embed-amd64\\python39.zip\\http\\client.pyc',
+   'PYMODULE'),
+  ('hmac',
+   'C:\\Users\\keyang\\Desktop\\장건수\\99. '
+   'ETC\\python-3.9.0-embed-amd64\\python39.zip\\hmac.pyc',
+   'PYMODULE'),
+  ('tempfile',
+   'C:\\Users\\keyang\\Desktop\\장건수\\99. '
+   'ETC\\python-3.9.0-embed-amd64\\python39.zip\\tempfile.pyc',
+   'PYMODULE'),
+  ('multiprocessing.context',
+   'C:\\Users\\keyang\\Desktop\\장건수\\99. '
+   'ETC\\python-3.9.0-embed-amd64\\python39.zip\\multiprocessing\\context.pyc',
+   'PYMODULE'),
+  ('multiprocessing.popen_spawn_win32',
+   'C:\\Users\\keyang\\Desktop\\장건수\\99. '
+   'ETC\\python-3.9.0-embed-amd64\\python39.zip\\multiprocessing\\popen_spawn_win32.pyc',
+   'PYMODULE'),
+  ('multiprocessing.popen_forkserver',
+   'C:\\Users\\keyang\\Desktop\\장건수\\99. '
+   'ETC\\python-3.9.0-embed-amd64\\python39.zip\\multiprocessing\\popen_forkserver.pyc',
+   'PYMODULE'),
+  ('multiprocessing.popen_spawn_posix',
+   'C:\\Users\\keyang\\Desktop\\장건수\\99. '
+   'ETC\\python-3.9.0-embed-amd64\\python39.zip\\multiprocessing\\popen_spawn_posix.pyc',
+   'PYMODULE'),
+  ('multiprocessing.popen_fork',
+   'C:\\Users\\keyang\\Desktop\\장건수\\99. '
+   'ETC\\python-3.9.0-embed-amd64\\python39.zip\\multiprocessing\\popen_fork.pyc',
+   'PYMODULE'),
+  ('multiprocessing.sharedctypes',
+   'C:\\Users\\keyang\\Desktop\\장건수\\99. '
+   'ETC\\python-3.9.0-embed-amd64\\python39.zip\\multiprocessing\\sharedctypes.pyc',
+   'PYMODULE'),
+  ('multiprocessing.heap',
+   'C:\\Users\\keyang\\Desktop\\장건수\\99. '
+   'ETC\\python-3.9.0-embed-amd64\\python39.zip\\multiprocessing\\heap.pyc',
+   'PYMODULE'),
+  ('ctypes',
+   'C:\\Users\\keyang\\Desktop\\장건수\\99. '
+   'ETC\\python-3.9.0-embed-amd64\\python39.zip\\ctypes\\__init__.pyc',
+   'PYMODULE'),
+  ('ctypes._endian',
+   'C:\\Users\\keyang\\Desktop\\장건수\\99. '
+   'ETC\\python-3.9.0-embed-amd64\\python39.zip\\ctypes\\_endian.pyc',
+   'PYMODULE'),
+  ('multiprocessing.pool',
+   'C:\\Users\\keyang\\Desktop\\장건수\\99. '
+   'ETC\\python-3.9.0-embed-amd64\\python39.zip\\multiprocessing\\pool.pyc',
+   'PYMODULE'),
+  ('multiprocessing.dummy',
+   'C:\\Users\\keyang\\Desktop\\장건수\\99. '
+   'ETC\\python-3.9.0-embed-amd64\\python39.zip\\multiprocessing\\dummy\\__init__.pyc',
+   'PYMODULE'),
+  ('multiprocessing.dummy.connection',
+   'C:\\Users\\keyang\\Desktop\\장건수\\99. '
+   'ETC\\python-3.9.0-embed-amd64\\python39.zip\\multiprocessing\\dummy\\connection.pyc',
+   'PYMODULE'),
+  ('queue',
+   'C:\\Users\\keyang\\Desktop\\장건수\\99. '
+   'ETC\\python-3.9.0-embed-amd64\\python39.zip\\queue.pyc',
+   'PYMODULE'),
+  ('multiprocessing.queues',
+   'C:\\Users\\keyang\\Desktop\\장건수\\99. '
+   'ETC\\python-3.9.0-embed-amd64\\python39.zip\\multiprocessing\\queues.pyc',
+   'PYMODULE'),
+  ('multiprocessing.synchronize',
+   'C:\\Users\\keyang\\Desktop\\장건수\\99. '
+   'ETC\\python-3.9.0-embed-amd64\\python39.zip\\multiprocessing\\synchronize.pyc',
+   'PYMODULE'),
+  ('multiprocessing.managers',
+   'C:\\Users\\keyang\\Desktop\\장건수\\99. '
+   'ETC\\python-3.9.0-embed-amd64\\python39.zip\\multiprocessing\\managers.pyc',
+   'PYMODULE'),
+  ('multiprocessing.shared_memory',
+   'C:\\Users\\keyang\\Desktop\\장건수\\99. '
+   'ETC\\python-3.9.0-embed-amd64\\python39.zip\\multiprocessing\\shared_memory.pyc',
+   'PYMODULE'),
+  ('secrets',
+   'C:\\Users\\keyang\\Desktop\\장건수\\99. '
+   'ETC\\python-3.9.0-embed-amd64\\python39.zip\\secrets.pyc',
+   'PYMODULE'),
+  ('multiprocessing.reduction',
+   'C:\\Users\\keyang\\Desktop\\장건수\\99. '
+   'ETC\\python-3.9.0-embed-amd64\\python39.zip\\multiprocessing\\reduction.pyc',
+   'PYMODULE'),
+  ('multiprocessing.process',
+   'C:\\Users\\keyang\\Desktop\\장건수\\99. '
+   'ETC\\python-3.9.0-embed-amd64\\python39.zip\\multiprocessing\\process.pyc',
+   'PYMODULE'),
+  ('runpy',
+   'C:\\Users\\keyang\\Desktop\\장건수\\99. '
+   'ETC\\python-3.9.0-embed-amd64\\python39.zip\\runpy.pyc',
+   'PYMODULE'),
+  ('pkgutil',
+   'C:\\Users\\keyang\\Desktop\\장건수\\99. '
+   'ETC\\python-3.9.0-embed-amd64\\python39.zip\\pkgutil.pyc',
+   'PYMODULE'),
+  ('inspect',
+   'C:\\Users\\keyang\\Desktop\\장건수\\99. '
+   'ETC\\python-3.9.0-embed-amd64\\python39.zip\\inspect.pyc',
+   'PYMODULE'),
+  ('dis',
+   'C:\\Users\\keyang\\Desktop\\장건수\\99. '
+   'ETC\\python-3.9.0-embed-amd64\\python39.zip\\dis.pyc',
+   'PYMODULE'),
+  ('opcode',
+   'C:\\Users\\keyang\\Desktop\\장건수\\99. '
+   'ETC\\python-3.9.0-embed-amd64\\python39.zip\\opcode.pyc',
+   'PYMODULE'),
+  ('ast',
+   'C:\\Users\\keyang\\Desktop\\장건수\\99. '
+   'ETC\\python-3.9.0-embed-amd64\\python39.zip\\ast.pyc',
+   'PYMODULE'),
+  ('zipimport',
+   'C:\\Users\\keyang\\Desktop\\장건수\\99. '
+   'ETC\\python-3.9.0-embed-amd64\\python39.zip\\zipimport.pyc',
+   'PYMODULE'),
+  ('multiprocessing',
+   'C:\\Users\\keyang\\Desktop\\장건수\\99. '
+   'ETC\\python-3.9.0-embed-amd64\\python39.zip\\multiprocessing\\__init__.pyc',
+   'PYMODULE'),
+  ('stringprep',
+   'C:\\Users\\keyang\\Desktop\\장건수\\99. '
+   'ETC\\python-3.9.0-embed-amd64\\python39.zip\\stringprep.pyc',
+   'PYMODULE'),
+  ('tracemalloc',
+   'C:\\Users\\keyang\\Desktop\\장건수\\99. '
+   'ETC\\python-3.9.0-embed-amd64\\python39.zip\\tracemalloc.pyc',
+   'PYMODULE'),
+  ('_py_abc',
+   'C:\\Users\\keyang\\Desktop\\장건수\\99. '
+   'ETC\\python-3.9.0-embed-amd64\\python39.zip\\_py_abc.pyc',
+   'PYMODULE'),
+  ('dataclasses',
+   'C:\\Users\\keyang\\Desktop\\장건수\\99. '
+   'ETC\\python-3.9.0-embed-amd64\\python39.zip\\dataclasses.pyc',
+   'PYMODULE'),
+  ('copy',
+   'C:\\Users\\keyang\\Desktop\\장건수\\99. '
+   'ETC\\python-3.9.0-embed-amd64\\python39.zip\\copy.pyc',
+   'PYMODULE'),
+  ('subprocess',
+   'C:\\Users\\keyang\\Desktop\\장건수\\99. '
+   'ETC\\python-3.9.0-embed-amd64\\python39.zip\\subprocess.pyc',
+   'PYMODULE'),
+  ('graphviz',
+   'C:\\Users\\keyang\\Desktop\\장건수\\99. '
+   'ETC\\python-3.9.0-embed-amd64\\Lib\\site-packages\\graphviz\\__init__.py',
+   'PYMODULE'),
+  ('graphviz.graphs',
+   'C:\\Users\\keyang\\Desktop\\장건수\\99. '
+   'ETC\\python-3.9.0-embed-amd64\\Lib\\site-packages\\graphviz\\graphs.py',
+   'PYMODULE'),
+  ('graphviz.encoding',
+   'C:\\Users\\keyang\\Desktop\\장건수\\99. '
+   'ETC\\python-3.9.0-embed-amd64\\Lib\\site-packages\\graphviz\\encoding.py',
+   'PYMODULE'),
+  ('graphviz.sources',
+   'C:\\Users\\keyang\\Desktop\\장건수\\99. '
+   'ETC\\python-3.9.0-embed-amd64\\Lib\\site-packages\\graphviz\\sources.py',
+   'PYMODULE'),
+  ('graphviz.unflattening',
+   'C:\\Users\\keyang\\Desktop\\장건수\\99. '
+   'ETC\\python-3.9.0-embed-amd64\\Lib\\site-packages\\graphviz\\unflattening.py',
+   'PYMODULE'),
+  ('graphviz.rendering',
+   'C:\\Users\\keyang\\Desktop\\장건수\\99. '
+   'ETC\\python-3.9.0-embed-amd64\\Lib\\site-packages\\graphviz\\rendering.py',
+   'PYMODULE'),
+  ('graphviz.saving',
+   'C:\\Users\\keyang\\Desktop\\장건수\\99. '
+   'ETC\\python-3.9.0-embed-amd64\\Lib\\site-packages\\graphviz\\saving.py',
+   'PYMODULE'),
+  ('graphviz.dot',
+   'C:\\Users\\keyang\\Desktop\\장건수\\99. '
+   'ETC\\python-3.9.0-embed-amd64\\Lib\\site-packages\\graphviz\\dot.py',
+   'PYMODULE'),
+  ('graphviz.quoting',
+   'C:\\Users\\keyang\\Desktop\\장건수\\99. '
+   'ETC\\python-3.9.0-embed-amd64\\Lib\\site-packages\\graphviz\\quoting.py',
+   'PYMODULE'),
+  ('graphviz._defaults',
+   'C:\\Users\\keyang\\Desktop\\장건수\\99. '
+   'ETC\\python-3.9.0-embed-amd64\\Lib\\site-packages\\graphviz\\_defaults.py',
+   'PYMODULE'),
+  ('graphviz.jupyter_integration',
+   'C:\\Users\\keyang\\Desktop\\장건수\\99. '
+   'ETC\\python-3.9.0-embed-amd64\\Lib\\site-packages\\graphviz\\jupyter_integration.py',
+   'PYMODULE'),
+  ('graphviz.piping',
+   'C:\\Users\\keyang\\Desktop\\장건수\\99. '
+   'ETC\\python-3.9.0-embed-amd64\\Lib\\site-packages\\graphviz\\piping.py',
+   'PYMODULE'),
+  ('graphviz.base',
+   'C:\\Users\\keyang\\Desktop\\장건수\\99. '
+   'ETC\\python-3.9.0-embed-amd64\\Lib\\site-packages\\graphviz\\base.py',
+   'PYMODULE'),
+  ('graphviz.backend',
+   'C:\\Users\\keyang\\Desktop\\장건수\\99. '
+   'ETC\\python-3.9.0-embed-amd64\\Lib\\site-packages\\graphviz\\backend\\__init__.py',
+   'PYMODULE'),
+  ('graphviz.backend.upstream_version',
+   'C:\\Users\\keyang\\Desktop\\장건수\\99. '
+   'ETC\\python-3.9.0-embed-amd64\\Lib\\site-packages\\graphviz\\backend\\upstream_version.py',
+   'PYMODULE'),
+  ('graphviz.backend.mixins',
+   'C:\\Users\\keyang\\Desktop\\장건수\\99. '
+   'ETC\\python-3.9.0-embed-amd64\\Lib\\site-packages\\graphviz\\backend\\mixins.py',
+   'PYMODULE'),
+  ('graphviz.backend.viewing',
+   'C:\\Users\\keyang\\Desktop\\장건수\\99. '
+   'ETC\\python-3.9.0-embed-amd64\\Lib\\site-packages\\graphviz\\backend\\viewing.py',
+   'PYMODULE'),
+  ('platform',
+   'C:\\Users\\keyang\\Desktop\\장건수\\99. '
+   'ETC\\python-3.9.0-embed-amd64\\python39.zip\\platform.pyc',
+   'PYMODULE'),
+  ('graphviz.backend.unflattening',
+   'C:\\Users\\keyang\\Desktop\\장건수\\99. '
+   'ETC\\python-3.9.0-embed-amd64\\Lib\\site-packages\\graphviz\\backend\\unflattening.py',
+   'PYMODULE'),
+  ('graphviz.backend.rendering',
+   'C:\\Users\\keyang\\Desktop\\장건수\\99. '
+   'ETC\\python-3.9.0-embed-amd64\\Lib\\site-packages\\graphviz\\backend\\rendering.py',
+   'PYMODULE'),
+  ('graphviz.backend.piping',
+   'C:\\Users\\keyang\\Desktop\\장건수\\99. '
+   'ETC\\python-3.9.0-embed-amd64\\Lib\\site-packages\\graphviz\\backend\\piping.py',
+   'PYMODULE'),
+  ('graphviz.backend.execute',
+   'C:\\Users\\keyang\\Desktop\\장건수\\99. '
+   'ETC\\python-3.9.0-embed-amd64\\Lib\\site-packages\\graphviz\\backend\\execute.py',
+   'PYMODULE'),
+  ('graphviz.backend.dot_command',
+   'C:\\Users\\keyang\\Desktop\\장건수\\99. '
+   'ETC\\python-3.9.0-embed-amd64\\Lib\\site-packages\\graphviz\\backend\\dot_command.py',
+   'PYMODULE'),
+  ('graphviz.exceptions',
+   'C:\\Users\\keyang\\Desktop\\장건수\\99. '
+   'ETC\\python-3.9.0-embed-amd64\\Lib\\site-packages\\graphviz\\exceptions.py',
+   'PYMODULE'),
+  ('graphviz._compat',
+   'C:\\Users\\keyang\\Desktop\\장건수\\99. '
+   'ETC\\python-3.9.0-embed-amd64\\Lib\\site-packages\\graphviz\\_compat.py',
+   'PYMODULE'),
+  ('unittest.mock',
+   'C:\\Users\\keyang\\Desktop\\장건수\\99. '
+   'ETC\\python-3.9.0-embed-amd64\\python39.zip\\unittest\\mock.pyc',
+   'PYMODULE'),
+  ('unittest',
+   'C:\\Users\\keyang\\Desktop\\장건수\\99. '
+   'ETC\\python-3.9.0-embed-amd64\\python39.zip\\unittest\\__init__.pyc',
+   'PYMODULE'),
+  ('unittest.async_case',
+   'C:\\Users\\keyang\\Desktop\\장건수\\99. '
+   'ETC\\python-3.9.0-embed-amd64\\python39.zip\\unittest\\async_case.pyc',
+   'PYMODULE'),
+  ('unittest.signals',
+   'C:\\Users\\keyang\\Desktop\\장건수\\99. '
+   'ETC\\python-3.9.0-embed-amd64\\python39.zip\\unittest\\signals.pyc',
+   'PYMODULE'),
+  ('unittest.main',
+   'C:\\Users\\keyang\\Desktop\\장건수\\99. '
+   'ETC\\python-3.9.0-embed-amd64\\python39.zip\\unittest\\main.pyc',
+   'PYMODULE'),
+  ('unittest.runner',
+   'C:\\Users\\keyang\\Desktop\\장건수\\99. '
+   'ETC\\python-3.9.0-embed-amd64\\python39.zip\\unittest\\runner.pyc',
+   'PYMODULE'),
+  ('unittest.loader',
+   'C:\\Users\\keyang\\Desktop\\장건수\\99. '
+   'ETC\\python-3.9.0-embed-amd64\\python39.zip\\unittest\\loader.pyc',
+   'PYMODULE'),
+  ('unittest.suite',
+   'C:\\Users\\keyang\\Desktop\\장건수\\99. '
+   'ETC\\python-3.9.0-embed-amd64\\python39.zip\\unittest\\suite.pyc',
+   'PYMODULE'),
+  ('unittest.case',
+   'C:\\Users\\keyang\\Desktop\\장건수\\99. '
+   'ETC\\python-3.9.0-embed-amd64\\python39.zip\\unittest\\case.pyc',
+   'PYMODULE'),
+  ('unittest._log',
+   'C:\\Users\\keyang\\Desktop\\장건수\\99. '
+   'ETC\\python-3.9.0-embed-amd64\\python39.zip\\unittest\\_log.pyc',
+   'PYMODULE'),
+  ('difflib',
+   'C:\\Users\\keyang\\Desktop\\장건수\\99. '
+   'ETC\\python-3.9.0-embed-amd64\\python39.zip\\difflib.pyc',
+   'PYMODULE'),
+  ('unittest.result',
+   'C:\\Users\\keyang\\Desktop\\장건수\\99. '
+   'ETC\\python-3.9.0-embed-amd64\\python39.zip\\unittest\\result.pyc',
+   'PYMODULE'),
+  ('unittest.util',
+   'C:\\Users\\keyang\\Desktop\\장건수\\99. '
+   'ETC\\python-3.9.0-embed-amd64\\python39.zip\\unittest\\util.pyc',
+   'PYMODULE'),
+  ('asyncio',
+   'C:\\Users\\keyang\\Desktop\\장건수\\99. '
+   'ETC\\python-3.9.0-embed-amd64\\python39.zip\\asyncio\\__init__.pyc',
+   'PYMODULE'),
+  ('asyncio.unix_events',
+   'C:\\Users\\keyang\\Desktop\\장건수\\99. '
+   'ETC\\python-3.9.0-embed-amd64\\python39.zip\\asyncio\\unix_events.pyc',
+   'PYMODULE'),
+  ('asyncio.log',
+   'C:\\Users\\keyang\\Desktop\\장건수\\99. '
+   'ETC\\python-3.9.0-embed-amd64\\python39.zip\\asyncio\\log.pyc',
+   'PYMODULE'),
+  ('asyncio.windows_events',
+   'C:\\Users\\keyang\\Desktop\\장건수\\99. '
+   'ETC\\python-3.9.0-embed-amd64\\python39.zip\\asyncio\\windows_events.pyc',
+   'PYMODULE'),
+  ('asyncio.windows_utils',
+   'C:\\Users\\keyang\\Desktop\\장건수\\99. '
+   'ETC\\python-3.9.0-embed-amd64\\python39.zip\\asyncio\\windows_utils.pyc',
+   'PYMODULE'),
+  ('asyncio.selector_events',
+   'C:\\Users\\keyang\\Desktop\\장건수\\99. '
+   'ETC\\python-3.9.0-embed-amd64\\python39.zip\\asyncio\\selector_events.pyc',
+   'PYMODULE'),
+  ('asyncio.proactor_events',
+   'C:\\Users\\keyang\\Desktop\\장건수\\99. '
+   'ETC\\python-3.9.0-embed-amd64\\python39.zip\\asyncio\\proactor_events.pyc',
+   'PYMODULE'),
+  ('asyncio.base_subprocess',
+   'C:\\Users\\keyang\\Desktop\\장건수\\99. '
+   'ETC\\python-3.9.0-embed-amd64\\python39.zip\\asyncio\\base_subprocess.pyc',
+   'PYMODULE'),
+  ('asyncio.threads',
+   'C:\\Users\\keyang\\Desktop\\장건수\\99. '
+   'ETC\\python-3.9.0-embed-amd64\\python39.zip\\asyncio\\threads.pyc',
+   'PYMODULE'),
+  ('asyncio.subprocess',
+   'C:\\Users\\keyang\\Desktop\\장건수\\99. '
+   'ETC\\python-3.9.0-embed-amd64\\python39.zip\\asyncio\\subprocess.pyc',
+   'PYMODULE'),
+  ('asyncio.streams',
+   'C:\\Users\\keyang\\Desktop\\장건수\\99. '
+   'ETC\\python-3.9.0-embed-amd64\\python39.zip\\asyncio\\streams.pyc',
+   'PYMODULE'),
+  ('asyncio.queues',
+   'C:\\Users\\keyang\\Desktop\\장건수\\99. '
+   'ETC\\python-3.9.0-embed-amd64\\python39.zip\\asyncio\\queues.pyc',
+   'PYMODULE'),
+  ('asyncio.runners',
+   'C:\\Users\\keyang\\Desktop\\장건수\\99. '
+   'ETC\\python-3.9.0-embed-amd64\\python39.zip\\asyncio\\runners.pyc',
+   'PYMODULE'),
+  ('asyncio.base_events',
+   'C:\\Users\\keyang\\Desktop\\장건수\\99. '
+   'ETC\\python-3.9.0-embed-amd64\\python39.zip\\asyncio\\base_events.pyc',
+   'PYMODULE'),
+  ('concurrent.futures',
+   'C:\\Users\\keyang\\Desktop\\장건수\\99. '
+   'ETC\\python-3.9.0-embed-amd64\\python39.zip\\concurrent\\futures\\__init__.pyc',
+   'PYMODULE'),
+  ('concurrent.futures.thread',
+   'C:\\Users\\keyang\\Desktop\\장건수\\99. '
+   'ETC\\python-3.9.0-embed-amd64\\python39.zip\\concurrent\\futures\\thread.pyc',
+   'PYMODULE'),
+  ('concurrent.futures.process',
+   'C:\\Users\\keyang\\Desktop\\장건수\\99. '
+   'ETC\\python-3.9.0-embed-amd64\\python39.zip\\concurrent\\futures\\process.pyc',
+   'PYMODULE'),
+  ('concurrent.futures._base',
+   'C:\\Users\\keyang\\Desktop\\장건수\\99. '
+   'ETC\\python-3.9.0-embed-amd64\\python39.zip\\concurrent\\futures\\_base.pyc',
+   'PYMODULE'),
+  ('concurrent',
+   'C:\\Users\\keyang\\Desktop\\장건수\\99. '
+   'ETC\\python-3.9.0-embed-amd64\\python39.zip\\concurrent\\__init__.pyc',
+   'PYMODULE'),
+  ('asyncio.trsock',
+   'C:\\Users\\keyang\\Desktop\\장건수\\99. '
+   'ETC\\python-3.9.0-embed-amd64\\python39.zip\\asyncio\\trsock.pyc',
+   'PYMODULE'),
+  ('asyncio.staggered',
+   'C:\\Users\\keyang\\Desktop\\장건수\\99. '
+   'ETC\\python-3.9.0-embed-amd64\\python39.zip\\asyncio\\staggered.pyc',
+   'PYMODULE'),
+  ('asyncio.tasks',
+   'C:\\Users\\keyang\\Desktop\\장건수\\99. '
+   'ETC\\python-3.9.0-embed-amd64\\python39.zip\\asyncio\\tasks.pyc',
+   'PYMODULE'),
+  ('asyncio.base_tasks',
+   'C:\\Users\\keyang\\Desktop\\장건수\\99. '
+   'ETC\\python-3.9.0-embed-amd64\\python39.zip\\asyncio\\base_tasks.pyc',
+   'PYMODULE'),
+  ('asyncio.locks',
+   'C:\\Users\\keyang\\Desktop\\장건수\\99. '
+   'ETC\\python-3.9.0-embed-amd64\\python39.zip\\asyncio\\locks.pyc',
+   'PYMODULE'),
+  ('asyncio.sslproto',
+   'C:\\Users\\keyang\\Desktop\\장건수\\99. '
+   'ETC\\python-3.9.0-embed-amd64\\python39.zip\\asyncio\\sslproto.pyc',
+   'PYMODULE'),
+  ('asyncio.transports',
+   'C:\\Users\\keyang\\Desktop\\장건수\\99. '
+   'ETC\\python-3.9.0-embed-amd64\\python39.zip\\asyncio\\transports.pyc',
+   'PYMODULE'),
+  ('asyncio.protocols',
+   'C:\\Users\\keyang\\Desktop\\장건수\\99. '
+   'ETC\\python-3.9.0-embed-amd64\\python39.zip\\asyncio\\protocols.pyc',
+   'PYMODULE'),
+  ('asyncio.futures',
+   'C:\\Users\\keyang\\Desktop\\장건수\\99. '
+   'ETC\\python-3.9.0-embed-amd64\\python39.zip\\asyncio\\futures.pyc',
+   'PYMODULE'),
+  ('asyncio.exceptions',
+   'C:\\Users\\keyang\\Desktop\\장건수\\99. '
+   'ETC\\python-3.9.0-embed-amd64\\python39.zip\\asyncio\\exceptions.pyc',
+   'PYMODULE'),
+  ('asyncio.events',
+   'C:\\Users\\keyang\\Desktop\\장건수\\99. '
+   'ETC\\python-3.9.0-embed-amd64\\python39.zip\\asyncio\\events.pyc',
+   'PYMODULE'),
+  ('asyncio.coroutines',
+   'C:\\Users\\keyang\\Desktop\\장건수\\99. '
+   'ETC\\python-3.9.0-embed-amd64\\python39.zip\\asyncio\\coroutines.pyc',
+   'PYMODULE'),
+  ('asyncio.base_futures',
+   'C:\\Users\\keyang\\Desktop\\장건수\\99. '
+   'ETC\\python-3.9.0-embed-amd64\\python39.zip\\asyncio\\base_futures.pyc',
+   'PYMODULE'),
+  ('asyncio.format_helpers',
+   'C:\\Users\\keyang\\Desktop\\장건수\\99. '
+   'ETC\\python-3.9.0-embed-amd64\\python39.zip\\asyncio\\format_helpers.pyc',
+   'PYMODULE'),
+  ('asyncio.constants',
+   'C:\\Users\\keyang\\Desktop\\장건수\\99. '
+   'ETC\\python-3.9.0-embed-amd64\\python39.zip\\asyncio\\constants.pyc',
+   'PYMODULE'),
+  ('graphviz._tools',
+   'C:\\Users\\keyang\\Desktop\\장건수\\99. '
+   'ETC\\python-3.9.0-embed-amd64\\Lib\\site-packages\\graphviz\\_tools.py',
+   'PYMODULE'),
+  ('graphviz.parameters',
+   'C:\\Users\\keyang\\Desktop\\장건수\\99. '
+   'ETC\\python-3.9.0-embed-amd64\\Lib\\site-packages\\graphviz\\parameters\\__init__.py',
+   'PYMODULE'),
+  ('graphviz.parameters.mixins',
+   'C:\\Users\\keyang\\Desktop\\장건수\\99. '
+   'ETC\\python-3.9.0-embed-amd64\\Lib\\site-packages\\graphviz\\parameters\\mixins.py',
+   'PYMODULE'),
+  ('graphviz.parameters.formatters',
+   'C:\\Users\\keyang\\Desktop\\장건수\\99. '
+   'ETC\\python-3.9.0-embed-amd64\\Lib\\site-packages\\graphviz\\parameters\\formatters.py',
+   'PYMODULE'),
+  ('graphviz.parameters.renderers',
+   'C:\\Users\\keyang\\Desktop\\장건수\\99. '
+   'ETC\\python-3.9.0-embed-amd64\\Lib\\site-packages\\graphviz\\parameters\\renderers.py',
+   'PYMODULE'),
+  ('graphviz.parameters.formats',
+   'C:\\Users\\keyang\\Desktop\\장건수\\99. '
+   'ETC\\python-3.9.0-embed-amd64\\Lib\\site-packages\\graphviz\\parameters\\formats.py',
+   'PYMODULE'),
+  ('graphviz.parameters.engines',
+   'C:\\Users\\keyang\\Desktop\\장건수\\99. '
+   'ETC\\python-3.9.0-embed-amd64\\Lib\\site-packages\\graphviz\\parameters\\engines.py',
+   'PYMODULE'),
+  ('graphviz.parameters.base',
+   'C:\\Users\\keyang\\Desktop\\장건수\\99. '
+   'ETC\\python-3.9.0-embed-amd64\\Lib\\site-packages\\graphviz\\parameters\\base.py',
+   'PYMODULE'),
+  ('graphviz.copying',
+   'C:\\Users\\keyang\\Desktop\\장건수\\99. '
+   'ETC\\python-3.9.0-embed-amd64\\Lib\\site-packages\\graphviz\\copying.py',
+   'PYMODULE'),
+  ('wx',
+   'C:\\Users\\keyang\\Desktop\\장건수\\99. '
+   'ETC\\python-3.9.0-embed-amd64\\Lib\\site-packages\\wx\\__init__.py',
+   'PYMODULE'),
+  ('wx.core',
+   'C:\\Users\\keyang\\Desktop\\장건수\\99. '
+   'ETC\\python-3.9.0-embed-amd64\\Lib\\site-packages\\wx\\core.py',
+   'PYMODULE'),
+  ('wx.adv',
+   'C:\\Users\\keyang\\Desktop\\장건수\\99. '
+   'ETC\\python-3.9.0-embed-amd64\\Lib\\site-packages\\wx\\adv.py',
+   'PYMODULE'),
+  ('wx.html',
+   'C:\\Users\\keyang\\Desktop\\장건수\\99. '
+   'ETC\\python-3.9.0-embed-amd64\\Lib\\site-packages\\wx\\html.py',
+   'PYMODULE'),
+  ('wx.msw',
+   'C:\\Users\\keyang\\Desktop\\장건수\\99. '
+   'ETC\\python-3.9.0-embed-amd64\\Lib\\site-packages\\wx\\msw.py',
+   'PYMODULE'),
+  ('wx.lib.colourutils',
+   'C:\\Users\\keyang\\Desktop\\장건수\\99. '
+   'ETC\\python-3.9.0-embed-amd64\\Lib\\site-packages\\wx\\lib\\colourutils.py',
+   'PYMODULE'),
+  ('wx.lib',
+   'C:\\Users\\keyang\\Desktop\\장건수\\99. '
+   'ETC\\python-3.9.0-embed-amd64\\Lib\\site-packages\\wx\\lib\\__init__.py',
+   'PYMODULE'),
+  ('six',
+   'C:\\Users\\keyang\\Desktop\\장건수\\99. '
+   'ETC\\python-3.9.0-embed-amd64\\Lib\\site-packages\\six.py',
+   'PYMODULE'),
+  ('__future__',
+   'C:\\Users\\keyang\\Desktop\\장건수\\99. '
+   'ETC\\python-3.9.0-embed-amd64\\python39.zip\\__future__.pyc',
+   'PYMODULE'),
+  ('wx.__version__',
+   'C:\\Users\\keyang\\Desktop\\장건수\\99. '
+   'ETC\\python-3.9.0-embed-amd64\\Lib\\site-packages\\wx\\__version__.py',
+   'PYMODULE')],
+ [('python39.dll',
+   'C:\\Users\\keyang\\Desktop\\장건수\\99. '
+   'ETC\\python-3.9.0-embed-amd64\\python39.dll',
+   'BINARY'),
+  ('_multiprocessing.pyd',
+   'C:\\Users\\keyang\\Desktop\\장건수\\99. '
+   'ETC\\python-3.9.0-embed-amd64\\_multiprocessing.pyd',
+   'EXTENSION'),
+  ('unicodedata.pyd',
+   'C:\\Users\\keyang\\Desktop\\장건수\\99. '
+   'ETC\\python-3.9.0-embed-amd64\\unicodedata.pyd',
+   'EXTENSION'),
+  ('select.pyd',
+   'C:\\Users\\keyang\\Desktop\\장건수\\99. '
+   'ETC\\python-3.9.0-embed-amd64\\select.pyd',
+   'EXTENSION'),
+  ('_socket.pyd',
+   'C:\\Users\\keyang\\Desktop\\장건수\\99. '
+   'ETC\\python-3.9.0-embed-amd64\\_socket.pyd',
+   'EXTENSION'),
+  ('_decimal.pyd',
+   'C:\\Users\\keyang\\Desktop\\장건수\\99. '
+   'ETC\\python-3.9.0-embed-amd64\\_decimal.pyd',
+   'EXTENSION'),
+  ('_hashlib.pyd',
+   'C:\\Users\\keyang\\Desktop\\장건수\\99. '
+   'ETC\\python-3.9.0-embed-amd64\\_hashlib.pyd',
+   'EXTENSION'),
+  ('_lzma.pyd',
+   'C:\\Users\\keyang\\Desktop\\장건수\\99. '
+   'ETC\\python-3.9.0-embed-amd64\\_lzma.pyd',
+   'EXTENSION'),
+  ('_bz2.pyd',
+   'C:\\Users\\keyang\\Desktop\\장건수\\99. '
+   'ETC\\python-3.9.0-embed-amd64\\_bz2.pyd',
+   'EXTENSION'),
+  ('pyexpat.pyd',
+   'C:\\Users\\keyang\\Desktop\\장건수\\99. '
+   'ETC\\python-3.9.0-embed-amd64\\pyexpat.pyd',
+   'EXTENSION'),
+  ('_ssl.pyd',
+   'C:\\Users\\keyang\\Desktop\\장건수\\99. '
+   'ETC\\python-3.9.0-embed-amd64\\_ssl.pyd',
+   'EXTENSION'),
+  ('_ctypes.pyd',
+   'C:\\Users\\keyang\\Desktop\\장건수\\99. '
+   'ETC\\python-3.9.0-embed-amd64\\_ctypes.pyd',
+   'EXTENSION'),
+  ('_queue.pyd',
+   'C:\\Users\\keyang\\Desktop\\장건수\\99. '
+   'ETC\\python-3.9.0-embed-amd64\\_queue.pyd',
+   'EXTENSION'),
+  ('_overlapped.pyd',
+   'C:\\Users\\keyang\\Desktop\\장건수\\99. '
+   'ETC\\python-3.9.0-embed-amd64\\_overlapped.pyd',
+   'EXTENSION'),
+  ('_asyncio.pyd',
+   'C:\\Users\\keyang\\Desktop\\장건수\\99. '
+   'ETC\\python-3.9.0-embed-amd64\\_asyncio.pyd',
+   'EXTENSION'),
+  ('wx\\_adv.cp39-win_amd64.pyd',
+   'C:\\Users\\keyang\\Desktop\\장건수\\99. '
+   'ETC\\python-3.9.0-embed-amd64\\Lib\\site-packages\\wx\\_adv.cp39-win_amd64.pyd',
+   'EXTENSION'),
+  ('wx\\_html.cp39-win_amd64.pyd',
+   'C:\\Users\\keyang\\Desktop\\장건수\\99. '
+   'ETC\\python-3.9.0-embed-amd64\\Lib\\site-packages\\wx\\_html.cp39-win_amd64.pyd',
+   'EXTENSION'),
+  ('wx\\_msw.cp39-win_amd64.pyd',
+   'C:\\Users\\keyang\\Desktop\\장건수\\99. '
+   'ETC\\python-3.9.0-embed-amd64\\Lib\\site-packages\\wx\\_msw.cp39-win_amd64.pyd',
+   'EXTENSION'),
+  ('wx\\siplib.cp39-win_amd64.pyd',
+   'C:\\Users\\keyang\\Desktop\\장건수\\99. '
+   'ETC\\python-3.9.0-embed-amd64\\Lib\\site-packages\\wx\\siplib.cp39-win_amd64.pyd',
+   'EXTENSION'),
+  ('wx\\_core.cp39-win_amd64.pyd',
+   'C:\\Users\\keyang\\Desktop\\장건수\\99. '
+   'ETC\\python-3.9.0-embed-amd64\\Lib\\site-packages\\wx\\_core.cp39-win_amd64.pyd',
+   'EXTENSION'),
+  ('api-ms-win-crt-runtime-l1-1-0.dll',
+   'C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance '
+   'Toolkit\\api-ms-win-crt-runtime-l1-1-0.dll',
+   'BINARY'),
+  ('api-ms-win-crt-time-l1-1-0.dll',
+   'C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance '
+   'Toolkit\\api-ms-win-crt-time-l1-1-0.dll',
+   'BINARY'),
+  ('VCRUNTIME140.dll',
+   'C:\\Users\\keyang\\Desktop\\장건수\\99. '
+   'ETC\\python-3.9.0-embed-amd64\\VCRUNTIME140.dll',
+   'BINARY'),
+  ('api-ms-win-crt-string-l1-1-0.dll',
+   'C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance '
+   'Toolkit\\api-ms-win-crt-string-l1-1-0.dll',
+   'BINARY'),
+  ('api-ms-win-crt-process-l1-1-0.dll',
+   'C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance '
+   'Toolkit\\api-ms-win-crt-process-l1-1-0.dll',
+   'BINARY'),
+  ('api-ms-win-crt-convert-l1-1-0.dll',
+   'C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance '
+   'Toolkit\\api-ms-win-crt-convert-l1-1-0.dll',
+   'BINARY'),
+  ('api-ms-win-crt-locale-l1-1-0.dll',
+   'C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance '
+   'Toolkit\\api-ms-win-crt-locale-l1-1-0.dll',
+   'BINARY'),
+  ('api-ms-win-crt-environment-l1-1-0.dll',
+   'C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance '
+   'Toolkit\\api-ms-win-crt-environment-l1-1-0.dll',
+   'BINARY'),
+  ('api-ms-win-crt-stdio-l1-1-0.dll',
+   'C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance '
+   'Toolkit\\api-ms-win-crt-stdio-l1-1-0.dll',
+   'BINARY'),
+  ('api-ms-win-crt-heap-l1-1-0.dll',
+   'C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance '
+   'Toolkit\\api-ms-win-crt-heap-l1-1-0.dll',
+   'BINARY'),
+  ('api-ms-win-crt-filesystem-l1-1-0.dll',
+   'C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance '
+   'Toolkit\\api-ms-win-crt-filesystem-l1-1-0.dll',
+   'BINARY'),
+  ('api-ms-win-crt-conio-l1-1-0.dll',
+   'C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance '
+   'Toolkit\\api-ms-win-crt-conio-l1-1-0.dll',
+   'BINARY'),
+  ('api-ms-win-crt-math-l1-1-0.dll',
+   'C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance '
+   'Toolkit\\api-ms-win-crt-math-l1-1-0.dll',
+   'BINARY'),
+  ('libcrypto-1_1.dll',
+   'C:\\Users\\keyang\\Desktop\\장건수\\99. '
+   'ETC\\python-3.9.0-embed-amd64\\libcrypto-1_1.dll',
+   'BINARY'),
+  ('api-ms-win-crt-utility-l1-1-0.dll',
+   'C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance '
+   'Toolkit\\api-ms-win-crt-utility-l1-1-0.dll',
+   'BINARY'),
+  ('libssl-1_1.dll',
+   'C:\\Users\\keyang\\Desktop\\장건수\\99. '
+   'ETC\\python-3.9.0-embed-amd64\\libssl-1_1.dll',
+   'BINARY'),
+  ('libffi-7.dll',
+   'C:\\Users\\keyang\\Desktop\\장건수\\99. '
+   'ETC\\python-3.9.0-embed-amd64\\libffi-7.dll',
+   'BINARY'),
+  ('wx\\wxbase32u_vc140_x64.dll',
+   'C:\\Users\\keyang\\Desktop\\장건수\\99. '
+   'ETC\\python-3.9.0-embed-amd64\\Lib\\site-packages\\wx\\wxbase32u_vc140_x64.dll',
+   'BINARY'),
+  ('wx\\VCRUNTIME140_1.dll',
+   'C:\\Users\\keyang\\Desktop\\장건수\\99. '
+   'ETC\\python-3.9.0-embed-amd64\\Lib\\site-packages\\wx\\VCRUNTIME140_1.dll',
+   'BINARY'),
+  ('wx\\wxmsw32u_core_vc140_x64.dll',
+   'C:\\Users\\keyang\\Desktop\\장건수\\99. '
+   'ETC\\python-3.9.0-embed-amd64\\Lib\\site-packages\\wx\\wxmsw32u_core_vc140_x64.dll',
+   'BINARY'),
+  ('wx\\VCRUNTIME140.dll',
+   'C:\\Users\\keyang\\Desktop\\장건수\\99. '
+   'ETC\\python-3.9.0-embed-amd64\\Lib\\site-packages\\wx\\VCRUNTIME140.dll',
+   'BINARY'),
+  ('wx\\wxmsw32u_html_vc140_x64.dll',
+   'C:\\Users\\keyang\\Desktop\\장건수\\99. '
+   'ETC\\python-3.9.0-embed-amd64\\Lib\\site-packages\\wx\\wxmsw32u_html_vc140_x64.dll',
+   'BINARY'),
+  ('wx\\wxbase32u_net_vc140_x64.dll',
+   'C:\\Users\\keyang\\Desktop\\장건수\\99. '
+   'ETC\\python-3.9.0-embed-amd64\\Lib\\site-packages\\wx\\wxbase32u_net_vc140_x64.dll',
+   'BINARY'),
+  ('wx\\MSVCP140.dll',
+   'C:\\Users\\keyang\\Desktop\\장건수\\99. '
+   'ETC\\python-3.9.0-embed-amd64\\Lib\\site-packages\\wx\\MSVCP140.dll',
+   'BINARY'),
+  ('ucrtbase.dll',
+   'C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance '
+   'Toolkit\\ucrtbase.dll',
+   'BINARY'),
+  ('api-ms-win-core-heap-l1-1-0.dll',
+   'C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance '
+   'Toolkit\\api-ms-win-core-heap-l1-1-0.dll',
+   'BINARY'),
+  ('api-ms-win-core-libraryloader-l1-1-0.dll',
+   'C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance '
+   'Toolkit\\api-ms-win-core-libraryloader-l1-1-0.dll',
+   'BINARY'),
+  ('api-ms-win-core-file-l2-1-0.dll',
+   'C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance '
+   'Toolkit\\api-ms-win-core-file-l2-1-0.dll',
+   'BINARY'),
+  ('api-ms-win-core-synch-l1-1-0.dll',
+   'C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance '
+   'Toolkit\\api-ms-win-core-synch-l1-1-0.dll',
+   'BINARY'),
+  ('api-ms-win-core-interlocked-l1-1-0.dll',
+   'C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance '
+   'Toolkit\\api-ms-win-core-interlocked-l1-1-0.dll',
+   'BINARY'),
+  ('api-ms-win-core-sysinfo-l1-1-0.dll',
+   'C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance '
+   'Toolkit\\api-ms-win-core-sysinfo-l1-1-0.dll',
+   'BINARY'),
+  ('api-ms-win-core-namedpipe-l1-1-0.dll',
+   'C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance '
+   'Toolkit\\api-ms-win-core-namedpipe-l1-1-0.dll',
+   'BINARY'),
+  ('api-ms-win-core-memory-l1-1-0.dll',
+   'C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance '
+   'Toolkit\\api-ms-win-core-memory-l1-1-0.dll',
+   'BINARY'),
+  ('api-ms-win-core-processthreads-l1-1-1.dll',
+   'C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance '
+   'Toolkit\\api-ms-win-core-processthreads-l1-1-1.dll',
+   'BINARY'),
+  ('api-ms-win-core-timezone-l1-1-0.dll',
+   'C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance '
+   'Toolkit\\api-ms-win-core-timezone-l1-1-0.dll',
+   'BINARY'),
+  ('api-ms-win-core-file-l1-1-0.dll',
+   'C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance '
+   'Toolkit\\api-ms-win-core-file-l1-1-0.dll',
+   'BINARY'),
+  ('api-ms-win-core-errorhandling-l1-1-0.dll',
+   'C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance '
+   'Toolkit\\api-ms-win-core-errorhandling-l1-1-0.dll',
+   'BINARY'),
+  ('api-ms-win-core-profile-l1-1-0.dll',
+   'C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance '
+   'Toolkit\\api-ms-win-core-profile-l1-1-0.dll',
+   'BINARY'),
+  ('api-ms-win-core-handle-l1-1-0.dll',
+   'C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance '
+   'Toolkit\\api-ms-win-core-handle-l1-1-0.dll',
+   'BINARY'),
+  ('api-ms-win-core-datetime-l1-1-0.dll',
+   'C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance '
+   'Toolkit\\api-ms-win-core-datetime-l1-1-0.dll',
+   'BINARY'),
+  ('api-ms-win-core-file-l1-2-0.dll',
+   'C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance '
+   'Toolkit\\api-ms-win-core-file-l1-2-0.dll',
+   'BINARY'),
+  ('api-ms-win-core-string-l1-1-0.dll',
+   'C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance '
+   'Toolkit\\api-ms-win-core-string-l1-1-0.dll',
+   'BINARY'),
+  ('api-ms-win-core-localization-l1-2-0.dll',
+   'C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance '
+   'Toolkit\\api-ms-win-core-localization-l1-2-0.dll',
+   'BINARY'),
+  ('api-ms-win-core-processthreads-l1-1-0.dll',
+   'C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance '
+   'Toolkit\\api-ms-win-core-processthreads-l1-1-0.dll',
+   'BINARY'),
+  ('api-ms-win-core-debug-l1-1-0.dll',
+   'C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance '
+   'Toolkit\\api-ms-win-core-debug-l1-1-0.dll',
+   'BINARY'),
+  ('api-ms-win-core-rtlsupport-l1-1-0.dll',
+   'C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance '
+   'Toolkit\\api-ms-win-core-rtlsupport-l1-1-0.dll',
+   'BINARY'),
+  ('api-ms-win-core-console-l1-1-0.dll',
+   'C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance '
+   'Toolkit\\api-ms-win-core-console-l1-1-0.dll',
+   'BINARY'),
+  ('api-ms-win-core-util-l1-1-0.dll',
+   'C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance '
+   'Toolkit\\api-ms-win-core-util-l1-1-0.dll',
+   'BINARY'),
+  ('api-ms-win-core-processenvironment-l1-1-0.dll',
+   'C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance '
+   'Toolkit\\api-ms-win-core-processenvironment-l1-1-0.dll',
+   'BINARY'),
+  ('api-ms-win-core-synch-l1-2-0.dll',
+   'C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance '
+   'Toolkit\\api-ms-win-core-synch-l1-2-0.dll',
+   'BINARY')],
+ [],
+ [],
+ [('base_library.zip',
+   'C:\\Users\\keyang\\Desktop\\장건수\\99. '
+   'ETC\\salary_lupin\\C_code_converter_flowchart\\build\\c_code_converter\\base_library.zip',
+   'DATA')])

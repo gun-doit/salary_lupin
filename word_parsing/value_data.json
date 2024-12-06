@@ -1,0 +1,3578 @@
+{
+    "DiagSessionTimer": [
+        "word",
+        "\uc9c4\ub2e8 \uc138\uc158 \ud0c0\uc774\uba38 \uac12"
+    ],
+    "b_DiaState": [
+        "byte",
+        "\uc9c4\ub2e8 \uc0c1\ud0dc On, Off \ud30c\uc545"
+    ],
+    "mwd_Uds_InitFlag": [
+        "byte",
+        "Mdw Uds \ucd08\uae30\ud654 \ud50c\ub798\uadf8"
+    ],
+    "gbDiaBatOk": [
+        "word",
+        "\uc9c4\ub2e8 \uc138\uc158 \ud0c0\uc774\uba38 \uac12"
+    ],
+    "gbEngineOff_IgnOn": [
+        "BYTE",
+        "Engine Off, Ign On \uc0c1\ud0dc"
+    ],
+    "gbEngineOff": [
+        "BYTE",
+        "Enable on/off \ud310\ub2e8 \uc774\uc804 \ubcc0\uc218"
+    ],
+    "gbGlaSensorDirection": [
+        "byte",
+        "\uae00\ub77c\uc2a4 \ubaa8\ud130 \ud68c\uc804 \ubc29\ud5a5 \ud30c\uc545"
+    ],
+    "gbBldSensorDirection": [
+        "byte",
+        "\ube14\ub77c\uc778\ub4dc \ubaa8\ud130 \ud68c\uc804 \ubc29\ud5a5 \ud30c\uc545"
+    ],
+    "gbRCMBldOperState": [
+        "byte",
+        "\ube14\ub77c\uc778\ub4dc \ub3d9\uc791 \uc0c1\ud0dc"
+    ],
+    "gbIgnOffCntBusoff": [
+        "byte",
+        "CAN BUS OFF \uac10\uc9c0\uc2dc Ign off \ud69f\uc218\ub97c \uce21\uc815\ud558\uae30 \uc704\ud55c \uce74\uc6b4\ud2b8 \ubcc0\uc218"
+    ],
+    "gbIgnOffCntGlsErr": [
+        "byte",
+        "Glass Motor Error\uac10\uc9c0\uc2dc Ign off \ud69f\uc218\ub97c \uce21\uc815\ud558\uae30 \uc704\ud55c \uce74\uc6b4\ud2b8 \ubcc0\uc218"
+    ],
+    "gbIgnOffCntSwSt": [
+        "byte",
+        "Switch Error \uac10\uc9c0\uc2dc Ign off \ud69f\uc218\ub97c \uce21\uc815\ud558\uae30 \uc704\ud55c \uce74\uc6b4\ud2b8 \ubcc0\uc218"
+    ],
+    "gbIgnOffCntBldErr": [
+        "byte",
+        "Blind Motor Error \uac10\uc9c0\uc2dc Ign off \ud69f\uc218\ub97c \uce21\uc815\ud558\uae30 \uc704\ud55c \uce74\uc6b4\ud2b8 \ubcc0\uc218"
+    ],
+    "gbIgnOffCntLINbusoff": [
+        "byte",
+        "LIN BUS OFF \uac10\uc9c0\uc2dc Ign off \ud69f\uc218\ub97c \uce21\uc815\ud558\uae30 \uc704\ud55c \uce74\uc6b4\ud2b8 \ubcc0\uc218"
+    ],
+    "gbDiagHashReq": [
+        "byte",
+        "Glass IVD \uc9c4\ud589\ud558\uae30 \uc704\ud574 Hash \uc694\uad6c\ub97c \uc704\ud55c Flag \ubcc0\uc218"
+    ],
+    "gbDiag_BLD_HashReq": [
+        "byte",
+        "Blind IVD \uc9c4\ud589\ud558\uae30 \uc704\ud574 Hash \uc694\uad6c\ub97c \uc704\ud55c Flag \uc218"
+    ],
+    "gbEnableCount": [
+        "byte",
+        "Enable on/off \ud310\ub2e8 \ubcc0\uc218"
+    ],
+    "gbEnableCountOld": [
+        "byte",
+        "Enable On/Off \uc800\uc7a5\uc744 \uc704\ud55c \ubcc0\uc218"
+    ],
+    "gbReprogramReq_A": [
+        "BYTE",
+        "Reprogram Start Request"
+    ],
+    "gbReprogramReq_B": [
+        "byte",
+        "\ube14\ub77c\uc778\ub4dc\uc81c\uc5b4\uae30 \uc5c5\ub370\uc774\ub97c \uc704\ud55c \uc0c1\ud0dc Flag"
+    ],
+    "gbReprogramReq_C": [
+        "byte",
+        "\ube14\ub77c\uc778\ub4dc\uc81c\uc5b4\uae30 \uc5c5\ub370\uc774\ub97c \uc704\ud55c \uc0c1\ud0dc Flag"
+    ],
+    "gbRequestBldClear": [
+        "Byte",
+        "\ube14\ub77c\uc778\ub4dc \uc81c\uc5b4\uae30 \ucd08\uae30\ud654 \ud574\uc81c \uc694\uccad\uc744 \uc704\ud55c Flag"
+    ],
+    "gbRequestBldIVD": [
+        "Byte",
+        "\ube14\ub77c\uc778\ub4dc IVD \uacc4\uc0b0\uc744 \uc694\uccad\ud558\uae30 \uc704\ud55c Flag"
+    ],
+    "gbBlindNotInitResult": [
+        "BYTE",
+        "Hall_Fault\nStall\nOverRide\nReinit\nErase"
+    ],
+    "RCM_CANRx_AppDiag": [
+        "typedef struct",
+        "uint8 RCM_Window_AsstPwrWdwSunroofEnblSta;\nuint8 RCM_DATC_OutTempSnsrVal;\nuint8 RCM_C_BlindCmdAVN;\nuint8 RCM_C_GlassCmdAVN;\nuint8 RCM_RKE_WdwUpDnReq;\nuint8 RCM_ATS_RRSunBlind;\nuint8 RCM_BCM_Ign2InSta;\nuint8 RCM_BCM_Ign1InSta;\nuint16 RCM_CLU_DisSpdVal_KPH;\nuint8 RCM_ENG_EngSta;\nuint8 RCM_VCU_EvDrvRdySta;\nuint8 RCM_C_RrGlassCmdAVN;\nuint8 RCM_C_RrBlindCmdAVN;\nuint16 RCM_HU_OptionInfo;\nuint8 RCM_Navi_AirConditionWarning;\nuint8 RCM_SGU_BlindOpenReq;"
+    ],
+    "gbSerialNum[]": [
+        "Uint8",
+        "\uc2dc\ub9ac\uc5bc \ub118\ubc84 \uc800\uc7a5 \ubc84\ud37c"
+    ],
+    "gbpartNumber[]": [
+        "Uint8",
+        "\ud30c\ud2b8 \ub118\ubc84 \uc800\uc7a5 \ubc84\ud37c"
+    ],
+    "gbdateNumber[]": [
+        "Uint8",
+        "\ub0a0\uc9dc \uc800\uc7a5 \ubc84\ud37c"
+    ],
+    "gbhardVersion[]": [
+        "Uint8",
+        "HW \ubc84\uc804 \uc800\uc7a5 \ubc84\ud37c"
+    ],
+    "b_DiaNvMErase": [
+        "boolean",
+        "NvM Erase\nOn\nOFF"
+    ],
+    "sbRequestClearDTC": [
+        "Uint8",
+        "DTC \ud074\ub9ac\uc5b4 \uc0c1\ud0dc \ud655\uc778"
+    ],
+    "sbRequestClearDTCNetwork": [
+        "Uint8",
+        "IGN 30\ud68c \ub9cc\uc871\uc5d0 \ub530\ub978 DTC Clear\uc694\uccad\uc744 \uc704\ud55c Flag"
+    ],
+    "gbInitialization_Status_Load": [
+        "byte",
+        "\uae00\ub77c\uc2a4\uc758 \ucd08\uae30\ud654 \uc0c1\ud0dc(\ubd80\ud558)\ub97c \ud310\ub2e8\ud558\uae30 \uc704\ud55c Flag"
+    ],
+    "gbInitialization_Status_Position": [
+        "byte",
+        "\uae00\ub77c\uc2a4\uc758 \ucd08\uae30\ud654 \uc0c1\ud0dc(\uc704\uce58)\ub97c \ud310\ub2e8\ud558\uae30 \uc704\ud55c Flag"
+    ],
+    "gbFront_Decalibarion_Cause": [
+        "byte",
+        "\uc804\uc11d \ucd08\uae30\ud654 \ud574\uc81c \uc6d0\uc778\uc744 \ud310\ub2e8\ud558\uae30 \uc704\ud55c Flag"
+    ],
+    "gbRear_Decalibarion_Cause": [
+        "byte",
+        "\ud6c4\uc11d \ucd08\uae30\ud654 \ud574\uc81c \uc6d0\uc778\uc744 \ud310\ub2e8\ud558\uae30 \uc704\ud55c Flag"
+    ],
+    "gbFront_Initialization_Fail_Cause": [
+        "byte",
+        "\uc804\uc11d \ucd08\uae30\ud654 \uc2e4\ud328 \uc6d0\uc778\uc744 \ud310\ub2e8\ud558\uae30 \uc704\ud55c Flag"
+    ],
+    "gbRear_Initialization_Fail_Cause": [
+        "byte",
+        "\ud6c4\uc11d \ucd08\uae30\ud654 \uc2e4\ud328 \uc6d0\uc778\uc744 \ud310\ub2e8\ud558\uae30 \uc704\ud55c Flag"
+    ],
+    "Front_OHC_Switch_Status_A": [
+        "byte",
+        "OHC \uc2a4\uc704\uce58 A \uc2e0\ud638 \ud310\ub2e8 \ubcc0\uc218"
+    ],
+    "Front_OHC_Switch_Status_B": [
+        "byte",
+        "OHC \uc2a4\uc704\uce58 B \uc2e0\ud638 \ud310\ub2e8 \ubcc0\uc218"
+    ],
+    "Front_OHC_Switch_Status_C": [
+        "byte",
+        "OHC \uc2a4\uc704\uce58 C \uc2e0\ud638 \ud310\ub2e8 \ubcc0\uc218"
+    ],
+    "Front_Glass_Anti_Pinch_Reaction_Status": [
+        "byte",
+        "Glass \uc548\ud2f0\ud540\uce58 \uac10\uc9c0 \uc0c1\ud0dc\ub97c \ud310\ub2e8\ud558\uae30 \uc704\ud55c \ubcc0\uc218"
+    ],
+    "Front_Blind_Anti_Pinch_Reaction_Status": [
+        "byte",
+        "Blind \uc548\ud2f0\ud540\uce58 \uac10\uc9c0 \uc0c1\ud0dc\ub97c \ud310\ub2e8\ud558\uae30 \uc704\ud55c \ubcc0\uc218"
+    ],
+    "Position_Failure": [
+        "byte",
+        "Glass or Blind \ucd08\uae30\ud654\uac00 \ud574\uc81c \uc0c1\ud0dc\ub97c \ud310\ubcc4\ud558\uae30 \uc704\ud55c Flag"
+    ],
+    "TeachStatus_Not_Find_Flag": [
+        "byte",
+        "Glass \ucd08\uae30\ud654 \ud574\uc81c\uc0ac\uc720\ub97c \ud310\ub2e8\ud558\uae30 \uc704\ud55c \ubcc0\uc218"
+    ],
+    "Front_Glass_Hall_Fault_Flag": [
+        "byte",
+        "Glass Hall Fault\uac00 \uac10\uc9c0\ub418\uc5c8\uc744 \ub54c \ubc1c\uc0dd\ud558\ub294 \ubcc0\uc218"
+    ],
+    "Front_Glass_Motor_Fault_State_Flag": [
+        "byte",
+        "Glass \uc81c\uc5b4\uae30\uac00 \uacfc\uc804\ub958\uac00 \uac10\uc9c0\ub418\uc5c8\uc744 \ub54c \ubc1c\uc0dd\ud558\ub294 \ubcc0\uc218"
+    ],
+    "gb_Diag_RCM_OptType": [
+        "Uint8",
+        "RCM \uc81c\uc5b4\uae30 Option Type\uc744 \uc1a1\ucd9c\ud558\uae30 \uc704\ud55c \ubcc0\uc218"
+    ],
+    "NvM_ErrorStatus_Flag": [
+        "Uint8",
+        "Glass \uc81c\uc5b4\uae30\uc758 NVM \uace0\uc7a5 \uc0c1\ud0dc\ub97c \ubc18\ubcc4\ud558\uae30 \uc704\ud55c \ubcc0\uc218"
+    ],
+    "gbEcuInlineMode_Flag": [
+        "Uint8",
+        "gbEcuInlineMode \ubcc0\uacbd \uce74\uc6b4\ud130 \ubcc0\uc218"
+    ],
+    "Out_of_Voltage_flag": [
+        "Uint8",
+        "Glass \uc81c\uc5b4\uae30\uc758 \uacf5\uae09\ub418\ub294 \uc804\uc555\uc774 \uc815\uc0c1\uc5ec\ubd80\ub97c \ucd9c\ub825\ud558\uae30 \uc704\ud55c \ubcc0\uc218"
+    ],
+    "Init_Fail_Cause_Enable_Off_flag": [
+        "Uint8",
+        "\ucd08\uae30\ud654 \ud574\uc81c \uc6d0\uc778\uc5d0 \ub300\ud558\uc5ec IGN OFF\uc0c1\ud0dc\uc640 \uc5f0\uad00\uc788\ub294\uc9c0\ub97c \ud310\ub2e8\ud558\uae30 \uc704\ud55c \ubcc0\uc218"
+    ],
+    "fBlind_TeachStatus_Back": [
+        "uint16",
+        "\ube14\ub77c\uc778\ub4dc \ucd08\uae30\ud654 \uc0c1\ud0dc \uc804\uac12"
+    ],
+    "fBlind_TeachStatus_Back_1": [
+        "uint16",
+        "\ube14\ub77c\uc778\ub4dc \ucd08\uae30\ud654 \uc0c1\ud0dc \uc804\uc804\uac12"
+    ],
+    "fBlind_TeachStatus_Back_ago": [
+        "uint16",
+        "\ube14\ub77c\uc778\ub4dc \ucd08\uae30\ud654 \uc0c1\ud0dc \uc804\uc804\uc804\uac12"
+    ],
+    "CAN_BUS_OFF_CNT": [
+        "uint16",
+        "CAN BUS OFF \uc720\uc9c0 \uc2dc\uac04 \uce74\uc6b4\ud2b8 \ubcc0\uc218"
+    ],
+    "LIN_BUS_OFF_CNT": [
+        "uint16",
+        "LIN BUS OFF \uc720\uc9c0 \uc2dc\uac04 \uce74\uc6b4\ud2b8 \ubcc0\uc218"
+    ],
+    "Uds_Mode_STATE": [
+        "enum",
+        "cUds_Mode_Init\ncUds_Mode_BatOn"
+    ],
+    "RCM_DiagInput": [
+        "typedef struct",
+        "uint16 RCM_BatteryVoltage;\nuint8 RCM_ApplicationInit;\nuint8 RCM_gbComBatMode;\nuint8 RCM_gbIOBatMode;\nuint8 RCM_gbDiagBatMode;\nuint8 RCM_gbLPCondition;"
+    ],
+    "sbUds_Mode": [
+        "enum",
+        "Uds \uc0c1\ud0dc \ud655\uc778\ncUds_Mode_Init\ncUds_Mode_BatOn"
+    ],
+    "retValue": [
+        "Uint8",
+        "RTE_E_OK \ud30c\uc545"
+    ],
+    "sbMdw_Uds_InitFlag": [
+        "BYTE",
+        "SWP Init Complete \ud655\uc778"
+    ],
+    "RCM_CANRx_AppDiag.RCM_Window_AsstPwrWdwSunroofEnblSta": [
+        "uint8",
+        "Enable \uc0c1\ud0dc \ud30c\uc545"
+    ],
+    "gb_Option_E_Sta": [
+        "",
+        ""
+    ],
+    "RCM_CANRx_AppDiag.RCM_ENG_EngSta": [
+        "uint8",
+        "ST_RCM_CANRx\n\uc5d4\uc9c4 \uc0c1\ud0dc"
+    ],
+    "RCM_CANRx_AppDiag.RCM_VCU_EvDrvRdySta": [
+        "uint8",
+        "HEV \uc0c1\ud0dc"
+    ],
+    "RCM_CANRx_AppDiag.RCM_BCM_Ign1InSta": [
+        "uint8",
+        "IGN1 \uc0c1\ud0dc"
+    ],
+    "RCM_CANRx_AppDiag.RCM_BCM_Ign2InSta": [
+        "uint8",
+        "IGN2 \uc0c1\ud0dc"
+    ],
+    "bTemp": [
+        "byte",
+        "\uc9c4\ub2e8 \ubc30\ud130\ub9ac \uc0c1\ud0dc \ud655\uc778"
+    ],
+    "ErrorCode": [
+        "Dcm_NegativeResponseCodeType",
+        "\uc0c1\uc138 \ub0b4\uc6a9\uc740 AUTOEVER_AUTOSAR_Dcm_UM \ubb38\uc11c \ucc38\uace0"
+    ],
+    "Data": [
+        "uint8",
+        "AUTOSAR \ud50c\ub7ab\ud3fc data"
+    ],
+    "DataLength": [
+        "uint16",
+        ""
+    ],
+    "OpStatus": [
+        "Dcm_OpStatusType",
+        "\uc0c1\uc138 \ub0b4\uc6a9\uc740 AUTOEVER_AUTOSAR_Dcm_UM \ubb38\uc11c \ucc38\uace0"
+    ],
+    "RTE_E_OK": [
+        "define",
+        "RTE_E_OK \uc0c1\ud0dc \uc9c4\ub2e8"
+    ],
+    "LddRetVal": [
+        "uint8",
+        "RTE \uc0c1\ud0dc \ubc18\ud658"
+    ],
+    "mbData0": [
+        "uint8",
+        "Init \ubaa8\ub4dc \uc0c1\ud0dc"
+    ],
+    "gbEcuInlineMode": [
+        "BYTE",
+        "ECU \ub7ec\ub2dd \uc0c1\ud0dc \ud655\uc778"
+    ],
+    "gbEcuAutoInitialApplied": [
+        "BYTE",
+        "ECU \ub7ec\ub2dd \uc0c1\ud0dc \ud655\uc778"
+    ],
+    "gbpartNumber": [
+        "",
+        ""
+    ],
+    "gbSerialNum": [
+        "",
+        ""
+    ],
+    "mbPending": [
+        "",
+        ""
+    ],
+    "gstCANcomm.u8RCM02_RCM_SunroofOpnSta": [
+        "Uint8",
+        "Glass \uc0c1\ud0dc \ud30c\uc545"
+    ],
+    "App_Function_gstFaultMon.uGlass.flag.fGlass_TeachStatus": [
+        "uint8",
+        "Glass \ud559\uc2b5 \uc644\ub8cc \uc0c1\ud0dc data"
+    ],
+    "DataOut_Out_RoutineStatus": [
+        "StartDataOutType_RID_0300h_OTAReady_Out_RoutineStatus",
+        "\uc0c1\uc138 \ub0b4\uc6a9\uc740 AUTOEVER_AUTOSAR_Dcm_UM \ubb38\uc11c \ucc38\uace0"
+    ],
+    "DataIn_startRoutineIn": [
+        "StartDataInType_RID_12A3h_Teaching_startRoutineIn",
+        ""
+    ],
+    "DataOut_TeachingStart": [
+        "StartDataOutType_RID_12A3h_Teaching_TeachingStart",
+        ""
+    ],
+    "DataIn_stopRoutineIn": [
+        "StopDataInType",
+        ""
+    ],
+    "DataOut_TeachingStop": [
+        "StopDataOutType",
+        ""
+    ],
+    "DataOut_TeachingResults": [
+        "RequestDataOutType",
+        ""
+    ],
+    "App_Monitor_gstGlaHallMon.enVelDirStatus": [
+        "enum",
+        "Glass \ubaa8\ud130 \ub3d9\uc791 \ubc29\ud5a5\nGlassValDir_Timeout = 0,\nGlassValDir_CW,\nGlassValDir_CCW"
+    ],
+    "gb_CANSIG_RCM_BldOpSta": [
+        "BYTE",
+        "CANSIG_RCM_BldOpSta"
+    ],
+    "mbBatNoramlFlag": [
+        "Byte",
+        "\ubc30\ud130\ub9ac \uc0c1\ud0dc \uc815\uc758"
+    ],
+    "mbBatNoramlFlagOld": [
+        "uint16",
+        "\uc774\uc804 \ubc30\ud130\ub9ac \uc0c1\ud0dc \uc815\uc758"
+    ],
+    "retrunVale": [
+        "Uint8",
+        "API \uc0c1\ud0dc \ud655\uc778"
+    ],
+    "EventStatusExtended": [
+        "typedef unsigned char",
+        "\uc9c4\ub2e8 \ucf54\ub4dc \uacc4\uc0b0\uc744 \uc704\ud55c \ubcc0\uc218"
+    ],
+    "returnValue": [
+        "Uint8",
+        "RTE \ubc84\uc2a4 \uc624\ud504 \uc0c1\ud0dc \uac12 \ubc18\ud658"
+    ],
+    "mbIgnOffCnt": [
+        "BYTE",
+        "IGN \uc2e0\ud638 Off count"
+    ],
+    "gstCANcomm.u8RCM01_RCM_SwStckDet": [
+        "uint8",
+        "\uc2a4\uc704\uce58 Stuck detection data"
+    ],
+    "App_Interface_gstFaultMon.uGlass.flag.fGlass_Hall_Error_Detection": [
+        "Uint8",
+        "Glass Hall sensor Error \ud30c\uc545"
+    ],
+    "App_Function_gstFaultMon.uBlind.flag.fBlind_Hall_Error_Detection": [
+        "Uint8",
+        "Blind Hall Error Detect Data"
+    ],
+    "Rte_Read_R_b_DiaState_BCAN_BusOffState": [
+        "Uint8",
+        "CAN BUS OFF \ud310\ub2e8"
+    ],
+    "App_Function_gstFaultMon.uGlass.flag.fGlass_CommunicationError_Detection": [
+        "uint8",
+        "\ube14\ub77c\uc778\ub4dc \uc5c6\uc744 \uacbd\uc6b0 \ud1b5\uc2e0 \uc5d0\ub7ec\ub97c \ud1b5\ud574 \uc120\ub8e8\ud504 \ud0c0\uc785 \ud30c\uc545"
+    ],
+    "mbSetValSW": [
+        "Byte",
+        "DEM \uc0c1\ud0dc \ud30c\uc545"
+    ],
+    "mbRteRetValSW": [
+        "Uint8",
+        "\uc2a4\uc704\uce58 \uc5d0\ub7ec \uc9c4\ub2e8"
+    ],
+    "mbSetValGlass": [
+        "Byte",
+        "Glass DEM \uc0c1\ud0dc \ud30c\uc545"
+    ],
+    "mbRteRetValGlass": [
+        "Uint8",
+        "Glass \ubaa8\ud130 \uc5d0\ub7ec \uc9c4\ub2e8"
+    ],
+    "mbSetValBlind": [
+        "Byte",
+        "Blind DEM \uc0c1\ud0dc \ud30c\uc545"
+    ],
+    "mbRteRetValBlind": [
+        "Uint8",
+        "Blind \ubaa8\ud130 \uc5d0\ub7ec \uc9c4\ub2e8"
+    ],
+    "mbSetValCANBusoff": [
+        "Byte",
+        "CAN BUS OFF \ud310\ub2e8"
+    ],
+    "mbRteRetValLINBusoff": [
+        "Byte",
+        "LIN BUS OFF \ud310\ub2e8"
+    ],
+    "mb_NvMBlk1B[]": [
+        "byte",
+        "NvM ram image buffer for 1byte blocks"
+    ],
+    "mb_NvMBlk1BInitVal[]": [
+        "byte",
+        ""
+    ],
+    "gbInitializationState": [
+        "byte",
+        ""
+    ],
+    "gbEcuRunning": [
+        "BYTE",
+        "ECU \ub7ec\ub2dd \uc0c1\ud0dc \ud655\uc778"
+    ],
+    "gbEcuAutoInitial": [
+        "byte",
+        "\uc624\ud1a0 \ucd08\uae30\ud654"
+    ],
+    "gbEcuRoofType": [
+        "byte",
+        ""
+    ],
+    "gbDtcFailHistoryCanBusOff": [
+        "byte",
+        ""
+    ],
+    "m_InitializationState": [
+        "Word",
+        "NvM \ube14\ub85d"
+    ],
+    "m_EcuRunning": [
+        "BYTE",
+        "ECU \ub7ec\ub2dd \uc0c1\ud0dc \ud655\uc778"
+    ],
+    "m_EcuAutoInitial": [
+        "byte",
+        "NvM \ube14\ub85d"
+    ],
+    "m_EcuAutoInitialApplied": [
+        "byte",
+        "NvM \ube14\ub85d"
+    ],
+    "m_EcuInlineMode": [
+        "Byte",
+        "NvM \ube14\ub85d"
+    ],
+    "m_DtcFailHistoryCanBusOff": [
+        "byte",
+        "NvM \ube14\ub85d"
+    ],
+    "m_EcuRoofType": [
+        "Byte",
+        "NvM \ube14\ub85d"
+    ],
+    "m_Gla_OperCnt": [
+        "Byte",
+        "NvM \ube14\ub85d"
+    ],
+    "m_MovingMonitoring": [
+        "Byte",
+        "NvM \ube14\ub85d"
+    ],
+    "gbMovingMonitoring": [
+        "byte",
+        ""
+    ],
+    "m_EcuHwVer[]": [
+        "Byte",
+        "ECU HW \ubc84\uc804 \uc800\uc7a5 \ubc84\ud37c"
+    ],
+    "m_EcuManufacDate[]": [
+        "byte",
+        "ECU \ub0a0\uc9dc \uc800\uc7a5 \ubc84\ud37c"
+    ],
+    "m_EcuSerialNum[]": [
+        "byte",
+        "ECU \uc2dc\ub9ac\uc5bc \ub118\ubc84 \uc800\uc7a5 \ubc84\ud37c"
+    ],
+    "m_EcuPartNum[]": [
+        "byte",
+        "ECU \ud30c\ud2b8 \ub118\ubc84 \uc800\uc7a5 \ubc84\ud37c"
+    ],
+    "m_EcuLoadData[]": [
+        "byte",
+        "ECU \ubd80\ud558 \ub370\uc774\ud130 \uc800\uc7a5 \ubc84\ud37c"
+    ],
+    "m_EcuLoadVoltData[]": [
+        "byte",
+        ""
+    ],
+    "m_GlassEEpNotInit[]": [
+        "byte",
+        ""
+    ],
+    "m_BlindEEpNotInit[]": [
+        "byte",
+        ""
+    ],
+    "m_gbIgnOffCntBusoff": [
+        "Byte",
+        "NvM \ube14\ub85d"
+    ],
+    "m_gbIgnOffCntGlsErr": [
+        "Byte",
+        "NvM \ube14\ub85d"
+    ],
+    "m_gbIgnOffCntSwSt": [
+        "Byte",
+        "NvM \ube14\ub85d"
+    ],
+    "m_gbIgnOffCntBldErr": [
+        "Byte",
+        "NvM \ube14\ub85d"
+    ],
+    "m_gbHallAState": [
+        "Byte",
+        "NvM \ube14\ub85d"
+    ],
+    "m_gbHallBState": [
+        "byte",
+        "NvM \ube14\ub85d"
+    ],
+    "m_gbHallLatEdgeState": [
+        "byte",
+        "NvM \ube14\ub85d"
+    ],
+    "gbHallAState": [
+        "BYTE",
+        "\ud604\uc7ac Hall \uc0c1\ud0dc"
+    ],
+    "gbHallBState": [
+        "BYTE",
+        "\ud604\uc7ac Hall \uc0c1\ud0dc"
+    ],
+    "gbHallLatEdgeState": [
+        "byte",
+        "B Hall Last Edge Memory"
+    ],
+    "gbLoadUpdate": [
+        "byte",
+        "\ubd80\ud558 \ud559\uc2b5"
+    ],
+    "gbLoadVoltUpdate": [
+        "Byte",
+        "\uc911\ub2e8 \uc704\uce58"
+    ],
+    "gbCurrentPosMovingStopReq": [
+        "BYTE",
+        "\ud604\uc7ac \uc704\uce58 \uc800\uc7a5 \ud50c\ub798\uadf8"
+    ],
+    "gwCurrentPos": [
+        "WORD",
+        "\ud604\uc7ac Hall \uc704\uce58"
+    ],
+    "gwCurrentPosMovingStop": [
+        "WORD",
+        "\uc911\ub2e8 \uc704\uce58"
+    ],
+    "m_CurrentPos": [
+        "Word",
+        "NvM \ube14\ub85d"
+    ],
+    "m_CurrentPosMovinigStop": [
+        "Word",
+        ""
+    ],
+    "m_gbFront_Initialization_Fail_Cause": [
+        "byte",
+        ""
+    ],
+    "m_gbFront_Decalibarion_Cause": [
+        "byte",
+        "NvM \ube14\ub85d"
+    ],
+    "m_GlassFullCloseCount": [
+        "Word",
+        "NvM \ube14\ub85d"
+    ],
+    "gGlassFullCloseCount": [
+        "Word",
+        ""
+    ],
+    "m_FactoryInitialCompleted": [
+        "Byte",
+        "NvM \ube14\ub85d"
+    ],
+    "gFactoryInitialCompleted": [
+        "byte",
+        ""
+    ],
+    "NvM_Mode_STATE": [
+        "enum",
+        "NvM \uc0c1\ud0dc\ncNvM_Mode_Init,\ncNvM_Mode_BatOn,"
+    ],
+    "sf_NvMBlk1B": [
+        "byte",
+        "NvM \ube14\ub85d"
+    ],
+    "NvM_Mode_INPUT": [
+        "struct",
+        "BYTE BswInitFlag\nBYTE NvMInitFlag"
+    ],
+    "ST_RCM_Input": [
+        "typedef struct",
+        "RCM Input\t\nuint16 RCM_BatteryVoltage;\nuint8 RCM_ApplicationInit;\nuint8 RCM_gbComBatMode;\nuint8 RCM_gbIOBatMode;\nuint8 RCM_gbDiagBatMode;\nuint8 RCM_gbLPCondition;"
+    ],
+    "gbNVMTimeTest": [
+        "byte",
+        ""
+    ],
+    "gbNVMReqTest": [
+        "BYTE",
+        "NvM \uc0c1\ud0dc \ud30c\uc545"
+    ],
+    "gbNVMReturnTest": [
+        "Byte",
+        ""
+    ],
+    "NvM_ErrorStatus": [
+        "Uint16",
+        ""
+    ],
+    "sbNvM_Mode": [
+        "enum",
+        "NvM \ucd08\uae30 \uc0c1\ud0dc \ubaa8\ub4dc \ud655\uc778\ncNvM_Mode_Init,\ncNvM_Mode_BatOn,"
+    ],
+    "RequestResultPtr": [
+        "Unit8",
+        "NvM \ud0c0\uc785 \ud0c0\uc785 \uc815\uc758"
+    ],
+    "inp.BswInitFlag": [
+        "Byte",
+        "BSW Init Completed"
+    ],
+    "inp.NvMInitFlag": [
+        "Byte",
+        "NvM Init Completed"
+    ],
+    "RCM_NvMInput.RCM_gbIOBatMode": [
+        "typedef struct",
+        "NvM Init \ubc30\ud130\ub9ac \ubaa8\ub4dc\nuint16 RCM_BatteryVoltage;\nuint8 RCM_ApplicationInit;\nuint8 RCM_gbComBatMode;\nuint8 RCM_gbIOBatMode;\nuint8 RCM_gbDiagBatMode;\nuint8 RCM_gbLPCondition;"
+    ],
+    "bId": [
+        "BYTE",
+        "\ud604\uc7ac \uc704\uce58 \uac12"
+    ],
+    "m_CurrentPosMovingStop": [
+        "Byte",
+        "NvM \ube14\ub85d"
+    ],
+    "m_Glas_OperCnt": [
+        "Byte",
+        ""
+    ],
+    "m_gbIgnOffCntBusOff": [
+        "Byte",
+        ""
+    ],
+    "a": [
+        "byte",
+        ""
+    ],
+    "b": [
+        "byte",
+        ""
+    ],
+    "c": [
+        "byte",
+        ""
+    ],
+    "d": [
+        "byte",
+        ""
+    ],
+    "f": [
+        "byte",
+        ""
+    ],
+    "g": [
+        "byte",
+        ""
+    ],
+    "e": [
+        "word",
+        ""
+    ],
+    "App_Monitor_gstGlaAnPin.s8PosLoadBuff": [
+        "uint8",
+        "Glass Anti-Pinch \ubc84\ud37c"
+    ],
+    "s_CurrentPos": [
+        "Word",
+        "\ud604\uc7ac \uc704\uce58 \uc800\uc7a5 \uc804 \ubc84\ud37c"
+    ],
+    "CurrentPos_JobF": [
+        "Unit8",
+        ""
+    ],
+    "s_InitializationState": [
+        "byte",
+        "\ud604\uc7ac \uc704\uce58 \uc800\uc7a5 \uc804 \ubc84\ud37c"
+    ],
+    "InitializationState_JobF": [
+        "Unit8",
+        ""
+    ],
+    "s_EcuHwVer": [
+        "Byte",
+        "\ud604\uc7ac \uc704\uce58 \uc800\uc7a5 \uc804 \ubc84\ud37c"
+    ],
+    "EcuHwVer_JobF": [
+        "Unit8",
+        "\uc911\ub2e8 \uc704\uce58"
+    ],
+    "s_EcuManufacDate": [
+        "Byte",
+        "\ud604\uc7ac \uc704\uce58 \uc800\uc7a5 \uc804 \ubc84\ud37c"
+    ],
+    "EcuManufacDate_JobF": [
+        "Unit8",
+        ""
+    ],
+    "s_EcuSerialNum": [
+        "Byte",
+        "\ud604\uc7ac \uc704\uce58 \uc800\uc7a5 \uc804 \ubc84\ud37c"
+    ],
+    "EcuSerialNum_JobF": [
+        "Uint8",
+        "\uc911\ub2e8 \uc704\uce58"
+    ],
+    "s_EcuPartNum": [
+        "Byte",
+        "\ud604\uc7ac \uc704\uce58 \uc800\uc7a5 \uc804 \ubc84\ud37c"
+    ],
+    "EcuPartNum_JobF": [
+        "Unit8",
+        ""
+    ],
+    "i": [
+        "Uint8",
+        ""
+    ],
+    "s_EcuLoadData": [
+        "Byte",
+        "\ud604\uc7ac \uc704\uce58 \uc800\uc7a5 \uc804 \ubc84\ud37c"
+    ],
+    "EcuLoadData_JobF": [
+        "Unit8",
+        ""
+    ],
+    "s_EcuAutoInitial": [
+        "Byte",
+        "\ud604\uc7ac \uc704\uce58 \uc800\uc7a5 \uc804 \ubc84\ud37c"
+    ],
+    "EcuAutoInitial_JobF": [
+        "Unit8",
+        ""
+    ],
+    "s_EcuRunning": [
+        "Byte",
+        "\ud604\uc7ac \uc704\uce58 \uc800\uc7a5 \uc804 \ubc84\ud37c"
+    ],
+    "EcuRunning_JobF": [
+        "Unit8",
+        ""
+    ],
+    "s_EcuAutoInitialApplied": [
+        "Byte",
+        "\ud604\uc7ac \uc704\uce58 \uc800\uc7a5 \uc804 \ubc84\ud37c"
+    ],
+    "EcuAutoInitialApplied_JobF": [
+        "Unit8",
+        ""
+    ],
+    "s_EcuInlineMode": [
+        "Byte",
+        "\ud604\uc7ac \uc704\uce58 \uc800\uc7a5 \uc804 \ubc84\ud37c"
+    ],
+    "EcuInlineMode_JobF": [
+        "Unit8",
+        ""
+    ],
+    "s_DtcFailHistoryCanBusOff": [
+        "Byte",
+        "\ud604\uc7ac \uc704\uce58 \uc800\uc7a5 \uc804 \ubc84\ud37c"
+    ],
+    "DtcFailHistoryCanBusOff_JobF": [
+        "Unit8",
+        ""
+    ],
+    "s_MovingMonitoring": [
+        "Byte",
+        "\ud604\uc7ac \uc704\uce58 \uc800\uc7a5 \uc804 \ubc84\ud37c"
+    ],
+    "MovingMonitoring_JobF": [
+        "Unit8",
+        ""
+    ],
+    "s_CurrentPosMovingStop": [
+        "Byte",
+        "\ud604\uc7ac \uc704\uce58 \uc800\uc7a5 \uc804 \ubc84\ud37c"
+    ],
+    "CurrentPosMovingStop_JobF": [
+        "Unit8",
+        ""
+    ],
+    "s_EcuRoofType": [
+        "Byte",
+        "\ud604\uc7ac \uc704\uce58 \uc800\uc7a5 \uc804 \ubc84\ud37c"
+    ],
+    "EcuRoofType_JobF": [
+        "Unit8",
+        ""
+    ],
+    "s_Gla_OperCnt": [
+        "Byte",
+        "\ud604\uc7ac \uc704\uce58 \uc800\uc7a5 \uc804 \ubc84\ud37c"
+    ],
+    "Gla_OperCnt_JobF": [
+        "Unit8",
+        ""
+    ],
+    "s_gbIgnOffCntBusoff": [
+        "Byte",
+        "\ud604\uc7ac \uc704\uce58 \uc800\uc7a5 \uc804 \ubc84\ud37c"
+    ],
+    "gbIgnOffCntBusoff_JobF": [
+        "Unit8",
+        ""
+    ],
+    "s_gbIgnOffCntGlsErr": [
+        "Byte",
+        "\ud604\uc7ac \uc704\uce58 \uc800\uc7a5 \uc804 \ubc84\ud37c"
+    ],
+    "gbIgnOffCntGlsErr_JobF": [
+        "Unit8",
+        ""
+    ],
+    "s_gbIgnOffCntSwSt": [
+        "Byte",
+        "\ud604\uc7ac \uc704\uce58 \uc800\uc7a5 \uc804 \ubc84\ud37c"
+    ],
+    "gbIgnOffCntSwSt_JobF": [
+        "Unit8",
+        ""
+    ],
+    "s_gbIgnOffCntBldErr": [
+        "Byte",
+        "\ud604\uc7ac \uc704\uce58 \uc800\uc7a5 \uc804 \ubc84\ud37c"
+    ],
+    "gbIgnOffCntBldErr_JobF": [
+        "Unit8",
+        ""
+    ],
+    "s_gbHallAState": [
+        "Byte",
+        "\ud604\uc7ac \uc704\uce58 \uc800\uc7a5 \uc804 \ubc84\ud37c"
+    ],
+    "gbHallAState_JobF": [
+        "Unit8",
+        ""
+    ],
+    "s_gbHallBState": [
+        "Byte",
+        "\ud604\uc7ac \uc704\uce58 \uc800\uc7a5 \uc804 \ubc84\ud37c"
+    ],
+    "gbHallBState_JobF": [
+        "Unit8",
+        ""
+    ],
+    "s_gbHallLatEdgeState": [
+        "Byte",
+        "\ud604\uc7ac \uc704\uce58 \uc800\uc7a5 \uc804 \ubc84\ud37c"
+    ],
+    "gbHallLatEdgeState_JobF": [
+        "Unit8",
+        ""
+    ],
+    "s_EcuLoadVoltData": [
+        "Byte",
+        "\ud604\uc7ac \uc704\uce58 \uc800\uc7a5 \uc804 \ubc84\ud37c"
+    ],
+    "EcuLoadVoltData_JobF": [
+        "Unit8",
+        ""
+    ],
+    "s_GlassEEpNotInit": [
+        "Byte",
+        "\ud604\uc7ac \uc704\uce58 \uc800\uc7a5 \uc804 \ubc84\ud37c"
+    ],
+    "GlassEEpNotInit_JobF": [
+        "Unit8",
+        ""
+    ],
+    "s_BlindEEpNotInit": [
+        "Byte",
+        "\ud604\uc7ac \uc704\uce58 \uc800\uc7a5 \uc804 \ubc84\ud37c"
+    ],
+    "BlindEEpNotInit_JobF": [
+        "Unit8",
+        ""
+    ],
+    "s_gbFront_Initialization_Fail_Cause": [
+        "Byte",
+        "\ud604\uc7ac \uc704\uce58 \uc800\uc7a5 \uc804 \ubc84\ud37c"
+    ],
+    "gbFront_Initialization_Fail_Cause_JobF": [
+        "Uint8",
+        "NvM \ube14\ub85d"
+    ],
+    "s_gbFront_Decalibarion_Cause": [
+        "Byte",
+        "\ud604\uc7ac \uc704\uce58 \uc800\uc7a5 \uc804 \ubc84\ud37c"
+    ],
+    "gbFront_Decalibarion_Cause_JobF": [
+        "Unit8",
+        ""
+    ],
+    "s_GlassFullCloseCount": [
+        "Word",
+        "\ud604\uc7ac \uc704\uce58 \uc800\uc7a5 \uc804 \ubc84\ud37c"
+    ],
+    "gGlassFullCloseCount_JobF": [
+        "Unit8",
+        ""
+    ],
+    "s_FactoryInitialCompleted": [
+        "byte",
+        "\ud604\uc7ac \uc704\uce58 \uc800\uc7a5 \uc804 \ubc84\ud37c"
+    ],
+    "gFactoryInitialCompleted_JobF": [
+        "Unit8",
+        ""
+    ],
+    "BlockRequest": [
+        "Uint8",
+        "\uc790\uc138\ud55c \ub0b4\uc6a9\uc740 AUTRON_AUTOSAR_NvM_UM.pdf \ucc38\uace0"
+    ],
+    "JobResult": [
+        "NvM_RequestResultType",
+        "\uc790\uc138\ud55c \ub0b4\uc6a9\uc740 AUTRON_AUTOSAR_NvM_UM.pdf \ucc38\uace0"
+    ],
+    "m_EcuHwVer": [
+        "Byte",
+        "NvM \ube14\ub85d"
+    ],
+    "m_EcuManufacDate": [
+        "Byte",
+        "NvM \ube14\ub85d"
+    ],
+    "m_EcuSerialNum": [
+        "Byte",
+        "NvM \ube14\ub85d"
+    ],
+    "m_EcuPartNum": [
+        "byte",
+        "NvM \ube14\ub85d"
+    ],
+    "m_EcuLoadData": [
+        "Byte",
+        "NvM \ube14\ub85d"
+    ],
+    "m_EcuLoadVoltData": [
+        "byte",
+        "NvM \ube14\ub85d"
+    ],
+    "m_GlassEEpNotInit": [
+        "byte",
+        "NvM \ube14\ub85d"
+    ],
+    "m_BlindEEpNotInit": [
+        "byte",
+        "NvM \ube14\ub85d"
+    ],
+    "N/A": [
+        "",
+        ""
+    ],
+    "LddRT": [
+        "Uint8",
+        ""
+    ],
+    "gw_BatVoltRowAD": [
+        "WORD",
+        "BatteryVoltage_ReadDirect \ucd9c\ub825"
+    ],
+    "gw_5VMonitorAD": [
+        "WORD",
+        "5VMonitor_ReadDirect \ucd9c\ub825"
+    ],
+    "gw_ISOMonitorAD": [
+        "WORD",
+        ""
+    ],
+    "gw_CANSIG_RCM_CurBldHallSnsrCnt": [
+        "WORD",
+        "CANSIG_RCM_BldHallSnsrPlsCnt"
+    ],
+    "gw_Commni_Blind_Fault": [
+        "WORD",
+        "Commni_Blind_Fault"
+    ],
+    "gbCountTest": [
+        "byte",
+        "Count \uacc4\uc0b0\uc744 \uc704\ud55c \uac12"
+    ],
+    "gb_CANSIG_RCM_BldInitSta": [
+        "BYTE",
+        "CANSIG_RCM_BldInitSta"
+    ],
+    "gb_CANSIG_RCM_BldAntPchSta": [
+        "BYTE",
+        "CANSIG_RCM_BldAntPchSta"
+    ],
+    "gb_CANSIG_RCM_BldMtrHiTempSta": [
+        "BYTE",
+        "CANSIG_RCM_BldMtrHiTempSta"
+    ],
+    "gb_CANSIG_RCM_BldMtRunTtlTime": [
+        "BYTE",
+        "CANSIG_RCM_BldMtRunTtlTime"
+    ],
+    "gb_CANSIG_RCM_BldPosSta": [
+        "BYTE",
+        "CANSIG_RCM_BldPosSta"
+    ],
+    "gb_CANSIG_RCM_BldFltVal": [
+        "BYTE",
+        "CANSIG_RCM_BldFltVal"
+    ],
+    "gb_CANSIG_RCM_BldFltSta": [
+        "BYTE",
+        "CANSIG_RCM_BldFltSta"
+    ],
+    "gb_Commni_Command_Target_Return": [
+        "BYTE",
+        "Commni_Command_Target_Return"
+    ],
+    "gb_Commni_Blind_Position_Area": [
+        "BYTE",
+        "Commni_Blind_Position_Area"
+    ],
+    "gb_Commni_ReinitBlindStatus": [
+        "BYTE",
+        "Commni_ReinitBlindStatus"
+    ],
+    "gb_Commni_OperateModeReturn": [
+        "BYTE",
+        "Commni_OperateModeReturn"
+    ],
+    "gb_Commni_Error": [
+        "BYTE",
+        "Error"
+    ],
+    "gb_CANVER_RCM_01": [
+        "BYTE",
+        "CANVER_RCM_01"
+    ],
+    "gb_CANVER_RCM_02": [
+        "BYTE",
+        "CANVER_RCM_02"
+    ],
+    "gb_CANVER_RCM_03": [
+        "BYTE",
+        "CANVER_RCM_03"
+    ],
+    "gb_CANVER_RCM_04": [
+        "BYTE",
+        "CANVER_RCM_04"
+    ],
+    "gb_CANVER_RCM_05": [
+        "BYTE",
+        "CANVER_RCM_05"
+    ],
+    "gb_CANVER_RCM_06": [
+        "BYTE",
+        "CANVER_RCM_06"
+    ],
+    "gb_CANVER_RCM_07": [
+        "BYTE",
+        "CANVER_RCM_07"
+    ],
+    "gbPowerFilt_Address": [
+        "byte",
+        "\ud544\ud130\ub9c1 \ub41c \uc804\uc555 \uc8fc\uc18c"
+    ],
+    "gbPowerFilt_AddressPrev": [
+        "byte",
+        "\ud544\ud130\ub9c1 \ub41c \uc804\uc555 \uc774\uc804 \uc8fc\uc18c"
+    ],
+    "gbComBatMode": [
+        "BYTE",
+        "ss_Io_Input_ComVoltageCtrl \ucd9c\ub825"
+    ],
+    "gbIOBatMode": [
+        "BYTE",
+        "ss_Io_Input_VoltageCtrl \ucd9c\ub825"
+    ],
+    "gbDiagBatMode": [
+        "BYTE",
+        "ss_Io_Input_DiagVoltageCtrl \ucd9c\ub825\ub825"
+    ],
+    "gwHallCountTestA": [
+        "WORD",
+        "Hall \uc13c\uc11c A \uce74\uc6b4\ud2b8 \uac12"
+    ],
+    "gwHallCountTestB": [
+        "WORD",
+        "Hall \uc13c\uc11c B \uce74\uc6b4\ud2b8 \uac12"
+    ],
+    "gwPowerFilt_mV": [
+        "word",
+        "\uc785\ub825\ub418\ub294 \uc804\uc555 \uac12"
+    ],
+    "gbPowerFiltBuff[]": [
+        "WORD",
+        "\ud544\ud130\ub9c1 \ub41c \uc804\uc555 \uac12 \uc800\uc7a5 \ubc84\ud37c"
+    ],
+    "glPowerFiltBuffsum": [
+        "LONG",
+        "\ud544\ud130\ub9c1 \ub41c \uc804\uc555 \uac12 \ud569"
+    ],
+    "gbWDTOut": [
+        "BYTE",
+        "\uc640\uce58\ub3c5 \ubc1c\uc0dd"
+    ],
+    "gbInitFlag": [
+        "byte",
+        "\ucd5c\ucd08 \uc785\ub825 \ud50c\ub798\uadf8"
+    ],
+    "RCM_01_200ms": [
+        "typedef struct",
+        "RCM_01 CAN \uc2e0\ud638"
+    ],
+    "RCM_02_200ms": [
+        "typedef struct",
+        "RCM_02 CAN \uc2e0\ud638"
+    ],
+    "RCM_03_200ms": [
+        "typedef struct",
+        "RCM_03 CAN \uc2e0\ud638"
+    ],
+    "RCM_01_200msBack": [
+        "typedef struct",
+        "RCM_01 \uc774\uc804 \uc0c1\ud0dc \uc800\uc7a5"
+    ],
+    "RCM_02_200msBack": [
+        "typedef struct",
+        "RCM_02 \uc774\uc804 \uc0c1\ud0dc \uc800\uc7a5"
+    ],
+    "RCM_03_200msBack": [
+        "typedef struct",
+        "RCM_03 \uc774\uc804 \uc0c1\ud0dc \uc800\uc7a5"
+    ],
+    "MAStoSLA": [
+        "typedef struct",
+        "Master -> Slave \ud1b5\uc2e0"
+    ],
+    "SLAtoMAS": [
+        "typedef struct",
+        "Slave->Master \ud1b5\uc2e0\nuint16 Commni_Blind_Fault;\nuint8 Commni_Command_Target_Return;\nuint8 Commni_Blind_Position_Area;\nuint8 Commni_ReinitBlindStatus;\nuint8 Commni_OperateModeReturn;\nboolean Commni_Keyang_reseved08;\nboolean Commni_Keyang_reseved09;\nboolean Commni_Keyang_reseved10;\nboolean Commni_Keyang_reseved11;\nboolean Commni_Keyang_reseved12;\nboolean Commni_Keyang_reseved13;\nboolean Commni_Keyang_reseved14;\nboolean Error;"
+    ],
+    "SLAtoMAS_CANSIG": [
+        "typedef struct",
+        "Slave-> Master CAN \uc2e0\ud638\t\nuint16 CANSIG_RCM_BldHallSnsrPlsCnt;\nuint8 CANSIG_RCM_BldOpSta;\nuint8 CANSIG_RCM_BldInitSta;\nuint8 CANSIG_RCM_BldAntPchSta;\nuint8 CANSIG_RCM_BldMtrHiTempSta;\nuint8 CANSIG_RCM_BldMtRunTtlTime;\nuint8 CANSIG_RCM_BldPosSta;\nuint8 CANSIG_RCM_BldFltVal;\nuint8 CANSIG_RCM_BldFltSta;"
+    ],
+    "SLAtoMAS_VER": [
+        "typedef struct",
+        "Slave-> Master RCM \uc2e0\ud638\nuint8 CANVER_RCM_01;\nuint8 CANVER_RCM_02;\nuint8 CANVER_RCM_03;\nuint8 CANVER_RCM_04;\nuint8 CANVER_RCM_05;\nuint8 CANVER_RCM_06;\nuint8 CANVER_RCM_07;"
+    ],
+    "RCM_Input": [
+        "typedef struct",
+        "RCM Input\nuint16 RCM_BatteryVoltage;\nuint8 RCM_ApplicationInit;\nuint8 RCM_gbComBatMode;\nuint8 RCM_gbIOBatMode;\nuint8 RCM_gbDiagBatMode;\nuint8 RCM_gbLPCondition;"
+    ],
+    "RCM_CANRx": [
+        "typedef struct",
+        "CAN Receive\nuint8 RCM_Window_AsstPwrWdwSunroofEnblSta;\nuint8 RCM_DATC_OutTempSnsrVal;\nuint8 RCM_C_BlindCmdAVN;\nuint8 RCM_C_GlassCmdAVN;\nuint8 RCM_RKE_WdwUpDnReq;\nuint8 RCM_ATS_RRSunBlind;\nuint8 RCM_BCM_Ign2InSta;\nuint8 RCM_BCM_Ign1InSta;\nuint16 RCM_CLU_DisSpdVal_KPH;\nuint8 RCM_ENG_EngSta;\nuint8 RCM_VCU_EvDrvRdySta;\nuint8 RCM_C_RrGlassCmdAVN;\nuint8 RCM_C_RrBlindCmdAVN;\nuint16 RCM_HU_OptionInfo;\nuint8 RCM_Navi_AirConditionWarning;\nuint8 RCM_SGU_BlindOpenReq;"
+    ],
+    "RCM_CANTx": [
+        "typedef struct",
+        "CAN Transmit\nuint8 RCM_OptTyp;\nuint8 RCM_SwStckDet;\nuint8 RCM_OHC_Cmd;\nuint16 RCM_CurGlsHallSnsrCnt;\nuint8 RCM_SunroofOpnSta;\nuint8 RCM_GlsOpSta;\nuint8 RCM_GlsInitSta;\nuint8 RCM_GlsAntPchSta;\nuint8 RCM_GlsMtrHiTempSta;\nuint8 RCM_GlsMtRunTtlTime;\nuint8 RCM_GlsPosSta;\nuint8 RCM_GlsFltVal;\nuint8 RCM_GlsFltSta;\nuint16 RCM_CurBldHallSnsrCnt;\nuint8 RCM_BldOpSta;\nuint8 RCM_BldInitSta;\nuint8 RCM_BldAntPchSta;\nuint8 RCM_BldMtrHiTempSta;\nuint8 RCM_BldMtRunTtlTime;\nuint8 RCM_BldPosSta;\nuint8 RCM_BldFltVal;\nuint8 RCM_BldFltSta;\nuint8 RCM_TunnelOptType;"
+    ],
+    "RCM_LINRx": [
+        "typedef struct",
+        "LIN Receive\nuint16 CANSIG_RCM_BldHallSnsrPlsCnt;\nuint8 CANSIG_RCM_BldOpSta;\nuint8 CANSIG_RCM_BldInitSta;\nuint8 CANSIG_RCM_BldAntPchSta;\nuint8 CANSIG_RCM_BldMtrHiTempSta;\nuint8 CANSIG_RCM_BldMtRunTtlTime;\nuint8 CANSIG_RCM_BldPosSta;\nuint8 CANSIG_RCM_BldFltVal;\nuint8 CANSIG_RCM_BldFltSta;\nuint16 Commni_Blind_Fault;\nuint8 Commni_Command_Target_Return;\nuint8 Commni_Blind_Position_Area;\nuint8 Commni_ReinitBlindStatus;\nuint8 Commni_OperateModeReturn;\nuint8 Commni_Keyang_reseved08;\nuint8 Commni_Keyang_reseved09;\nuint8 Commni_Keyang_reseved10;\nuint8 Commni_Keyang_reseved11;\nuint8 Commni_Keyang_reseved12;\nuint8 Commni_Keyang_reseved13;\nuint8 Commni_Keyang_reseved14;\nuint8 Commni_Error;\nuint8 CANVER_RCM_01;\nuint8 CANVER_RCM_02;\nuint8 CANVER_RCM_03;\nuint8 CANVER_RCM_04;\nuint8 CANVER_RCM_05;\nuint8 CANVER_RCM_06;\nuint8 CANVER_RCM_07;\nuint8 SlaveRespB0;\nuint8 SlaveRespB1;\nuint8 SlaveRespB2;\nuint8 SlaveRespB3;\nuint8 SlaveRespB4;\nuint8 SlaveRespB5;\nuint8 SlaveRespB6;\nuint8 SlaveRespB7;"
+    ],
+    "RCM_LINTx": [
+        "typedef struct",
+        "LIN Transmit\nuint16 Commni_Glass_Fault;\nuint8 Commni_Command_Target;\nuint8 Commni_Glass_Position_Area;\nuint8 Commni_ReinitCommand;\nuint8 Commni_ReinitStopCommand;\nuint8 Commni_OperateMode;\nuint8 Commni_Keyang_DebugState;\nuint8 LIN_Tx_reseved01;\nuint8 LIN_Tx_reseved02;\nuint16 LIN_Tx_reseved03;\nuint8 LIN_Tx_reseved04;\nuint8 LIN_Tx_reseved05;\nuint8 LIN_Tx_reseved06;\nuint8 LIN_Tx_reseved07;"
+    ],
+    "RCM_Output": [
+        "typedef struct",
+        "RCM \ubaa8\ud130 \ucd9c\ub825\nuint16 RCM_MotorDriveDuty;\nuint8 RCM_MotorDirect;"
+    ],
+    "App_Inout_Function_Inout": [
+        "typedef struct",
+        "uint16 RCM_SleepCondition;\nuint8 RCM_Reserve01;\nuint8 RCM_Reserve02;"
+    ],
+    "gbHall_A_Sts": [
+        "BYTE",
+        "\ud604\uc7ac Hall A\uc758 \uc785\ub825 \uc0c1\ud0dc"
+    ],
+    "gbHall_B_Sts": [
+        "BYTE",
+        "\ud604\uc7ac Hall B\uc758 \uc785\ub825 \uc0c1\ud0dc"
+    ],
+    "glActiveTime_HallSnsrA": [
+        "LONG",
+        "Hall_A \ub3d9\uc791 \uc2dc\uac04"
+    ],
+    "glActiveTime_HallSnsrB": [
+        "LONG",
+        "Hall_B \ub3d9\uc791 \uc2dc\uac04"
+    ],
+    "GetDuty": [
+        "typedef struct",
+        "IoHwAb_IcuValueType ActiveTime;\n\tIoHwAb_IcuValueType PeriodTime;"
+    ],
+    "gbVoltMode": [
+        "enum",
+        "\uc804\uc555\uc5d0 \ub530\ub978 \ubc94\uc704 \ubc0f \uc0c1\ud0dc\ncBatteryState_Init,\ncBatteryState_Normal,\ncBatteryState_Low,\ncBatteryState_High"
+    ],
+    "RCM_Input.RCM_ApplicationInit": [
+        "uint8",
+        "RCM Application \ucd08\uae30\ud654"
+    ],
+    "gwPowerFiltMove_mV": [
+        "WORD",
+        "\ud604\uc7ac \uc804\uc555 \ud310\ub2e8"
+    ],
+    "RCM_Input.RCM_gbDiagBatMode": [
+        "uint8",
+        "\uc9c4\ub2e8 \ubc30\ud130\ub9ac \ubaa8\ub4dc"
+    ],
+    "RCM_Input.RCM_BatteryVoltage": [
+        "uint16",
+        "\ubc30\ud130\ub9ac \uc804\uc555 \ud30c\uc545"
+    ],
+    "RCM_Input.RCM_gbComBatMode": [
+        "uint8",
+        "\ubc30\ud130\ub9ac \ubaa8\ub4dc \ube44\uad50"
+    ],
+    "RCM_Input.RCM_gbIOBatMode": [
+        "uint8",
+        "\ubc30\ud130\ub9ac \ubaa8\ub4dc \ucd9c\ub825"
+    ],
+    "gbPowerFiltBuff": [
+        "word",
+        "\ubc30\ud130\ub9ac \uc804\uc555\uac12 \uc800\uc7a5"
+    ],
+    "mbComVoltMode": [
+        "enum",
+        "\uc804\uc555\uc5d0 \ub530\ub978 \ubc94\uc704 \ubc0f \uc0c1\ud0dc\ncComBatteryState_Init,\ncComBatteryState_Normal,\ncComBatteryState_Low,\ncComBatteryState_High"
+    ],
+    "gbGlsOutofVolt": [
+        "BYTE",
+        "ON / OFF \ud50c\ub798\uadf8 \ubcc0\uc218"
+    ],
+    "mbDiagVoltageCtrlMode": [
+        "enum",
+        "\uc9c4\ub2e8 \uc804\uc555 control \ubaa8\ub4dc\ncVoltage_Init,\ncVoltage_Normal,\ncVoltage_Fault"
+    ],
+    "mwBATVoltStateChangeCnt": [
+        "WORD",
+        "\uc804\uc555 \ubcc0\ud654 count \uac12"
+    ],
+    "gb_CANVER_RCM_08": [
+        "BYTE",
+        "CANVER_RCM_08"
+    ],
+    "gbBldVersion": [
+        "BYTE",
+        "cInvald\ncConfirm"
+    ],
+    "gb_BLD_IVD_DATA_01": [
+        "BYTE",
+        "CANVER_RCM_01"
+    ],
+    "gb_BLD_IVD_DATA_02": [
+        "BYTE",
+        "CANVER_RCM_02"
+    ],
+    "gb_BLD_IVD_DATA_03": [
+        "BYTE",
+        "CANVER_RCM_03"
+    ],
+    "gb_BLD_IVD_DATA_04": [
+        "BYTE",
+        "CANVER_RCM_04"
+    ],
+    "gb_BLD_IVD_DATA_05": [
+        "BYTE",
+        "CANVER_RCM_05"
+    ],
+    "gb_BLD_IVD_DATA_06": [
+        "BYTE",
+        "CANVER_RCM_06"
+    ],
+    "gb_BLD_IVD_DATA_07": [
+        "BYTE",
+        "CANVER_RCM_07"
+    ],
+    "gb_BLD_IVD_DATA_08": [
+        "BYTE",
+        "CANVER_RCM_08"
+    ],
+    "gb_SlaveRespB0": [
+        "BYTE",
+        "SlaveRespB0"
+    ],
+    "gb_SlaveRespB1": [
+        "BYTE",
+        "SlaveRespB1"
+    ],
+    "gb_SlaveRespB2": [
+        "BYTE",
+        "SlaveRespB2"
+    ],
+    "gb_SlaveRespB3": [
+        "BYTE",
+        "SlaveRespB3"
+    ],
+    "gb_SlaveRespB4": [
+        "BYTE",
+        "SlaveRespB4"
+    ],
+    "gb_SlaveRespB5": [
+        "BYTE",
+        "SlaveRespB5"
+    ],
+    "gb_SlaveRespB6": [
+        "BYTE",
+        "SlaveRespB6"
+    ],
+    "gb_SlaveRespB7": [
+        "BYTE",
+        "SlaveRespB7"
+    ],
+    "App_Inout_Function_Inout.RCM_SleepCondition": [
+        "uint16",
+        "\uc2ac\ub9bd \ubaa8\ub4dc"
+    ],
+    "RCM_Input.RCM_gbLPCondition": [
+        "uint8",
+        "\uc2ac\ub9bd\ubaa8\ub4dc \ud30c\uc545 \ud6c4 High/low"
+    ],
+    "RCM_Output.RCM_MotorDirect": [
+        "uint8",
+        "\ubaa8\ud130 \ucd9c\ub825 \ubc29\ud5a5(open, close)"
+    ],
+    "gbProgSession": [
+        "BYTE",
+        "OFF, ON"
+    ],
+    "gbWDTEnCnt": [
+        "BYTE",
+        "\uc640\uce58\ub3c5 \ud310\ub2e8"
+    ],
+    "gbWDTCnt": [
+        "BYTE",
+        "\uc640\uce58\ub3c5 \ud310\ub2e8"
+    ],
+    "gbHall_A_Error": [
+        "BYTE",
+        "Hall_A Error \uac12"
+    ],
+    "gbHall_B_Error": [
+        "BYTE",
+        "Hall_B Error \uac12"
+    ],
+    "gbLowPowerSequence": [
+        "BYTE",
+        "Low Power\ub85c \uc778\ud574 Hall \uc13c\uc11c error \ubc1c\uc0dd \uc2dc\ud000\uc2a4"
+    ],
+    "RCM_CANRx.RCM_BCM_Ign1InSta": [
+        "Uint8",
+        "IGN1 \uc2e0\ud638"
+    ],
+    "RCM_CANRx.RCM_BCM_Ign2InSta": [
+        "Uint8",
+        "IGN2 \uc2e0\ud638"
+    ],
+    "RCM_CANRx.RCM_CLU_DisSpdVal_KPH": [
+        "Uint16",
+        "\ud604\uc7ac \ucc28\uc18d \ud30c\uc545"
+    ],
+    "RCM_CANRx.RCM_DATC_OutTempSnsrVal": [
+        "BYTE",
+        "DATC \uc628\ub3c4 CAN \uc2e0\ud638"
+    ],
+    "RCM_CANRx.RCM_ENG_EngSta": [
+        "BYTE",
+        "EMS_EngSta CAN \uc2e0\ud638"
+    ],
+    "RCM_CANRx.RCM_HU_OptionInfo": [
+        "Uint16",
+        "HU \uae30\ub2a5 \ud30c\uc545"
+    ],
+    "RCM_CANRx.RCM_Navi_AirConditionWarning": [
+        "Uint8",
+        "\ud130\ub110\ubaa8\ub4dc \uc9c4\uc785 \uc2dc \uacf5\uc870 \uae30\ub2a5 warining \uc2e0\ud638"
+    ],
+    "RCM_CANRx.RCM_Window_AsstPwrWdwSunroofEnblSta": [
+        "Uint8",
+        "Window_AsstPwrWdwSunroofEnblSta"
+    ],
+    "gbE2E_BCM_20_ErrorCode": [
+        "BYTE",
+        ""
+    ],
+    "gbE2E_BCM_DLC16_ErrorCode": [
+        "BYTE",
+        ""
+    ],
+    "gbE2E_BCM_20_ErrorFix": [
+        "BYTE",
+        "gbE2E_BCM_20_Msg Error \uc5ec\ubd80"
+    ],
+    "gbE2E_BCM_DLC16_ErrorFix": [
+        "BYTE",
+        "gbE2E_BCM_DLC16_Msg Error \uc5ec\ubd80"
+    ],
+    "mbRRSunBlind": [
+        "BYTE",
+        "RRSunBlind CAN \uc2e0\ud638"
+    ],
+    "mbDATC_OutTempSnsrVal": [
+        "BYTE",
+        "DATC \uc628\ub3c4 CAN \uc2e0\ud638"
+    ],
+    "mbC_BlindCmdAVN": [
+        "BYTE",
+        "Blind AVN CAN \uc2e0\ud638"
+    ],
+    "mbC_GlassCmdAVN": [
+        "BYTE",
+        "Glass AVN CAN \uc2e0\ud638"
+    ],
+    "mbRKE_WdwUpDnReq": [
+        "BYTE",
+        "Window Up Down CAN \uc2e0\ud638"
+    ],
+    "mbSGU_BlindOpenReq": [
+        "BYTE",
+        "SGU_Blind Open CAN \uc2e0\ud638"
+    ],
+    "RCM_CANRx.RCM_ATS_RRSunBlind": [
+        "BYTE",
+        "RRSunBlind CAN \uc2e0\ud638"
+    ],
+    "RCM_CANRx.RCM_C_BlindCmdAVN": [
+        "BYTE",
+        "Blind AVN CAN \uc2e0\ud638"
+    ],
+    "RCM_CANRx.RCM_C_GlassCmdAVN": [
+        "BYTE",
+        "Glass AVN CAN \uc2e0\ud638"
+    ],
+    "RCM_CANRx.RCM_RKE_WdwUpDnReq": [
+        "BYTE",
+        "HCU_HevRdy CAN \uc2e0\ud638"
+    ],
+    "RCM_CANRx.RCM_SGU_BlindOpenReq": [
+        "BYTE",
+        "SGU_Blind Open CAN \uc2e0\ud638"
+    ],
+    "mbVCU_EvDrvRdySta": [
+        "BYTE",
+        "VCU_EvDrvRdy CAN \uc2e0\ud638"
+    ],
+    "mbENG_EngSta": [
+        "BYTE",
+        "EMS_EngSta CAN \uc2e0\ud638"
+    ],
+    "mbHCU_HevRdySta": [
+        "BYTE",
+        "HCU_HevRdy CAN \uc2e0\ud638"
+    ],
+    "RCM_CANRx.RCM_VCU_EvDrvRdySta": [
+        "BYTE",
+        "VCU_EvDrvRdy CAN \uc2e0\ud638"
+    ],
+    "gbE2E_BCM_02_ErrorCode": [
+        "BYTE",
+        "E2E_ErrCode"
+    ],
+    "gbE2E_BCM_02_RCM_BCM_Ign1InSta_OldValue": [
+        "BYTE",
+        ""
+    ],
+    "gbE2E_BCM_02_RCM_BCM_Ign2InSta_OldValue": [
+        "BYTE",
+        ""
+    ],
+    "gbE2E_BCM_20_OldValue": [
+        "BYTE",
+        ""
+    ],
+    "gbE2E_BCM_DLC16_OldValue": [
+        "BYTE",
+        ""
+    ],
+    "App_Monitor_gstGlaCtrl": [
+        "typedef struct",
+        "C_GLASS_CTRL\nenum enStopStatus enStopMode;\nenGlassOperate \tenOperate;\nenOperateModeStatus enOperateMode;\nenOperateTargetIndex enCommandTarget;\nenOperateTargetIndex enOperationTarget;\nuint16 u16AntiPinchEnableDebounce;\nuint8 u8AntiPinchEnable;\nenum enStopStatus enStopModeBack;\nenGlassOperate \tenOperateBack;\nenOperateModeStatus enOperateModeBack;\nenOperateTargetIndex enCommandTargetBack;\nuint16\tu16AntiPinchEnableDebounceBack;\nuint8\tu8AntiPinchEnableBack;"
+    ],
+    "App_Monitor_gstGlaAnPin": [
+        "typedef struct",
+        "C_GLASS_ANTIPINCH\nuint8 u8PosLoadInitEnable;\nuint8 u8PosLoadInitEnableBack;\nuint8 u8MonitorEnable;\nuint8 u8MonitorEnableBack;\nuint16 u16PosLoadAddr;\nuint16 u16PosLoadAddrPrev;\nuint16 u16PosLoadHallInterval;\nsint16 s16PosLoadSum;\nsint16 s16PosLoadSumTest;\nuint8 s8PosLoadBuff[LOADBUFF_ADDR_MAX];\nuint8 s8PosLoadBuffNew[LOADBUFF_ADDR_MAX];\nuint8 s8PosLoadTest[LOADBUFF_ADDR_MAX];\nsint16 s16Load;\nsint16 s16LoadOffset;\nsint16 s16VoltOffset;\nsint16 s16CarSpdOffset;\nsint16 s16LoadSum;\nsint16 s16LoadLimit;\nuint16 u16VoltPrev;\nsint16 s16VoltDiffSum;\nsint16 s16Volt_Pos_Comp;\nsint16 s16Volt_Force_Comp;\nsint16 s16Maskable_Comp;\nsint16 s16Temp_Force_Comp;\nsint16 s16dN_Volt_VoltPrev;\nsint16 s16N_Volt_Pres;\nsint16 s16N_Volt_Prev;\nuint8 u8dNSum_Address;\nuint8 u8dNSum_AddressPrev;\nsint16 s16dNSum;\nsint16 s16dNVibSum;\nuint8   bVibDetect;\nuint16 u16dNVibDetectDebounce;\nsint16 s16dNSum_Total;\nsint16 s16dNSum_Total_Limit;\nsint16 s16dN_Pos_CompLeft;"
+    ],
+    "App_Monitor_gstFaultMon": [
+        "typedef struct",
+        "C_FAULT_MON\nU_GLASS_FAULT uGlass;\nU_BLIND_FAULT uBlind;\nU_GLASS_FAULT_BACK uGlassBack;\nU_BLIND_FAULT_BACK uBlindBack;"
+    ],
+    "App_Monitor_gstGlaOvCurrentMon": [
+        "typedef struct",
+        "C_GLASS_CTRL_OVERCURRENT_MON\nsint32 s32CurrentFilt_mA;\nuint32 u32CurrentFiltBuff[10];\nsint32 s32CurrentFiltBuff_Sum;\nuint8  u8CurrentFilt_Address;\nuint8  u8CurrentFilt_AddressPrev;\nuint16 u16CalibrationOffset;\nuint8 u8MonitorEnable;\nuint16 u16TimeoutDebounce;\nsint32 s32CurrentFilt_mABack;\nuint32 u32CurrentFiltBuffBack[10];\nsint32 s32CurrentFiltBuff_SumBack;\nuint8  u8CurrentFilt_AddressBack;\nuint8  u8CurrentFilt_AddressPrevBack;\nuint16 u16CalibrationOffsetBack;\nuint8 u8MonitorEnableBack;\nuint16 u16TimeoutDebounceBack;"
+    ],
+    "App_Monitor_gstGlaPosMon": [
+        "uint8",
+        "Glass \uc704\uce58 \uac12"
+    ],
+    "App_Monitor_gstGlaHallMon": [
+        "typedef struct",
+        "C_GLASS_HALL_MON\nuint8 \tu8HallQuad_FirstTimeStatus;\nuint16 u16HallQuad_TimeoutDebounce;\nuint8\tu8HallQuad_Timeout_Cnt;\nuint16\tu16HallCapCnt;\nuint16\tu16HallCapCntPrev;\nenGlassVelocityDirection_Index enVelDirStatus;\nsint32  s32HallQuad_VelocityPrev;\nuint8  u8HallQuad_FirstTimeStatusBack;\nuint16 u16HallQuad_TimeoutDebounceBack;\nuint8\tu8HallQuad_Timeout_CntBack;\nuint16\tu16HallCapCntBack;\nuint16\tu16HallCapCntPrevBack;\nenGlassVelocityDirection_Index enVelDirStatusBack;\nsint32  s32HallQuad_VelocityPrevBack;"
+    ],
+    "App_Monitor_gstGlaAnHeatMon": [
+        "typedef struct",
+        "C_GLASS_CTRL_ANTIHEAT_MON\nuint8\tu8TotalTime;\nuint16\tu16AccTime;\nuint16\tu16FaultTimeLimit;\nuint16\tu16RecTimeLimit;\nuint8\tu8TotalTimeBack;\nuint16\tu16AccTimeBack;\nuint16\tu16FaultTimeLimitBack;\nuint16\tu16RecTimeLimitBack;"
+    ],
+    "App_Monitor_gstCurr_Mon": [
+        "typedef struct",
+        "C_CURR_MON\nuint8 ConversionFlag;\nuint32 SumCurrLawVal;\nuint16 CntCurrSen;\nuint16 Current_A;\nuint16 AvgLawValue;"
+    ],
+    "App_Monitor_gstGlaVeloMon": [
+        "uint8",
+        "Glass \uc18d\ub3c4 \uac12"
+    ],
+    "App_Monitor_gstGlaAccMon": [
+        "uint8",
+        "Glass \uac00\uc18d\ub3c4 \uac12"
+    ],
+    "RCM_MonitorInput": [
+        "typedef struct",
+        "ST_RCM_Input\nuint16 RCM_BatteryVoltage;\nuint8 RCM_ApplicationInit;\nuint8 RCM_gbComBatMode;\nuint8 RCM_gbIOBatMode;\nuint8 RCM_gbDiagBatMode;\nuint8 RCM_gbLPCondition;"
+    ],
+    "RCM_MonitorOutput": [
+        "typedef struct",
+        "ST_RCM_Output\nuint16 RCM_MotorDriveDuty\nuint8 RCM_MotorDirect"
+    ],
+    "u8StallMonitorEnablePrev": [
+        "uint8",
+        ""
+    ],
+    "Motor_Stop_Flag": [
+        "Uint8",
+        "\ubaa8\ud130 \uc815\uc9c0 \ud50c\ub798\uadf8"
+    ],
+    "App_Monitor_gstGlaPosMon.enPositionArea": [
+        "Uint8",
+        "Glass \uc704\uce58 \uad6c\uc5ed"
+    ],
+    "App_Monitor_gstFaultMon.uGlass.flag.fGlass_Anti_Pinch_Detection": [
+        "uint8",
+        "Glass Anti-Pinch Detection Data"
+    ],
+    "App_Monitor_gstFaultMon.uGlass.flag.fGlass_OverRide_Detection": [
+        "uint8",
+        "Glass OverRide \ubc1c\uc0dd data"
+    ],
+    "App_Monitor_gstFaultMon.uGlassBack.flag.fGlass_Anti_Pinch_DetectionBack": [
+        "Uint8",
+        "Glass OverRide \ubc1c\uc0dd data"
+    ],
+    "App_Monitor_gstGlaPosMon.u16MechHall_Position": [
+        "Uint16",
+        "Glass Hall mechine \uc704\uce58"
+    ],
+    "App_Monitor_gstGlaPosMon.u16Hall_PositionBack": [
+        "uint16",
+        "Glass Hall Position \uc774\uc804 \uac12"
+    ],
+    "App_Monitor_gstGlaPosMon.u16Hall_Position": [
+        "Uint16",
+        "Glass \uc704\uce58 \uac12"
+    ],
+    "App_Monitor_gstGlaHallMon.enVelDirStatusBack": [
+        "enum",
+        "\ubaa8\ud130 \uc774\uc804 \ud68c\uc804 \ubc29\ud5a5\nGlassValDir_Timeout = 0,\nGlassValDir_CW,\nGlassValDir_CCW"
+    ],
+    "App_Monitor_gstGlaAnPin.u8PosLoadInitEnableBack": [
+        "Uint8",
+        "Glass Anti-Pinch Enable \uc774\uc804 \uac12"
+    ],
+    "App_Monitor_gstGlaAnPin.u8PosLoadInitEnable": [
+        "Uint8",
+        "Glass Anti-Pinch \ubd80\ud558 \ucd08\uae30 \uc124\uc815 Enable \uac12"
+    ],
+    "App_Monitor_gstFaultMon.uGlassBack.flag.fGlass_OverCurrent_DetectionBack": [
+        "Uint8",
+        "Glass OverCurrent Detection \uc774\uc804 data"
+    ],
+    "App_Monitor_gstFaultMon.uGlass.flag.fGlass_OverCurrent_Detection": [
+        "Uint8",
+        "Glass OverCurrent Detection data"
+    ],
+    "App_Monitor_gstGlaAnHeatMon.u16AccTimeBack": [
+        "uint16",
+        "Glass \ubaa8\ud130 \uacfc\uc5f4 \uc2dc\uac04 \uc774\uc804 \uac12"
+    ],
+    "App_Monitor_gstGlaAnHeatMon.u16AccTime": [
+        "Uint16",
+        "\ubaa8\ud130 \uad6c\ub3d9 \uc2dc\uac04"
+    ],
+    "App_Monitor_gstFaultMon.uBlind.u16Data": [
+        "Unit16",
+        "\ube14\ub77c\uc778\ub4dc Fault Monitor data"
+    ],
+    "RCM_MonitorInput.RCM_gbIOBatMode": [
+        "uint8",
+        "IO \ubc30\ud130\ub9ac \ubaa8\ub4dc"
+    ],
+    "App_Function_gstGlaStall.u8MonitorEnable": [
+        "uint8",
+        "Stall Monitor Enable"
+    ],
+    "App_Monitor_gstGlaCtrl.enOperate": [
+        "uint8",
+        "Glass \ub3d9\uc791 \uc0c1\ud0dc"
+    ],
+    "App_Function_gstGlaStall.u16TimeoutDebounce": [
+        "Uint16",
+        "Stall Timeout Debounce"
+    ],
+    "App_Function_gstFaultMon.uGlass.flag.fGlass_Stall_Detection": [
+        "Uint8",
+        "Glass Stall Detection Data"
+    ],
+    "App_Monitor_gstGlaAnPin.s16PosLoadSum": [
+        "sint16",
+        "Glass Anti-Pinch \ubd80\ud558 \ud569"
+    ],
+    "App_Monitor_gstGlaAnPin.u16PosLoadAddrPrev": [
+        "Uint16",
+        "Glass Anti-Pinch \ubd80\ud558 \uc774\uc804 \uc8fc\uc18c \uac12"
+    ],
+    "App_Monitor_gstGlaAnPin.u16PosLoadAddr": [
+        "Uint16",
+        "Glass Anti-Pinch \ubd80\ud558 \uc8fc\uc18c"
+    ],
+    "App_Monitor_gstGlaAnPin.u16PosLoadHallInterval": [
+        "Uint16",
+        "Glass Anti-Pinch \ubd80\ud558 hall Ineterval \uacc4\uc0b0 \uac12"
+    ],
+    "ret_Dummy": [
+        "uint8",
+        "\ud568\uc218 return"
+    ],
+    "App_Monitor_gstCurr_Mon.AvgLawValue": [
+        "uint16",
+        "get adc average value for 10ms"
+    ],
+    "App_Monitor_gstCurr_Mon.Current_A": [
+        "uint16",
+        "unit conversion into current"
+    ],
+    "temp_Sum": [
+        "uint32_t",
+        "\uc804\ub958 \ud569"
+    ],
+    "temp_Cnt": [
+        "uint16_t",
+        "\uc785\ub825\ub41c \uc804\ub958 \uac1c\uc218 \uce74\uc6b4\ud2b8"
+    ],
+    "ret": [
+        "uint8",
+        "\uc2a4\uc704\uce58 \ud0c0\uc785 \ucd9c\ub825 \ubcc0\uc218"
+    ],
+    "LawVal": [
+        "Uint16",
+        ""
+    ],
+    "McuInput_uV": [
+        "uint32_t",
+        "Mcu Input uV"
+    ],
+    "Shunt_mV": [
+        "uint16_t",
+        "1000 is unit change uV => mV"
+    ],
+    "mear_curr_mV": [
+        "uint16_t",
+        "\uc804\ub958 \uacc4\uc0b0(I = V/R)"
+    ],
+    "currVal": [
+        "Uint16",
+        "\uc804\ub958\uac12"
+    ],
+    "gstCurr_Filtter.u32PowerFiltBuff": [
+        "uint32_t",
+        "\uc804\ub958 \ub370\uc774\ud130 (\ubc84\ud37c)"
+    ],
+    "gstCurr_Filtter.u32PowerFiltBuff_Sum": [
+        "Uint32_t",
+        "\ud544\ud130\ub9c1 \ub41c \uc804\ub958\uac12"
+    ],
+    "u16AddressUpdate": [
+        "Uint16",
+        "\ub3d9\uc791\ubd80\ud558\uac00 \uacc4\uc0b0\uc774 \uc2dc\uc791\ud558\ub294 Addr \ubcc0\uc218"
+    ],
+    "u16StartAddress": [
+        "Uint16",
+        "\uc548\ud2f0\ud540\uce58 \ubaa8\ub2c8\ud130\ub9c1\uc744 \ud558\uae30 \uc704\ud55c \ube44\uad50 Addr \ubcc0\uc218"
+    ],
+    "s16Volt_Comp": [
+        "Uint16",
+        "\uc81c\uc5b4\uae30 \uc804\uc555"
+    ],
+    "s16_Start_ADDR_Volt_Comp": [
+        "Uint16",
+        "\ub3d9\uc791\ubd80\ud558\uac00 \uc2dc\uc791\ud588\uc744\ub54c\uc758 \uc804\uc555 \ubcc0\uc218"
+    ],
+    "gbAddrUpdate": [
+        "Sint8",
+        "u16PosLoadAddr\uc640 u16PosLoadAddrPrev\uc758 \ucc28\uc774\uac00 2\uc774\uc0c1\uc77c \ub54c \ud604\uc7ac Addr\ub9cc\ud07c \ub370\uc774\ud130\ub97c \ubcf4\uc815\ud558\uae30 \uc704\ud55c \ubcc0\uc218"
+    ],
+    "gbSeqVariable": [
+        "Uint8",
+        "u16PosLoadAddr\uc640 u16PosLoadAddrPrev\uc758 \ucc28\ub97c \uc800\uc7a5\ud55c \ubcc0\uc218"
+    ],
+    "gwAddrVariable": [
+        "Uint16",
+        "\ud640\uce74\uc6b4\ud2b8\ub97c Hall Address\ub85c \ubcc0\ud658\uc744 \ud558\uae30 \uc704\ud55c \ubcc0\uc218"
+    ],
+    "gbdNMaxCheck": [
+        "Uint8",
+        "\ubd80\ud558 \ub370\uc774\ud130\ub97c \uc800\uc628 \ub3d9\uc791\uc73c\ub85c \uc778\uc2dd \ud558\uc600\uc744 \ub54c\uc758 Flag \ubcc0\uc218"
+    ],
+    "gbdNMaxCheck_Car": [
+        "Uint8",
+        "CAN \ub370\uc774\ud130(\ucc28\ub7c9))\ub97c \uc800\uc628\uc73c\ub85c \uc218\uc2e0\ud55c \uacbd\uc6b0"
+    ],
+    "gbdNMaxCheckInit": [
+        "Uint8",
+        "\ubd80\ud558 \ub370\uc774\ud130\ub97c \uc800\uc628 \ub3d9\uc791\uc73c\ub85c \uc778\uc2dd\uc744 \uc720\uc9c0 \ud558\uae30 \uc704\ud55c \ubcc0\uc218"
+    ],
+    "gbdNMaxCheckCnt": [
+        "Uint8",
+        "\ubd80\ud558 \ub370\uc774\ud130\ub97c \uc800\uc628 \ub3d9\uc791\uc73c\ub85c \uc778\uc2dd\ud558\uae30 \uc704\ud55c \uce74\uc6b4\ud2b8 \ubcc0\uc218"
+    ],
+    "AntiKid_Limit_Position_Compensation": [
+        "Sint16",
+        "\uc2dc\uc2a4\ud15c\uc758 \ubd80\ud558 Addr \uad6c\uac04\ubcc4 \ud2b9\uc131\uc744 \uace0\ub824\ud55c \ubc18\uc804 \ud30c\ub77c\ubbf8\ud130\ub97c \uc801\uc6a9\ud55c \ubcc0\uc218"
+    ],
+    "AntiKid_Limit_Temperature_Compensation": [
+        "Sint16",
+        "\uc800\uc628 \ud2b9\uc131\uc744 \uace0\ub824\ud55c \ubc18\uc804 \ud30c\ub77c\ubbf8\ud130\ub97c \uc801\uc6a9\ud55c \ubcc0\uc218"
+    ],
+    "AntiKid_Limit_Speed_Compensation": [
+        "Sint16",
+        "\uace0\uc18d \uc8fc\ud589 \ud2b9\uc131\uc744 \uace0\ub824\ud55c \ubc18\uc804 \ud30c\ub77c\ubbf8\ud130\ub97c \uc801\uc6a9\ud55c \ubcc0\uc218"
+    ],
+    "Antikid_Limit_RoughRoad_Compensation": [
+        "Sint16",
+        "\ud5d8\ub85c \uc8fc\ud589 \ud2b9\uc131\uc744 \uace0\ub824\ud55c \ubc18\uc804 \ud30c\ub77c\ubbf8\ud130\ub97c \uc801\uc6a9\ud55c \ubcc0\uc218"
+    ],
+    "AntiKid_Limit_Cranking_Compensation": [
+        "Sint16",
+        "\uc2dc\ub3d9\uc2dc \uc804\uc555 \ud2b9\uc131\uc744 \uace0\ub824\ud55c \ubc18\uc804 \ud30c\ub77c\ubbf8\ud130\ub97c \uc801\uc6a9\ud55c \ubcc0\uc218"
+    ],
+    "NOW_TEST_CALC_DATA": [
+        "Sint16",
+        "\ud604\uc704\uce58(Addr)\uc5d0\uc11c\uc758 \ub3d9\uc791 \ubd80\ud558\ub97c \uc801\uc6a9\ud55c \ubcc0\uc218"
+    ],
+    "NOW_BUFF_CALC_DATA": [
+        "Sint16",
+        "\ud604\uc704\uce58(Addr)\uc5d0\uc11c\uc758 \ud559\uc2b5 \ubd80\ud558\ub97c \uc801\uc6a9\ud55c \ubcc0\uc218"
+    ],
+    "Diff_TEST_CALC_DATA": [
+        "Sint16",
+        "\ud604\uc704\uce58(Addr)\uc640 \uc774\uc804 \uc704\uce58\uc758 \ub3d9\uc791\ubd80\ud558\uc758 \ucc28\uc774\ub97c \uc801\uc6a9\ud55c \ubcc0\uc218(\ubcc0\ud654\ub7c9)"
+    ],
+    "Total_AntiKid_Limit_Compensation": [
+        "Sint16",
+        "Position + Termperature + Speed + RoughRoad + Cranking\uc5d0 \ub300\ud55c \ud2b9\uc131\uc744 \ubaa8\ub450 \uace0\ub824\ud55c \ubc18\uc804 \ud30c\ub77c\ubbf8\ud130\ub97c \uc801\uc6a9\ud55c \ubcc0\uc218"
+    ],
+    "s8PosLoadBuff_Voltage[LOADBUFF_ADDR_MAX]": [
+        "Uint8",
+        "\ud559\uc2b5 \ubd80\ud558 \ucde8\ub4dd\uc2dc \uad6c\uac04\ubcc4(Addr) \uc804\uc555 \ub370\uc774\ud130\ub97c \ucde8\ub4dd\ud55c \ubcc0\uc218"
+    ],
+    "s8Load_Nsum_Voltage[LOADBUFF_ADDR_MAX]": [
+        "Uint8",
+        "\ub3d9\uc791 \ubd80\ud558 \ucde8\ub4dd\uc2dc \uad6c\uac04\ubcc4(Addr) \uc804\uc555 \ub370\uc774\ud130\ub97c \ucde8\ub4dd\ud55c \ubcc0\uc218"
+    ],
+    "s16CompareData_Diff_Add[LOADBUFF_ADDR_MAX]": [
+        "Sint16",
+        "\ud604\uc704\uce58(Addr)\uc640 \uc774\uc804 \uc704\uce58\uc758 \ub3d9\uc791\ubd80\ud558\uc758 \ucc28\uc774\ub97c \uc801\uc6a9\ud55c \ubcc0\uc218(\ubcc0\ud654\ub7c9)\uacfc \ud604\uc704\uce58(Addr)\uc640 \uc774\uc804 \uc704\uce58\uc758 \ud559\uc2b5\ubd80\ud558\uc758 \ucc28\uc774\ub97c \uc801\uc6a9\ud55c \ubcc0\uc218(\ubcc0\ud654\ub7c9)\uc758 \ucc28\ub97c \uc801\uc6a9\ud55c \ubcc0\uc218"
+    ],
+    "gwRoughLoad_CNT": [
+        "Sint16",
+        "\ud5d8\ub85c\ub97c \ud310\ub2e8\ud558\uae30 \uc704\ud55c \uce74\uc6b4\ud2b8 \ubcc0\uc218"
+    ],
+    "gwRoughLoad_Range": [
+        "Sint16",
+        "\ud5d8\ub85c\ub85c \ud310\ub2e8\ud558\uae30 \uc704\ud55c \ubd80\ud558 \ubcc0\ud654\ub7c9\uc758 \ucc28\uc774\ub97c \uc801\uc6a9\ud55c \ubcc0\uc218"
+    ],
+    "u16_Hall_position_Chk": [
+        "Uint16",
+        "\uc548\ud2f0\ud540\uce58\ub85c \uac10\uc9c0\ud55c Hall Count (\uc704\uce58)\ub97c \ubc18\uc601\ud55c \ubcc0\uc218"
+    ],
+    "u16_Hall_Addr_Chk": [
+        "Uint16",
+        "\uc548\ud2f0\ud540\uce58\ub85c \uac10\uc9c0\ud55c Addr (\uc704\uce58)\uc744 \ubc18\uc601\ud55c \ubcc0\uc218"
+    ],
+    "Anti_Detect_Kids_Load_Limit": [
+        "Sint16",
+        "\uc548\ud2f0\ud540\uce58\ub85c \uac10\uc9c0\ud55c Addr\uc758 App_Monitor_gstGlaAnPin.Anti_Kid_LimitData[]\ub97c \ubc18\uc601\ud55c \ubcc0\uc218"
+    ],
+    "Anti_Detect_Kids_Load": [
+        "Sint16",
+        "\uc548\ud2f0\ud540\uce58\ub85c \uac10\uc9c0\ud55c Addr\uc758 App_Monitor_gstGlaAnPin.Anti_Kid_LoadData[]\ub97c \ubc18\uc601\ud55c \ubcc0\uc218"
+    ],
+    "u16DataBufTest[LOADBUFF_HALLCNT]": [
+        "Uint16",
+        "\ud640 Addr\ubcc4 \ubd80\ud558 \ub370\uc774\ud130\ub97c \uc0b0\ucd9c\ud558\uae30 \uc704\ud55c \ud640\uac04 \uc2e0\ud638\uc758 \uc8fc\uae30\ub97c \ubc18\uc601\ud55c \ub370\uc774\ud130"
+    ],
+    "u16Load_DataBufTest[LOADBUFF_HALLCNT]": [
+        "Uint16",
+        "\ud640 Addr\ubcc4 \ubd80\ud558 \ud559\uc2b5 \ub370\uc774\ud130\ub97c \uc0b0\ucd9c\ud558\uae30 \uc704\ud55c \ud640\uac04 \uc2e0\ud638\uc758 \uc8fc\uae30\ub97c \ubc18\uc601\ud55c \ub370\uc774\ud130"
+    ],
+    "u16DataBuffAVG": [
+        "Uint16",
+        "u16DataBufTest[LOADBUFF_HALLCNT] \ubcc0\uc218\uc5d0 \ub300\ud558\uc5ec \ud544\ud130\ub97c \uc801\uc6a9\ud55c \ubcc0\uc218"
+    ],
+    "u16DataBuffAVG_prev": [
+        "Uint16",
+        "u16DataBufTest[LOADBUFF_HALLCNT] \ubcc0\uc218\uc5d0 \ub300\ud558\uc5ec \ud544\ud130\ub97c \uc801\uc6a9\ud55c \ubcc0\uc218"
+    ],
+    "u16DataTESTAVG": [
+        "Uint16",
+        "u16Load_DataBufTest [LOADBUFF_HALLCNT] \ubcc0\uc218\uc5d0 \ub300\ud558\uc5ec \ud544\ud130\ub97c \uc801\uc6a9\ud55c \ubcc0\uc218"
+    ],
+    "u16DataTESTAVG_prev": [
+        "Uint16",
+        "u16Load_DataBufTest [LOADBUFF_HALLCNT] \ubcc0\uc218\uc5d0 \ub300\ud558\uc5ec \ud544\ud130\ub97c \uc801\uc6a9\ud55c \ubcc0\uc218"
+    ],
+    "u16CalcData": [
+        "Uint16",
+        "\uc784\uc758\uc758 \uc804\uc555\uc5d0\uc11c \ucde8\ub4dd\ud55c \ud559\uc2b5 \ubd80\ud558\ub370\uc774\ud130\ub97c \ud2b9\uc815 \uc804\uc555\uc758 \ud559\uc2b5 \ubd80\ud558 \ub370\uc774\ud130\ub85c \ubcf4\uc815 \uc801\uc6a9\ud55c \ubcc0\uc218"
+    ],
+    "Engine_Cranking_Safety_Time_Debounce": [
+        "Uint16",
+        "Engine \ud06c\ub7ad\ud0b9 \uac10\uc9c0\uc2dc\uac04"
+    ],
+    "u32gbScale": [
+        "Uint32",
+        "\uc784\uc758\uc758 \uc804\uc555\uc5d0\uc11c \ucde8\ub4dd\ud55c \ub3d9\uc791 \ub370\uc774\ud130\ub97c \ud2b9\uc815 \uc804\uc555\uc758 \ub3d9\uc791 \ub370\uc774\ud130\ub85c \ubcf4\uc815 \uc801\uc6a9\ud55c \ubcc0\uc218"
+    ],
+    "Masking_Offset_CLOSE": [
+        "Uint16",
+        "AntiKid_Limit_Position_Compensation \ubcc0\uc218\ub97c \ub3c4\ucd9c\ud558\uae30 \uc704\ud55c Close \uc601\uc5ed\uc5d0 \ub300\ud55c Offset"
+    ],
+    "AntiKids_Manual_Limit_Value": [
+        "sint16",
+        "Slide \uad6c\uac04\uc5d0\uc11c\uc758 \ubc18\uc804\ub825 \uc124\uc815\ud558\uae30 \uc704\ud55c \ubcc0\uc218"
+    ],
+    "AntiKids_Manual_Limit_Value_1": [
+        "sint16",
+        "Tilt \uad6c\uac04\uc5d0\uc11c\uc758 \ud2b9\uc815\uc804\uc555\uc774\ud558\uc758 \ubc18\uc804\ub825\uc744 \uc124\uc815\ud558\uae30 \uc704\ud55c \ubcc0\uc218"
+    ],
+    "AntiKids_Manual_Limit_Value_2": [
+        "sint16",
+        "Tilt \uad6c\uac04\uc5d0\uc11c\uc758 \ud2b9\uc815\uc804\uc555\uc774\uc0c1\uc758 \ubc18\uc804\ub825\uc744 \uc124\uc815\ud558\uae30 \uc704\ud55c \ubcc0\uc218"
+    ],
+    "AntiKids_Masking_Limit_Value": [
+        "sint16",
+        "\ud2b9\uc815 \uad6c\uac04\uc5d0\uc11c \uc624\ubc18\uc804\uc774 \ubc1c\uc0dd\ud558\uc9c0 \uc54a\ub3c4\ub85d \uc124\uc815\ud55c \ubcc0\uc218"
+    ],
+    "u16_25mm_Address_Limit_Value": [
+        "sint16",
+        "AntiKid_Limit_Position_Compensation \ubcc0\uc218\ub97c \ub3c4\ucd9c\ud558\uae30 \uc704\ud55c \ud2b9\uc815\uad6c\uac04\uc758 \ubcc0\uc218"
+    ],
+    "u16_50mm_Address_Limit_Value": [
+        "sint16",
+        "AntiKid_Limit_Position_Compensation \ubcc0\uc218\ub97c \ub3c4\ucd9c\ud558\uae30 \uc704\ud55c \ud2b9\uc815\uad6c\uac04\uc758 \ubcc0\uc218"
+    ],
+    "u16_200mm_Address_Limit_Value": [
+        "sint16",
+        "AntiKid_Limit_Position_Compensation \ubcc0\uc218\ub97c \ub3c4\ucd9c\ud558\uae30 \uc704\ud55c \ud2b9\uc815\uad6c\uac04\uc758 \ubcc0\uc218"
+    ],
+    "u16_25mm_Masking_Offset": [
+        "uint16",
+        "AntiKid_Limit_Position_Compensation \ubcc0\uc218\ub97c \ub3c4\ucd9c\ud558\uae30 \uc704\ud55c \ud2b9\uc815\uad6c\uac04\uc758 \ubcc0\uc218"
+    ],
+    "u16_50mm_Masking_Offset": [
+        "uint16",
+        "AntiKid_Limit_Position_Compensation \ubcc0\uc218\ub97c \ub3c4\ucd9c\ud558\uae30 \uc704\ud55c \ud2b9\uc815\uad6c\uac04\uc758 \ubcc0\uc218"
+    ],
+    "u16_200mm_Masking_Offset": [
+        "uint16",
+        "AntiKid_Limit_Position_Compensation \ubcc0\uc218\ub97c \ub3c4\ucd9c\ud558\uae30 \uc704\ud55c \ud2b9\uc815\uad6c\uac04\uc758 \ubcc0\uc218"
+    ],
+    "u16_25mm_Address": [
+        "uint16",
+        "AntiKid_Limit_Position_Compensation \ubcc0\uc218\ub97c \ub3c4\ucd9c\ud558\uae30 \uc704\ud55c \ud2b9\uc815\uad6c\uac04\uc758 \ubcc0\uc218"
+    ],
+    "u16_50mm_Address": [
+        "uint16",
+        "AntiKid_Limit_Position_Compensation \ubcc0\uc218\ub97c \ub3c4\ucd9c\ud558\uae30 \uc704\ud55c \ud2b9\uc815\uad6c\uac04\uc758 \ubcc0\uc218"
+    ],
+    "u16_200mm_Address": [
+        "uint16",
+        "AntiKid_Limit_Position_Compensation \ubcc0\uc218\ub97c \ub3c4\ucd9c\ud558\uae30 \uc704\ud55c \ud2b9\uc815\uad6c\uac04\uc758 \ubcc0\uc218"
+    ],
+    "AntiKids_Manual_Limit_Volt_Value": [
+        "sint16",
+        "App_Monitor_gstGlaAnPin.Anti_Kids_Load_Limit \ubcc0\uc218\ub97c \ub3c4\ucd9c\ud558\uae30 \uc704\ud55c \ubcc0\uc218"
+    ],
+    "AntiKids_Manual_Limit_Velocity_RPM": [
+        "sint16",
+        "App_Monitor_gstGlaAnPin.Anti_Kids_Load_Limit \ubcc0\uc218\ub97c \ub3c4\ucd9c\ud558\uae30 \uc704\ud55c \ubcc0\uc218"
+    ],
+    "u16NowPosition": [
+        "uint16",
+        "\uc2dc\uc2a4\ud15c\uc758 \ud604\uc7ac \uc704\uce58 Addr\ub97c \uc801\uc6a9\ud55c \ubcc0\uc218"
+    ],
+    "u8NewStartAdd_Cnt": [
+        "uint8",
+        "u16StartAddress\ub97c \ubcc0\ub3d9\ud558\uae30 \uc704\ud55c \uce74\uc6b4\ud130 \ubcc0\uc218"
+    ],
+    "u16StartAdd_Change": [
+        "uint16",
+        "\ub3d9\uc791\uc911 \ubcc0\uacbd\ub41c StartAddress\uac12\uc744 \uc801\uc6a9\ud55c \ubcc0\uc218"
+    ],
+    "u16StartAdd_Change_prev": [
+        "uint16",
+        "\uc774\uc804 Start Address\uac12\uc744 \uc801\uc6a9\ud55c \ubcc0\uc218"
+    ],
+    "AntiKids_LIMIT_Mode_Chk": [
+        "Sint8",
+        "Position, Termperature, Speed, Rough Road, Cranking\uc5d0 \ub300\ud55c \ud2b9\uc131 \ud30c\ub77c\ubbf8\ud130 \uc801\uc6a9\uc5ec\ubd80\ub97c \ud655\uc778\ud560\uc218 \uc788\ub294 \ubcc0\uc218"
+    ],
+    "u16OpenAddress": [
+        "uint16",
+        "Glass Open \uc601\uc5ed\uc5d0 \ub300\ud558\uc5ec Addr\ub85c \uacc4\uc0b0 \ub418\uc5b4\uc9c4 \ubcc0\uc218"
+    ],
+    "u16TiltAddress": [
+        "uint16",
+        "Glass Tilt \uc601\uc5ed\uc5d0 \ub300\ud558\uc5ec Addr\ub85c \uacc4\uc0b0 \ub418\uc5b4\uc9c4 \ubcc0\uc218"
+    ],
+    "u16CloseAddress": [
+        "uint16",
+        "Glass Close \uc601\uc5ed\uc5d0 \ub300\ud558\uc5ec Addr\ub85c \uacc4\uc0b0 \ub418\uc5b4\uc9c4 \ubcc0\uc218"
+    ],
+    "u8LoadChange_Enable": [
+        "uint8",
+        "\ub3d9\uc791\uc911 \ubcc0\uacbd\ub41c StartAddress\uac12\uc744 \uc801\uc6a9\uc744 \uc704\ud55c \ubcc0\uc218"
+    ],
+    "u8LoadChange_flag": [
+        "uint8",
+        "\ub3d9\uc791\uc911 \ubcc0\uacbd\ub41c StartAddress\uac12\uc744 \uc801\uc6a9\uc744 \uc704\ud55c \ubcc0\uc218"
+    ],
+    "u8Buff_Test_same_flag": [
+        "uint8",
+        "\ub3d9\uc791\uc911 \ubcc0\uacbd\ub41c StartAddress\uac12\uc744 \uc801\uc6a9\uc744 \uc704\ud55c \ubcc0\uc218"
+    ],
+    "u8Buff_Test_same_Enable": [
+        "uint8",
+        "\ub3d9\uc791\uc911 \ubcc0\uacbd\ub41c StartAddress\uac12\uc744 \uc801\uc6a9\uc744 \uc704\ud55c \ubcc0\uc218"
+    ],
+    "Rough_Road_Compensation_Value": [
+        "sint16",
+        "\ud5d8\ub85c \uc8fc\ud589 \ud2b9\uc131\uc744 \uace0\ub824\ud55c \ubc18\uc804 \ud30c\ub77c\ubbf8\ud130\ub97c \uc801\uc6a9\ud55c \ubcc0\uc218"
+    ],
+    "Start_ADDR_MASK_Value": [
+        "sint16",
+        "\uc2dc\uc2a4\ud15c\uc758 \ubd80\ud558 Addr \uad6c\uac04\ubcc4 \ud2b9\uc131\uc744 \uace0\ub824\ud55c \ubc18\uc804 \ud30c\ub77c\ubbf8\ud130\ub97c \ub3c4\ucd9c\ud558\uae30 \uc704\ud55c \ubcc0\uc218"
+    ],
+    "Start_Tilt_ADDR_MASK_Value": [
+        "sint16",
+        "\uc2dc\uc2a4\ud15c\uc758 \ubd80\ud558 Addr \uad6c\uac04\ubcc4 \ud2b9\uc131\uc744 \uace0\ub824\ud55c \ubc18\uc804 \ud30c\ub77c\ubbf8\ud130\ub97c \ub3c4\ucd9c\ud558\uae30 \uc704\ud55c \ubcc0\uc218"
+    ],
+    "Cov_Load_offset_1_Value[8][2]": [
+        "sint16",
+        "\uc784\uc758\uc758 \uc804\uc555\uc5d0\uc11c \ubd80\ud558\ub370\uc774\ud130\ub97c \ud2b9\uc815 \uc804\uc555\uc758 \ud559\uc2b5 \ubd80\ud558 \ub370\uc774\ud130\ub85c \ubcf4\uc815\uc744 \uc801\uc6a9\ud558\uae30 \uc704\ud55c \ubcc0\uc218"
+    ],
+    "Cov_Load_offset_2_Value[8][2]": [
+        "sint16",
+        "\uc784\uc758\uc758 \uc804\uc555\uc5d0\uc11c \ubd80\ud558\ub370\uc774\ud130\ub97c \ud2b9\uc815 \uc804\uc555\uc758 \ud559\uc2b5 \ubd80\ud558 \ub370\uc774\ud130\ub85c \ubcf4\uc815\uc744 \uc801\uc6a9\ud558\uae30 \uc704\ud55c \ubcc0\uc218"
+    ],
+    "Cov_Load_scale_Value[8][2]": [
+        "sint16",
+        "\uc784\uc758\uc758 \uc804\uc555\uc5d0\uc11c \ubd80\ud558\ub370\uc774\ud130\ub97c \ud2b9\uc815 \uc804\uc555\uc758 \ud559\uc2b5 \ubd80\ud558 \ub370\uc774\ud130\ub85c \ubcf4\uc815\uc744 \uc801\uc6a9\ud558\uae30 \uc704\ud55c \ubcc0\uc218"
+    ],
+    "gb_CH_A_HallSpeedFilt": [
+        "BYTE",
+        "\ub3d9\uc791 \ubd80\ud558\uc911 \ud640\uc2e0\ud638 \uc8fc\uae30\uac04 \uc2dc\uac04"
+    ],
+    "gb_CH_A_HallSpeed": [
+        "BYTE",
+        "\ub3d9\uc791 \ubd80\ud558\uc911 \ud640\uc2e0\ud638 \uc8fc\uae30\uac04 \uc2dc\uac04"
+    ],
+    "App_Monitor_gstGlaAnPin.s8PosLoad_CH_A_Calc_Buff[]": [
+        "Uint8",
+        "\uc2dc\uc2a4\ud15c \uad6c\uac04\ubcc4 \ubd80\ud558 \ub370\uc774\ud130"
+    ],
+    "s8PosLoadBuff_Voltage[]": [
+        "Uint8",
+        "\uc2dc\uc2a4\ud15c \uad6c\uac04\ubcc4 \uc804\uc555 \ub370\uc774\ud130"
+    ],
+    "NowVolt": [
+        "Uint16",
+        "\uc804\uc555 \ub370\uc774\ud130"
+    ],
+    "Manual_Limit_Cov_Value": [
+        "Sint16",
+        "\ubc18\uc804 \ud30c\ub77c\ubbf8\ud130"
+    ],
+    "NowRPM": [
+        "Uint16",
+        "\ubaa8\ud130 RPM"
+    ],
+    "Manual_Limit_RPM_Value": [
+        "Sint16",
+        "\ubc18\uc804 \ud30c\ub77c\ubbf8\ud130"
+    ],
+    "NowAddr": [
+        "Uint16",
+        "\ud604\uc7ac Addr"
+    ],
+    "U16StartAdress": [
+        "Uint16",
+        "\ud604\uc7ac StartAddr"
+    ],
+    "Addr_Cnt": [
+        "Uint16",
+        "\uad6c\uac04\ubcc4 Start Adrress \ubcc0\uacbd\ud558\uae30 \uc704\ud55c \uce74\uc6b4\ud2b8 \uc870\uac74"
+    ],
+    "Startadd": [
+        "Uint16",
+        "\ubcc0\uacbd\ub41c Startadd"
+    ],
+    "RCM_CANRx_AppInterface.RCM_CLU_DisSpdVal_KPH": [
+        "Uint16",
+        "\ucc28\uc18d\ub370\uc774\ud130"
+    ],
+    "Speed_Compenation": [
+        "Sint16",
+        "\ucc28\uc18d \uc801\uc6a9\uc5d0 \ub530\ub978 \ubc18\uc804 \ud30c\ub77c\ubbf8\ud130"
+    ],
+    "u16Now_Position": [
+        "Uint16",
+        "\ud604\uc7ac \ud640 Addr \uc704\uce58"
+    ],
+    "Positon_Compenation": [
+        "Sint16",
+        "\uc2dc\uc2a4\ud15c \uad6c\uac04\ubcc4 \ubd80\ud558\ud2b9\uc131\uc744 \uace0\ub824\ud55c \ubc18\uc804\ud30c\ub77c\ubbf8\ud130"
+    ],
+    "RCM_CANRx_AppInterface.RCM_BCM_Ign1InSta": [
+        "Uint8",
+        "IGN1 \uc2e0\ud638"
+    ],
+    "RCM_CANRx_AppInterface.RCM_BCM_Ign2InSta": [
+        "Uint8",
+        "IGN2 \uc2e0\ud638"
+    ],
+    "Engine_Craking_Compensation": [
+        "Sint16",
+        "Engine \ud06c\ub7ad\ud0b9\uc2dc \ubd80\ud558\ud2b9\uc131\uc744 \uace0\ub824\ud55c \ubc18\uc804\ud30c\ub77c\ubbf8\ud130"
+    ],
+    "CH_A_Calc_TEST": [
+        "Sint16",
+        "\ud604\uc704\uce58\uc758 \ub3d9\uc791 \ubd80\ud558 \ub370\uc774\ud130"
+    ],
+    "CH_A_Calc_BUFF": [
+        "Sint16",
+        "\ub3d9\uc791\ubd80\ud558"
+    ],
+    "Low_Temperature_Compensation": [
+        "Sint16",
+        "\uc800\uc628\uc5d0\uc11c \ub3d9\uc791\uc2dc \ubd80\ud558\ud2b9\uc131\uc744 \uace0\ub824\ud55c \ubc18\uc804\ud30c\ub77c\ubbf8\ud130"
+    ],
+    "Diff_CH_A_Calc_TEST": [
+        "Sint16",
+        "\ud604\uc704\uce58 \ub3d9\uc791 \ubd80\ud558\ub370\uc774\ud130\uc640 \uc774\uc804 \ub3d9\uc791\ubd80\ud558\ub370\uc774\ud130\uc758 \ucc28\uc774"
+    ],
+    "Rough_Road_Compensation": [
+        "sint16",
+        "\ud5d8\ub85c \uc8fc\ud589\uc911 \ub3d9\uc791\uc2dc \ubd80\ud558\ud2b9\uc131\uc744 \uace0\ub824\ud55c \ubc18\uc804\ud30c\ub77c\ubbf8\ud130"
+    ],
+    "Position": [
+        "uint16",
+        "\ud604\uc7ac \uc704\uce58 \uac12"
+    ],
+    "Speed": [
+        "Sint16",
+        "Speed \ud2b9\uc131\uc774 \uace0\ub824\ub41c \ubc18\uc804 \ud30c\ub77c\ubbf8\ud130"
+    ],
+    "Temperature": [
+        "Sint16",
+        "Temperature \ud2b9\uc131\uc774 \uace0\ub824\ub41c \ubc18\uc804 \ud30c\ub77c\ubbf8\ud130"
+    ],
+    "Engin_Cranking": [
+        "Sint16",
+        "Engin_Cranking \ud2b9\uc131\uc774 \uace0\ub824\ub41c \ubc18\uc804 \ud30c\ub77c\ubbf8\ud130"
+    ],
+    "RoughRoad": [
+        "Sint16",
+        "RoughRoad \ud2b9\uc131\uc774 \uace0\ub824\ub41c \ubc18\uc804 \ud30c\ub77c\ubbf8\ud130"
+    ],
+    "Total_AntiKid_Limit": [
+        "Sint16",
+        "Position + Termperature + Speed + RoughRoad + Cranking\uc5d0 \ub300\ud55c \ud2b9\uc131\uc774 \uace0\ub824\ub41c \ubc18\uc804 \ud30c\ub77c\ubbf8\ud130 \uc801\uc6a9 \ubcc0\uc218"
+    ],
+    "Voltage_Data": [
+        "Uint16",
+        "\uc804\uc555 \ub370\uc774\ud130"
+    ],
+    "Offset_Data": [
+        "Sint16",
+        "\ubcf4\uc815 \uc801\uc6a9\ud55c \ubd80\ud558 \ub370\uc774\ud130"
+    ],
+    "Cov_Load_offset_1_Value_1_Under12V": [
+        "Sint16",
+        "\ubcf4\uc815 \uc801\uc6a9\ud55c \ubd80\ud558 \ub370\uc774\ud130"
+    ],
+    "Cov_Load_offset_1_Value_2_Under12V": [
+        "Sint16",
+        "\ubcf4\uc815 \uc801\uc6a9\ud55c \ubd80\ud558 \ub370\uc774\ud130"
+    ],
+    "Cov_Load_offset_1_Value_1_Upper12V": [
+        "Sint16",
+        "\ubcf4\uc815 \uc801\uc6a9\ud55c \ubd80\ud558 \ub370\uc774\ud130"
+    ],
+    "Cov_Load_offset_1_Value_2_Upper12V": [
+        "Sint16",
+        "\ubcf4\uc815 \uc801\uc6a9\ud55c \ubd80\ud558 \ub370\uc774\ud130"
+    ],
+    "Cov_Load_offset_2_Value_2_Under12V": [
+        "Sint16",
+        "\ubcf4\uc815 \uc801\uc6a9\ud55c \ubd80\ud558 \ub370\uc774\ud130"
+    ],
+    "Cov_Load_offset_2_Value_1_Upper12V": [
+        "Sint16",
+        "\ubcf4\uc815 \uc801\uc6a9\ud55c \ubd80\ud558 \ub370\uc774\ud130"
+    ],
+    "Offset_Data_1": [
+        "Sint16",
+        "\ubcf4\uc815 \uc801\uc6a9\ud55c \ubd80\ud558 \ub370\uc774\ud130"
+    ],
+    "Cov_Load_scale_Value_1_Under12V": [
+        "Sint16",
+        "\ubcf4\uc815 \uc801\uc6a9\ud55c \ubd80\ud558 \ub370\uc774\ud130"
+    ],
+    "Cov_Load_scale_Value_2_Under12V": [
+        "Sint16",
+        "\ubcf4\uc815 \uc801\uc6a9\ud55c \ubd80\ud558 \ub370\uc774\ud130"
+    ],
+    "Cov_Load_scale_Value_1_Upper12V": [
+        "Sint16",
+        "\ubcf4\uc815 \uc801\uc6a9\ud55c \ubd80\ud558 \ub370\uc774\ud130"
+    ],
+    "Cov_Load_scale_Value_2_Upper12V": [
+        "Sint16",
+        "\ubcf4\uc815 \uc801\uc6a9\ud55c \ubd80\ud558 \ub370\uc774\ud130"
+    ],
+    "POS_FAULT_LIST": [
+        "enum",
+        "Glass Fault\nPOS_FLT_OVER_SPEED = 0,\nPOS_FLT_HALL_REVERSE,\nPOS_FLT_OPEN_HALL,\nPOS_FLT_CLOSE_HALL,\nPOS_FLT_OVER_RIDE,\nPOS_FAULT_MAX"
+    ],
+    "POS_FAULT_STATE": [
+        "enum",
+        "Glass Fault \uc0c1\ud0dc\nuint8 SetCnt;\nuint8 RelCnt;\nuint8 PosFaultState;"
+    ],
+    "PosFltState[]": [
+        "typedef struct",
+        "Glass \uc704\uce58 Fault \uc0c1\ud0dc \uc800\uc7a5 \ubc84\ud37c"
+    ],
+    "gbHall_A": [
+        "BYTE",
+        "Hall \uc13c\uc11c A \uac12"
+    ],
+    "gbHall_B": [
+        "BYTE",
+        "Hall \uc13c\uc11c B \uac12"
+    ],
+    "gbHallCount": [
+        "BYTE",
+        "Hall Count \uac12"
+    ],
+    "glActiveTime": [
+        "LONG",
+        "\ubaa8\ud130 \ub3d9\uc791 \uc2dc\uac04"
+    ],
+    "glActiveTimePrev": [
+        "LONG",
+        "\ubaa8\ud130 \ub3d9\uc791 \uc2dc\uac04 \uc774\uc804 \uac12"
+    ],
+    "glPeriodTime": [
+        "LONG",
+        "\ubaa8\ud130 \ub3d9\uc791 \uc2dc\uac04 \uac04\uaca9"
+    ],
+    "gwVelocityBuf[]": [
+        "WORD",
+        "Hall\uc758 \uc18d\ub3c4 \uac12"
+    ],
+    "gwVelocityFiltBuf[]": [
+        "WORD",
+        "\uc18d\ub3c4 \ubcf4\uc815 \uac12 buffer"
+    ],
+    "gwVelocitySum": [
+        "WORD",
+        "Hall \uc18d\ub3c4\uc758 \ud569."
+    ],
+    "gwVelocityFiltSum": [
+        "WORD",
+        "\uc18d\ub3c4 \ubcf4\uc815\uc774 \uc774\ub8e8\uc5b4\uc9c4 \uce74\uc6b4\ud2b8 \ud569"
+    ],
+    "App_Monitor_gstGlaHallMon.u8HallQuad_FirstTimeStatus": [
+        "uint8",
+        "Hall\uc774 \ucc98\uc74c\uc73c\ub85c \uc785\ub825\ub418\ub294 \uc0c1\ud0dc"
+    ],
+    "App_Monitor_gstGlaHallMon.u16HallQuad_TimeoutDebounce": [
+        "uint16",
+        "Hall\uc758 \ud30c\ud615\uc774 \uc785\ub825\ub418\uc9c0 \uc54a\uc744 \ub54c\uc758 Debounce"
+    ],
+    "gbHall_A_Chk_Flag": [
+        "BYTE",
+        "Hall Check Flag"
+    ],
+    "gbHall_A_Chk_Flag_Low": [
+        "BYTE",
+        "Hall Check Flag"
+    ],
+    "gl_Hall_A_ActiveTime": [
+        "uint32",
+        "Hall aCTIVE TIME"
+    ],
+    "gl_Hall_A_PeriodTime": [
+        "uint32",
+        "\ud640 \uc5e3\uc9c0 \uac04\uaca9"
+    ],
+    "u32Interval": [
+        "uint32",
+        "Hall \uc2dc\uac04\uc758 \ucc28\uc774 \uc785\ub825."
+    ],
+    "enValDirVal": [
+        "enum",
+        "\ubaa8\ud130 \ucd9c\ub825 \ubc29\ud5a5"
+    ],
+    "App_Monitor_gstGlaVeloMon.u8HallQuad_VelocityFilt": [
+        "Uint8",
+        "Hall \uc18d\ub3c4\uc758 Filtering\ub41c \uac12"
+    ],
+    "pp_Monitor_gstGlaVeloMon.s32HallQuad_Velocity_Cur": [
+        "Sint32",
+        "Hall \uc18d\ub3c4\uc758 \ud604\uc7ac \uac12"
+    ],
+    "constaddr": [
+        "uint8*",
+        "\ubc84\ud37c \uc8fc\uc18c\ub97c \ubc1b\uc544\uc624\uae30 \uc704\ud55c \ubcc0\uc218"
+    ],
+    "size": [
+        "uint16",
+        "\ubc84\ud37c \uc0ac\uc774\uc988"
+    ],
+    "address": [
+        "uint8",
+        "\ud604\uc7ac \ubc84\ud37c \uc8fc\uc18c"
+    ],
+    "enPrev_PositionArea": [
+        "uint8",
+        "\uc774\uc804 Glass \uc704\uce58 \uac12"
+    ],
+    "App_Monitor_gstGlaHallMon.u8HallQuad_Timeout_Cnt": [
+        "uint8",
+        "Hall\uc758 \ud30c\ud615\uc774 \uc785\ub825\ub418\uc9c0 \uc54a\uc744 \ub54c\uc758 Count"
+    ],
+    "u8HallCount": [
+        "Uint8",
+        "Hall \uce74\uc6b4\ud2b8 \uac12"
+    ],
+    "App_Function_gstGlaCtrl.enOperate": [
+        "uint8",
+        "Glass \ub3d9\uc791 \ubaa8\ub4dc"
+    ],
+    "App_Monitor_gstGlaAccMon.s16HallQuad_AccelerationFilt": [
+        "Sint16",
+        "Hall \uc13c\uc11c \uac00\uc18d\ub3c4 \ubcf4\uc0c1"
+    ],
+    "gstGlaCtrl.enOperate": [
+        "Uint8",
+        "Glass Motor\uc758 \uad6c\ub3d9 \uc0c1\ud0dc"
+    ],
+    "prevPosition": [
+        "uint16",
+        "Glass \uc774\uc804 \uc704\uce58 \uac12"
+    ],
+    "currPositon": [
+        "uint16",
+        "Glass \ud604\uc7ac \uc704\uce58 \uac12"
+    ],
+    "s32Velocity": [
+        "Sint32",
+        "\ud604\uc7ac \uc18d\ub3c4 \uac12"
+    ],
+    "index": [
+        "POS_FAULT_LIST\n\nenum",
+        "POS_FLT_OVER_SPEED = 0,\t// 10ms\n\tPOS_FLT_HALL_REVERSE,\n\tPOS_FLT_OPEN_HALL,\n\tPOS_FLT_CLOSE_HALL,\n\tPOS_FLT_OVER_RIDE,\n\tPOS_FAULT_MAX"
+    ],
+    "PosFltState[index].SetCnt": [
+        "Uint8",
+        "Fault \ud0d0\uc9c0 \uce74\uc6b4\ud2b8 \ubcc0\uc218"
+    ],
+    "Info_PosFault[index].SetCntRef": [
+        "Uint8",
+        "Fault \ud0d0\uc9c0 \uce74\uc6b4\ud2b8 \ubcc0\uc218"
+    ],
+    "PosFltState[index].RelCnt": [
+        "uint8",
+        "fault release \uce74\uc6b4\ud2b8 \ubcc0\uc218"
+    ],
+    "Info_PosFault[index].pFunc": [
+        "Uint8",
+        ""
+    ],
+    "PosFltState[index].PosFaultState": [
+        "Uint8",
+        "Glass Position Fault \uc0c1\ud0dc"
+    ],
+    "Info_PosFault[index].RelCntRef": [
+        "uint8",
+        "fault release \uce74\uc6b4\ud2b8 \ubcc0\uc218"
+    ],
+    "Flag_Fault": [
+        "uint8",
+        "Fault flag \uc2e0\ud638"
+    ],
+    "App_Monitor_gstFaultMon.uGlass.flag.fGlass_Hall_Error_Detection": [
+        "Uint8",
+        "Glass Hall Error Detection Data"
+    ],
+    "PosFltState[POS_FLT_SINGLEHALL].PosFaultState": [
+        "uint8",
+        "Glass \ud640 \uc13c\uc11c \uc5d0\ub7ec \uc0c1\ud0dc"
+    ],
+    "App_Function_gstGlaCtrl.u8AntiPinchEnable": [
+        "uint8",
+        "Glass Anti-Picnch Monitor Enable"
+    ],
+    "App_Monitor_gstGlaAnPin.u8MonitorEnable": [
+        "Uint8",
+        "Anti Pinch monitor Enable"
+    ],
+    "App_Function_gstSwCtrl": [
+        "typedef struct",
+        "Command SW Control\nenSwitchComm enCommand;\nenSwitchComm enCommandBack;\nenSwitchComm enCanCommand;\nenSwitchComm enCanCommandBack;\nenSwitchComm enCommand_Status;\nenSwitchComm enCommand_StatusBack;"
+    ],
+    "App_Function_gstCANcomm": [
+        "typedef struct",
+        "CAN Communication\nuint8\tu8CAN_IG;\t\nuint8\tu8CAN_HUCNTL;\nuint16 \tu16IgnDebounce;\nenIGNStatusINDEX blIgnStatus;\nenIGNStatusINDEX blIgnStatusBack;\nuint16 \tu16SleepDebounce;\nenSLEEPStatusINDEX blSleep;\nenSLEEPStatusINDEX blSleepBack;\nbool blTimeoutFlag;\nbool blHUCNTLFlag;\nuint8 u8ATS05_RRSunBlind;\nuint8 u8BCM20_BCM_Ign1InSta;\t\nuint8 u8BCM20_BCM_Ign2InSta;\nuint8 u8BCM20_Window_AsstPwrWdwSunroofEnblSta;\nuint16 u16CLU01_CLU_DisSpdVal_KPH;\nuint8 u8DATC01_DATC_OutTempSnsrVal;\nuint8 u8EMS02_ENG_EngSta;\nuint8 u8CNTL01_GlassCmdAVN;\nuint8 u8CNTL01_BlindCmdAVN;\nuint8 u8CNTL01_RrGlassCmdAVN;\nuint8 u8CNTL01_RrBlindCmdAVN;\nuint16 u16MON01_HU_OptionInfo;\nuint8 u8NAVI00_Navi_AirConditionWarning;\nuint8 u8RKE01_RKE_WdwUpDnReq;\nuint8 u8SGU01_SGU_BlindOpenReq;\nuint8 u8VCU01_VCU_EvDrvRdySta;\nuint8 u8RCM01_RCM_OptTyp;\nuint8 u8RCM01_RCM_SwStckDet;\nuint8 u8RCM01_RCM_TunnelOptType;\nuint8 u8RCM01_RCM_OHC_Cmd;\nuint8 u8RCM01_RCM_RmtSrfRValueSet;\nuint16 u16RCM02_RCM_CurGlsHallSnsrCnt;\nuint8 u8RCM02_RCM_SunroofOpnSta;\nuint8 u8RCM02_RCM_GlsOpSta;\nuint8 u8RCM02_RCM_GlsInitSta;\nuint8 u8RCM02_RCM_GlsAntPchSta;\nuint8 u8RCM02_RCM_GlsMtrHiTempSta;\nuint8 u8RCM02_RCM_GlsMtRunTtlTime;\nuint8 u8RCM02_RCM_GlsPosSta;\nuint8 u8RCM02_RCM_GlsFltVal;\nuint8 u8RCM02_RCM_GlsFltSta;\nuint16u16RCM03_RCM_CurBldHallSnsrCnt;\nuint8 u8RCM03_RCM_BldOpSta;\nuint8 u8RCM03_RCM_BldInitSta;\nuint8 u8RCM03_RCM_BldAntPchSta;\nuint8 u8RCM03_RCM_BldMtrHiTempSta;\nuint8 u8RCM03_RCM_BldMtRunTtlTime;\nuint8 u8RCM03_RCM_BldPosSta;\nuint8 u8RCM03_RCM_BldFltVal;\nuint8 u8RCM03_RCM_BldFltSta;"
+    ],
+    "App_Function_gstGlaLINCom": [
+        "typedef struct",
+        "LIN Communication\nuint8 u8Enable;\nuint8 u8EnableBack;\nenum enGlassCommniError_Status_INDEX enErrorStatus;\nenum enGlassBus_Status_INDEX enBus_Status;\nenBlindAreaStatus enBliPositionArea;\nenBlindAreaStatus enBliPositionAreaBack;\nuint16 u16Timeout_Debounce;\nuint8 u8Timeout_Enable;\nuint16 u16RecvTimeout_Debounce;"
+    ],
+    "App_Function_gstGlaMotorDrive": [
+        "typedef struct",
+        "Motor Drive\nenOperationIndex enOperation;\nuint16 u16PwmDuty;\nuint8 u8PwmDir;\nuint16 s8PresentDuty;\nuint16 u16CalcDuty;\nuint8 u8TimeCount;\nuint8 u8OpenStartDetect;\nuint8 u8CloseStartDetect;\nuint8 u8OpenSlowDetect;\nuint8 u8CloseSlowDetect;\nenOperationIndex enOperationBack;\nuint16 u16PwmDutyBack;\nuint8 u8PwmDirBack;\nuint16 s8PresentDutyBack;\nuint16 u16CalcDutyBack;\nuint8 u8TimeCountBack;\nuint8 u8OpenStartDetectBack;\nuint8 u8CloseStartDetectBack;\nuint8 u8OpenSlowDetectBack;\nuint8 u8CloseSlowDetectBack;"
+    ],
+    "App_Function_gstGlaPosMon": [
+        "typedef struct",
+        "Glass Position Monitoring\nuint16 u16Hall_Position;\nenGlassAreaStatus\tenPositionArea;\nuint16 u16MechHall_Position;\nuint16 u16Hall_PositionBack;\nenGlassAreaStatus\tenPositionAreaBack;"
+    ],
+    "App_Function_gstGlaHallMon": [
+        "typedef struct",
+        "Glass Hall Monitoring\nuint8 \tu8HallQuad_FirstTimeStatus;\nuint16  u16HallQuad_TimeoutDebounce;\nuint8\tu8HallQuad_Timeout_Cnt;\nuint16\tu16HallCapCnt;\nuint16\tu16HallCapCntPrev;\nenGlassVelocityDirection_Index\tenVelDirStatus;\nsint32  s32HallQuad_VelocityPrev;\nuint8 \tu8HallQuad_FirstTimeStatusBack;\nuint16  u16HallQuad_TimeoutDebounceBack;\nuint8\tu8HallQuad_Timeout_CntBack;\nuint16\tu16HallCapCntBack;\nuint16\tu16HallCapCntPrevBack;\nenGlassVelocityDirection_Index\tenVelDirStatusBack;\nsint32  s32HallQuad_VelocityPrevBack;"
+    ],
+    "App_Function_gstFaultMon": [
+        "typedef struct",
+        "fault Monitoring\nU_GLASS_FAULT uGlass;\nU_BLIND_FAULT uBlind;\nU_GLASS_FAULT_BACK uGlassBack;\nU_BLIND_FAULT_BACK uBlindBack;"
+    ],
+    "App_Function_gstGlaStall": [
+        "typedef struct",
+        "Glass stall\nuint8 u8MonitorEnable;\nuint16 u16TimeoutDebounce;\nuint8 u8MonitorEnableBack;\nuint16 u16TimeoutDebounceBack;"
+    ],
+    "App_Function_gstGlaAnPin": [
+        "typedef struct",
+        "Glass Anti-Pinch\nuint8 u8PosLoadInitEnable;\nuint8 u8PosLoadInitEnableBack;\nuint8 u8MonitorEnable;\nuint8 u8MonitorEnableBack;\nuint16 u16PosLoadAddr;\nuint16 u16PosLoadAddrPrev;\nuint16 u16PosLoadHallInterval;\nsint16 s16PosLoadSum;\nsint16 s16PosLoadSumTest;\nuint8 s8PosLoadBuff[LOADBUFF_ADDR_MAX];\nuint8 s8PosLoadBuffNew[LOADBUFF_ADDR_MAX];\nuint8 s8PosLoadTest[LOADBUFF_ADDR_MAX];\nsint16 s16Load;\nsint16 s16LoadOffset;\nsint16 s16VoltOffset;\nsint16 s16CarSpdOffset;\nsint16 s16LoadSum;\nsint16 s16LoadLimit;\nuint16 u16VoltPrev;\nsint16 s16VoltDiffSum;\nsint16 s16Volt_Pos_Comp;\nsint16 s16Volt_Force_Comp;\nsint16 s16Maskable_Comp;\nsint16 s16Temp_Force_Comp;\nsint16 s16dN_Volt_VoltPrev;\nsint16 s16N_Volt_Pres;\nsint16 s16N_Volt_Prev;\nuint8 u8dNSum_Address;\nuint8 u8dNSum_AddressPrev;\nsint16 s16dNSum;\nsint16 s16dNVibSum;\nuint8   bVibDetect;\nuint16 u16dNVibDetectDebounce;\nsint16 s16dNSum_Total;\nsint16 s16dNSum_Total_Limit;\nsint16 s16dN_Pos_CompLeft;"
+    ],
+    "App_Function_gstGlaCtrlOvCurrent": [
+        "typedef struct",
+        "Glass OverCurrent Control\nenum enGlassControlOperateOverCurrentStateMachineStatusIndex\tenStMc_State;"
+    ],
+    "App_Function_gstGlaOvCurrentMon": [
+        "typedef struct",
+        "Glass OverCurrent Monitoring\nsint32 s32CurrentFilt_mA;\nuint32 u32CurrentFiltBuff[10];\nsint32 s32CurrentFiltBuff_Sum;\nuint8  u8CurrentFilt_Address;\nuint8  u8CurrentFilt_AddressPrev;\nuint16 u16CalibrationOffset;\nuint8 u8MonitorEnable;\nuint16 u16TimeoutDebounce;\nsint32 s32CurrentFilt_mABack;\nuint32 u32CurrentFiltBuffBack[10];\nsint32 s32CurrentFiltBuff_SumBack;\nuint8  u8CurrentFilt_AddressBack;\nuint8  u8CurrentFilt_AddressPrevBack;\nuint16 u16CalibrationOffsetBack;\nuint8 u8MonitorEnableBack;\nuint16 u16TimeoutDebounceBack;"
+    ],
+    "App_Function_gstGlaCtrlOperAnPinAf": [
+        "typedef struct",
+        "Glass Anti-Pinch After\nenum enGlaCtrlOperAnPinAfStateMachineStatusIdx  enStMc_State;\nuint16 u16WaitDebounce;"
+    ],
+    "App_Function_gstGlaCtrlOperAnPin": [
+        "typedef struct",
+        "Glass Anti-Pinch Control\nenum enAntiPinchControlStatusIndex\tenAntiPinchCtrlStatus;"
+    ],
+    "App_Function_gstGlaCtrlOperAnHeat": [
+        "typedef struct",
+        "Glass Anti-Heat Control\nenum enGlassControlOperateAntiHeatStateMachineStatusIndex   enStMc_State;"
+    ],
+    "App_Function_gstGlaCtrlOperAuto": [
+        "typedef struct",
+        "Glass Auto Control\nenum enGlassTargetStateIndex enTargetSetState;\nenOperateTargetIndex enOperationTarget;\nenum enGlass_Command_Index\tenCommand;\nenum enGlassTargetStateIndex enTargetSetStateBack;\nenOperateTargetIndex enOperationTargetBack;\nenum enGlass_Command_Index\tenCommandBack;\nenum enGlassManualStateMachineStatusIndex\tenManuStMc_State;\nenum enGlassManualStateMachineStatusIndex\tenManuStMc_StateBack;"
+    ],
+    "App_Function_gstGlaCtrlOperComnErr": [
+        "typedef struct",
+        "Glass Communication Error\nenum enGlassControlOperateCommunicationErrorStateMachineStatusIndex\tenStMc_State;"
+    ],
+    "App_Function_gstGlaCtrlOperHallFault": [
+        "typedef struct",
+        "Glass Hall Fault Control\nenum enGlassControlOperateHallFaultStateMachineStatusIndex  enStMc_State;   \nuint16  u16OperDebounce;"
+    ],
+    "App_Function_gstGlaCtrlOperInit": [
+        "typedef struct",
+        "Glass \ucd08\uae30\ud654 Control\nenGlassReinitStateMachineStatusIndex\tenInitCtrlStatus;\nuint16\tu16InitCtrl_CloseSwitchDebounce;\nuint8\tu8Initial_HardStop_Detect;\nuint16\tu16InitCtrl_BouncebackDebounce;\nuint16\tu16InitCtrl_CloseOFFONDebounce;\nuint16\tu16InitCtrl_FullOpenWaitDebounce;\nuint16\tu16InitCtrl_GlassUpdateWaitDebounce;\nenum enReinitStartCommandIndex\tenInitial_Command;\nenReinitBlindStatusIndex\tenReintial_BlindStatus;"
+    ],
+    "App_Function_gstGlaCtrlOperOverRide": [
+        "typedef struct",
+        "Glass OverRide control\nenum enGlassControlOperateOverRideStateMachineStatusIndex\tenStMc_State;"
+    ],
+    "App_Function_gstGlaCtrlOperPosFlt": [
+        "typedef struct",
+        "Glass Position Fault\nenum enGlassControlOperatePositionFaultInitialStateMachineStatusIndex   enStMc_State;"
+    ],
+    "App_Function_gstGlaCtrlOperReinit": [
+        "typedef struct",
+        "Glass \uc7ac \ucd08\uae30\ud654 Control\nenGlassReinitStateMachineStatusIndex\tenReinitCtrlStatus;\nuint16 u16ReinitCtrl_CloseSwitchDebounce;\nuint8 u8Reinitial_HardStop_Detect;\nuint16 u16ReinitCtrl_BouncebackDebounce;\nuint16 u16ReinitCtrl_CloseOFFONDebounce;\nuint16 u16ReinitCtrl_FullOpenWaitDebounce;\nuint16 u16ReinitCtrl_GlassUpdateWaitDebounce;\nenum enReinitStartCommandIndex enReinitial_Command;\nenum enReinitStartCommandIndex\tenReinitial_CommandBack;\nenReinitBlindStatusIndex\tenReintial_BlindStatus;\nenReinitBlindStatusIndex\tenReintial_BlindStatusBack;\nenGlassReinitStateMachineStatusIndex u8debug;"
+    ],
+    "App_Function_gstGlaCtrlOperSleep": [
+        "typedef struct",
+        "Glass Sleep\nenum enGlassControlOperateSleepStateMachineStatusIndex\tenStMc_State;"
+    ],
+    "App_Function_gstGlaCtrlOperStall": [
+        "typedef struct",
+        "Glass Stall Control\nenum enGlassStallControlStatusIndex enStallCtrlStatus;"
+    ],
+    "App_Function_gstGlaCtrlOperVeryVolt": [
+        "typedef struct",
+        "Glass \uc804\uc555 Control\nenum enGlassControlOperateVeryHighLowVoltageStateMachineStatusIndex\tenStMc_State;"
+    ],
+    "App_Function_gstGlaCtrlOperWakeup": [
+        "typedef struct",
+        "Glass WakeUp Control\nenum enGlassControlOperateWakeupStateMachineStatusIndex\tenStMc_State;\nuint16 u16WaitDebounce;"
+    ],
+    "App_Function_gstGlaCtrl": [
+        "typedef struct",
+        "Glass Control\nenum enStopStatus enStopMode;\nenGlassOperate enOperate;\nenOperateModeStatus\tenOperateMode;\nenOperateTargetIndex\tenCommandTarget;\nenOperateTargetIndex\tenOperationTarget;\nuint16 u16AntiPinchEnableDebounce;\nuint8 u8AntiPinchEnable;\nenum enStopStatus enStopModeBack;\nenGlassOperate enOperateBack;\nenOperateModeStatus enOperateModeBack;\nenOperateTargetIndex \tenCommandTargetBack;\nuint16 u16AntiPinchEnableDebounceBack;\nuint8 u8AntiPinchEnableBack;"
+    ],
+    "App_Function_gstGlaAnHeatMon": [
+        "typedef struct",
+        "Glass Anti-Heat Monitoring\nuint8\tu8TotalTime;\nuint16\tu16AccTime;\nuint16\tu16FaultTimeLimit;\nuint16\tu16RecTimeLimit;\nuint8\tu8TotalTimeBack;\nuint16\tu16AccTimeBack;\nuint16\tu16FaultTimeLimitBack;\nuint16\tu16RecTimeLimitBack;"
+    ],
+    "App_Function_Function_Inout": [
+        "typedef struct",
+        "AppFunction Input/Output\nuint16 RCM_SleepCondition;\nuint8 RCM_Reserve01;\nuint8 RCM_Reserve02;"
+    ],
+    "RCM_FunctionInput": [
+        "typedef struct",
+        "RCM \uc804\uc555 \uc778\uac00 \uc0c1\ud0dc\nuint16 RCM_BatteryVoltage;\nuint8 RCM_ApplicationInit;\nuint8 RCM_gbComBatMode;\nuint8 RCM_gbIOBatMode;\nuint8 RCM_gbDiagBatMode;\nuint8 RCM_gbLPCondition;"
+    ],
+    "RCM_CANRx_App_Function": [
+        "typedef struct",
+        "CAN Receive\nuint8 RCM_Window_AsstPwrWdwSunroofEnblSta;\nuint8 RCM_DATC_OutTempSnsrVal;\nuint8 RCM_C_BlindCmdAVN;\nuint8 RCM_C_GlassCmdAVN;\nuint8 RCM_RKE_WdwUpDnReq;\nuint8 RCM_ATS_RRSunBlind;\nuint8 RCM_BCM_Ign2InSta;\nuint8 RCM_BCM_Ign1InSta;\nuint16 RCM_CLU_DisSpdVal_KPH;\nuint8 RCM_ENG_EngSta;\nuint8 RCM_VCU_EvDrvRdySta;\nuint8 RCM_C_RrGlassCmdAVN;\nuint8 RCM_C_RrBlindCmdAVN;\nuint16 RCM_HU_OptionInfo;\nuint8 RCM_Navi_AirConditionWarning;\nuint8 RCM_SGU_BlindOpenReq;"
+    ],
+    "gbBatFault": [
+        "BYTE",
+        ""
+    ],
+    "App_Function_gstGlaCtrl.enOperateMode": [
+        "Uint8",
+        "Glass \ub3d9\uc791 \ubaa8\ub4dc"
+    ],
+    "App_Function_gstGlaCtrl.enOperateBack": [
+        "uint8",
+        "Glass \uc774\uc804 \ub3d9\uc791 \ubaa8\ub4dc"
+    ],
+    "App_Function_gstGlaAnPin.u8PosLoadInitEnableBack": [
+        "uint8",
+        "Anti-Pinch \ubd80\ud558 \ucd08\uae30\ud654 \uc774\uc804 Enable"
+    ],
+    "App_Function_gstGlaAnPin.u8PosLoadInitEnable": [
+        "uint8",
+        "Glass Anti-Pinch \ucd08\uae30\ud654 Enable"
+    ],
+    "App_Function_gstGlaAnPin.u8MonitorEnableBack": [
+        "uint8",
+        "Anti-Pinch Monitoring \uc774\uc804 Enable"
+    ],
+    "App_Function_gstGlaAnPin.u8MonitorEnable": [
+        "Uint8",
+        "Anti Pinch Monitor Enable"
+    ],
+    "App_Function_gstFaultMon.uGlassBack.flag.fGlass_OverRide_DetectionBack": [
+        "uint8",
+        "Glass override Detection \uc774\uc804 Data"
+    ],
+    "App_Function_gstFaultMon.uGlass.flag.fGlass_OverRide_Detection": [
+        "Uint8",
+        "Glass OverRide Detect Data"
+    ],
+    "App_Function_gstFaultMon.uGlassBack.flag.fGlass_OverCurrent_DetectionBack": [
+        "uint8",
+        "Glass OverCurrent Detection Data"
+    ],
+    "App_Function_gstFaultMon.uGlass.flag.fGlass_OverCurrent_Detection": [
+        "Uint8",
+        "Glass OverCurrent Detect Data"
+    ],
+    "App_Function_gstGlaOvCurrentMon.u8MonitorEnableBack": [
+        "uint8",
+        "Glass OverCurrent Monitoring \uc774\uc804 Data"
+    ],
+    "App_Function_gstGlaOvCurrentMon.u8MonitorEnable": [
+        "Uint8",
+        "Glass OverCurrent Enable"
+    ],
+    "gbTestcount": [
+        "BYTE",
+        ""
+    ],
+    "mb100Count": [
+        "BYTE",
+        ""
+    ],
+    "CANTx_RCM_GlsInitSta": [
+        "BYTE",
+        "Glass \ucd08\uae30\ud654 \uc911 \ud1b5\uc2e0 \uc0c1\ud0dc"
+    ],
+    "gbPositionStallCmd": [
+        "Byte",
+        "Stall Command \uac12"
+    ],
+    "App_Function_gstGlaCtrl.enCommandTarge": [
+        "Uint8",
+        "\ub3d9\uc791 Command Target"
+    ],
+    "App_Function_gstGlaCtrl.u16AntiPinchEnableDebounce": [
+        "uint16",
+        "Anti-Pinch Debounce Enable"
+    ],
+    "enValue": [
+        "uint16",
+        "Anti-Pinch Enable \uc785\ub825"
+    ],
+    "App_Function_gstGlaCtrl.enCommandTarget": [
+        "Uint8",
+        "Glass Command Target \uc0c1\ud0dc"
+    ],
+    "App_Function_gstGlaMotorDrive.enOperation": [
+        "uint8",
+        "Glass \ubaa8\ud130 \ub3d9\uc791"
+    ],
+    "App_Function_gstGlaMotorDrive.u8OpenStartDetect": [
+        "Uint8",
+        "Glass Open \ub3d9\uc791 \uac10\uc9c0"
+    ],
+    "App_Function_gstGlaMotorDrive.u8CloseStartDetect": [
+        "Uint8",
+        "Glass Close \ub3d9\uc791 \uac10\uc9c0"
+    ],
+    "App_Function_gstFaultMon.uGlass.flag.fGlass_Motor_Over_Oper_Detection": [
+        "Uint8",
+        "Glass Over oper \ub3d9\uc791 \uac10\uc9c0"
+    ],
+    "App_Function\n_Function_Inout.RCM_SleepCondition": [
+        "uint16",
+        "Glass Sleep \ubaa8\ub4dc Input, Output"
+    ],
+    "App_Function_gstCANcomm.blSleep": [
+        "Uint8",
+        "Sleep \ubaa8\ub4dc CAN \ud1b5\uc2e0"
+    ],
+    "App_Function\n_gstFaultMon.uGlass.flag.fGlass_TeachStatus": [
+        "uint8",
+        "Glass Teach Status Data"
+    ],
+    "gbTeachStatusBackUp": [
+        "BYTE",
+        "backup"
+    ],
+    "App_Function\n_gstGlaCtrl.enOperateMode": [
+        "uint8",
+        "Glass \ub3d9\uc791 \ubaa8\ub4dc"
+    ],
+    "App_Function\n_gstGlaCtrlOperInit.enInitCtrlStatus": [
+        "uint8",
+        "Glass \ucd08\uae30\ud654 \uc0c1\ud0dc"
+    ],
+    "App_Function\n_gstGlaCtrlOperReinit.enReinitCtrlStatus": [
+        "uint8",
+        "Glass \uc7ac \ucd08\uae30\ud654 \uc0c1\ud0dc"
+    ],
+    "App_Function_Function_Inout.RCM_SleepCondition": [
+        "uint16",
+        "Sleep \ubaa8\ub4dc"
+    ],
+    "gbGlassEEpNotInitResult": [
+        "BYTE",
+        "Glass EEP Result"
+    ],
+    "gbGlassNotInitEEP_Flag": [
+        "BYTE",
+        "Glass EEP flag"
+    ],
+    "App_Function_gstGlaCtrlOperWakeup.enStMc_State": [
+        "enum",
+        "Glass WakeUp \uc0c1\ud0dc \nGlaWake_Init = 0,\nGlaWake_Wait,\nGlaWake_IG_Wait,\nGlaWake_Complete,"
+    ],
+    "App_Function_gstGlaCtrlOperInit.enInitCtrlStatus": [
+        "uint8",
+        "Glass \ucd08\uae30\ud654 \ub3d9\uc791 \uc0c1\ud0dc"
+    ],
+    "gbAutoInitialCmd": [
+        "BYTE",
+        "Auto \ubaa8\ub4dc \ucd5c\ucd08 \uc124\uc815 \uac12"
+    ],
+    "App_Function_gstFaultMon.uGlass.flag.fGlass_Hall_Error_Detection": [
+        "Uint8",
+        "Glass Hall Error Detect Data"
+    ],
+    "App_Function_gstGlaPosMon.enPositionArea": [
+        "Uint8",
+        "Glass \uc704\uce58 \uc0c1\ud0dc"
+    ],
+    "App_Function_gstSwCtrl.enCommand_Status": [
+        "typedef struct",
+        "Command \uc2a4\uc704\uce58 \uc785\ub825 \uc0c1\ud0dc"
+    ],
+    "RCM_CANRx_App_Function.RCM_CLU_DisSpdVal_KPH": [
+        "uint16",
+        "\ud604\uc7ac \ucc28\ub7c9 \uc18d\ub3c4"
+    ],
+    "gbSwitchStuckState": [
+        "BYTE",
+        "\uc2a4\uc704\uce58 \ub20c\ub9bc \uc0c1\ud0dc"
+    ],
+    "App_Function_gstFaultMon.uBlind.flag.fBlind_OverRide_Detection": [
+        "Uint8",
+        "Blind Override Detect Data"
+    ],
+    "App_Function_gstFaultMon.uBlind.flag.fBlind_Anti_Pinch_Detection": [
+        "Uint8",
+        "Blind Anti-Pinch Detect Data"
+    ],
+    "App_Function_gstFaultMon.uBlind.flag.fBlind_OverCurrent_Detection": [
+        "Uint8",
+        "Blind OverCurrent Detect Data"
+    ],
+    "App_Function_gstFaultMon.uBlind.flag.fBlind_Stall_Detection": [
+        "Uint8",
+        "Blind Stall Detect Data"
+    ],
+    "App_Function_gstFaultMon.uGlass.flag.fGlass_AntiHeat_Detection": [
+        "uint8",
+        "Glass Anti-heat Dectection Data"
+    ],
+    "App_Function_gstFaultMon.uBlind.flag.fBlind_AntiHeat_Detection": [
+        "uint8",
+        "Blind Anti-Heat Detection Data"
+    ],
+    "App_Function_gstGlaCtrlOperAuto.enOperationTarget": [
+        "Uint8",
+        "Operation Target"
+    ],
+    "App_Function_gstGlaCtrlOperAnPin.enAntiPinchCtrlStatus": [
+        "enum",
+        "Glass Anti-Pinch \uc0c1\ud0dc\nAntiPinchCtrl_Init = 0,\nAntiPinchCtrl_GlassOPEN,\nAntiPinchCtrl_GlassTILT,\nAntiPinchCtrl_BlindAntiPinch,\nAntiPinchCtrl_FaultInit,\nAntiPinchCtrl_Complete,"
+    ],
+    "App_Function_gstGlaCtrlOperStall.enStallCtrlStatus": [
+        "enum",
+        "Glass Stall \ub3d9\uc791 \ubaa8\ub4dc\nGlaStallCtrl_Init = 0,\nGlaStallCtrl_GlassOPEN,\nGlaStallCtrl_GlassTILT,\nGlaStallCtrl_BlindStall,\nGlaStallCtrl_GlassOPENING,\nGlaStallCtrl_FaultInit,\nGlaStallCtrl_Complete,"
+    ],
+    "App_Function_gstGlaCtrlOperOverRide.enStMc_State": [
+        "enum",
+        "Over Ride \uc0c1\ud0dc\uc758 \ub3d9\uc791\uc0c1\ud0dc\nGlaOvRide_Init = 0,\nGlaOvRide_ComWait,\t\nGlaOvRide_Complete"
+    ],
+    "App_Function_gstGlaCtrlOperReinit.enReinitCtrlStatus": [
+        "uint8",
+        "Glass ReInitial \uc0c1\ud0dc\uc758 \ub3d9\uc791\uc0c1\ud0dc"
+    ],
+    "App_Function_gstGlaCtrlOperAnPinAf.enStMc_State": [
+        "enum",
+        "Anti-Pinch After \uc0c1\ud0dc\nGlaAnPinAf_Init = 0,\nGlaAnPinAf_CommWait,\nGlaAnPinAf_GlassClosing,\t\nGlaAnPinAf_BlindClosing,\nGlaAnPinAf_GlassOpening,\nGlaAnPinAf_BlindOpening,\nGlaAnPinAf_Blind_Open_AndTILT,\nGlaAnPinAf_Blind_TILT_Wait,\nGlaAnPinAf_CLOSE_To_TILT,\nGlaAnPinAf_TILT_To_CLOSE,\nGlaAnPinAf_OPEN_To_TILT,\nGlaAnPinAf_Blind_Open_AndTILT_CLOSE,\nGlaAnPinAf_Complete"
+    ],
+    "App_Function_gstCANcomm.blIgnStatus": [
+        "Uint8",
+        "CAN IGN \uc0c1\ud0dc \uba54\uc2dc\uc9c0"
+    ],
+    "App_Function_gstGlaCtrlOperAnHeat.enStMc_State": [
+        "Enum",
+        "Glass Anti-Heat \uc0c1\ud0dc\nGlaAnHeat_Init = 0,\nGlaAnHeat_CommWait,\nGlaAnHeat_GlassClosing,\nGlaAnHeat_BlindClosing,"
+    ],
+    "App_Function_gstGlaCtrlOvCurrent.enStMc_State": [
+        "enum",
+        "OverCurrent \uc2dc \ub3d9\uc791 \uc0c1\ud0dc\nGlaOvCurrent_Init = 0,\nGlaOvCurrent_ComWait,\t\nGlaOvCurrent_Complete"
+    ],
+    "gbSwCtrlCommand": [
+        "BYTE",
+        "Command SW"
+    ],
+    "gbSwCtrlCommandStatus": [
+        "BYTE",
+        "Command SW \uc0c1\ud0dc"
+    ],
+    "gbSwCtrlCommandStatusBack": [
+        "BYTE",
+        "Command SW \uc774\uc804 \uc0c1\ud0dc"
+    ],
+    "gbOperateStopBackUp": [
+        "BYTE",
+        "Stop \ub3d9\uc791 \uc0c1\ud0dc BackUp"
+    ],
+    "App_Function_gstGlaCtrlOperAuto.enTargetSetState": [
+        "Uint8",
+        "TargetSetState"
+    ],
+    "App_Function_gstGlaPosMon.u16MechHall_Position": [
+        "Uint16",
+        "Glass Hall \uc704\uce58 \uac12"
+    ],
+    "gbOperateOpenDelay": [
+        "Byte",
+        "Open Delay Counter"
+    ],
+    "gbOperateCloseDelay": [
+        "Byte",
+        "Close Delay Counter"
+    ],
+    "App_Function_gstGlaCtrlOperWakeup.u16WaitDebounce": [
+        "uint16",
+        "Wake Up\uc744 \ub300\uae30\ud558\ub294 Debounce \uac12"
+    ],
+    "App_Function_gstGlaCtrlOperSleep.enStMc_State": [
+        "enum",
+        "Sleep \ubaa8\ub4dc \uc0c1\ud0dc\nGlaSlp_Init = 0,\nGlaSlp_Saving,\nGlaSlp_SleepEnter"
+    ],
+    "GLASSCONTROL_OPER_HALLFAULT_DEBOUNCE_MAX": [
+        "Macro(#define)",
+        "Hall Fault \uc2dc \ub3d9\uc791 \uc2dc\uac04 Debounce \uac12"
+    ],
+    "App_Function_gstGlaCtrlOperHallFault.enStMc_State": [
+        "enum",
+        "Glass Hall Fault \uc0c1\ud0dc\t\nGlaHallFlt_Init = 0,\nGlaHallFlt_InitComWait,\nGlaHallFlt_ClsWait,\nGlaHallFlt_Closing,"
+    ],
+    "App_Function_gstGlaCtrlOperHallFault.u16OperDebounce": [
+        "Uint16",
+        "Hall Fault \ub3d9\uc791\uc758 Debounce."
+    ],
+    "GLA_OVCURRENT_MON_RAW_OFFSET_BASE": [
+        "Macro(#define)",
+        "OverCurrent Offset base \uac12"
+    ],
+    "GLA_OVCURRENT_MON_CALI_OFFSET_FACTOR": [
+        "Macro(#define)",
+        "OverCurrent Offset \uacc4\uc0b0 \uc694\uc18c"
+    ],
+    "GLA_OVCURRENT_MON_VOLT_ZERO": [
+        "Macro(#define)",
+        "\uc804\ub958 \uacc4\uc0b0\uc744 \uc704\ud55c \uc804\uc555 Zero \uc124\uc815 \uac12"
+    ],
+    "GLA_OVCURRENT_MON_VOLT_LSB": [
+        "Macro(#define)",
+        "\uc804\ub958 \uacc4\uc0b0\uc744 \uc704\ud55c \uc804\uc555 LSB \uc124\uc815 \uac12"
+    ],
+    "GLA_OVCURRENT_MON_GAIN": [
+        "Macro(#define)",
+        ""
+    ],
+    "GLA_OVCURRENT_MON_SH_RES": [
+        "Macro(#define)",
+        "\uc804\ub958 \uacc4\uc0b0\uc744 \uc704\ud55c \uc800\ud56d \uac12"
+    ],
+    "GLA_OVCURRENT_MON_OFFSET": [
+        "Macro(#define)",
+        ""
+    ],
+    "GLA_OVCURRENT_VALUE": [
+        "Macro(#define)",
+        "\uacfc\uc804\ub958 \uae30\uc900 \uac12"
+    ],
+    "OVERCURRENTDEBOUNCEMAX": [
+        "Macro(#define)",
+        "100ms debounce"
+    ],
+    "OVERCURRENTDEBOUNCEMAX_MODE_INIT": [
+        "Macro(#define)",
+        "500ms debounce MAX"
+    ],
+    "App_Function_gstGlaOvCurrentMon.u16TimeoutDebounce": [
+        "Uint16",
+        "OverCurrent Timeout Debounce"
+    ],
+    "u8OvCurrentMonitorEnablePrev": [
+        "Uint8",
+        "OverCurrent Monitor Enable \uc774\uc804 \uac12"
+    ],
+    "App_Function_gstGlaOvCurrentMon.s32CurrentFilt_mA": [
+        "sint32",
+        "Glass Current \ud544\ud130\ub9c1 \uac12"
+    ],
+    "INIT_CLOSESWITCH_CHECK_DEBOUNCE_MAX": [
+        "Macro(#define)",
+        "\uc7ac\ucd08\uae30\ud654 Closw SW Check \ub3d9\uc791 \uc2dc\uac04 Debounce \uac12"
+    ],
+    "INIT_BOUNCEBACK_DEBOUNCE_MAX": [
+        "Macro(#define)",
+        "\uc7ac\ucd08\uae30\ud654 BounceBack \ub3d9\uc791 \uc2dc\uac04 Debounce \uac12"
+    ],
+    "INIT_CLOSEOFFON_DEBOUNCE_MAX": [
+        "Macro(#define)",
+        "\uc7ac\ucd08\uae30\ud654 Close Off/On \ub3d9\uc791 \uc2dc\uac04 Debounce \uac12"
+    ],
+    "INIT_CLOSEOFF_RECHECKWAIT_DEBOUNCE_MAX": [
+        "Macro(#define)",
+        "\uc7ac\ucd08\uae30\ud654 Close off \uc7ac \ud655\uc778 \ub3d9\uc791 \uc2dc\uac04 Debounce \uac12"
+    ],
+    "INIT_FULLOPENWAIT_DEBOUNCE_MAX": [
+        "Macro(#define)",
+        "\uc7ac\ucd08\uae30\ud654 Full Open \uc2dc \ub300\uae30 \ub3d9\uc791 \uc2dc\uac04 Debounce \uac12"
+    ],
+    "INIT_GLASSUPDATEWAIT_DEBOUNCE_MAX": [
+        "Macro(#define)",
+        "\uc7ac\ucd08\uae30\ud654 \ubd80\ud558 \ud559\uc2b5 \uc804 \ub300\uae30 \ub3d9\uc791 \uc2dc\uac04 Debounce \uac12"
+    ],
+    "App_Function_gstGlaCtrlOperReinit.enReinitial_Command": [
+        "enum",
+        "ReInitial \uc0c1\ud0dc\uc758 Command \uc0c1\ud0dc\nReCom_Init = 0,\nReCom_Blind_HardStop_Start,\nReCom_Blind_FullOpen,\nReCom_Blind_LoadInit_Start,\nReCom_Blind_FaultStop"
+    ],
+    "App_Function_gstGlaCtrlOperInit.u16InitCtrl_CloseSwitchDebounce": [
+        "uint16",
+        "\ucd08\uae30\ud654 \uc0c1\ud0dc\uc758 Close Switch Debounce \uac12"
+    ],
+    "App_Function_gstGlaCtrlOperInit.u16InitCtrl_BouncebackDebounce": [
+        "Uint16",
+        "\ucd08\uae30\ud654 \uc0c1\ud0dc\uc758 BounceBack Debounce \uac12"
+    ],
+    "u8HardStopMonitorEnablePrev": [
+        "uint8",
+        "HardStop Monitor \uc774\uc804 Enable"
+    ],
+    "App_Function_gstGlaCtrlOperInit.u8Initial_HardStop_Detect": [
+        "Uint8",
+        "\ucd08\uae30\ud654 \ub3d9\uc791 \uc2dc Hardstop \uc778\uc9c0 data"
+    ],
+    "App_Function_gstGlaCtrlOperInit.u16InitCtrl_FullOpenWaitDebounce": [
+        "Uint16",
+        "\ucd08\uae30\ud654 \ub3d9\uc791 \uc911 Full Open Debounce"
+    ],
+    "App_Function_gstGlaCtrlOperInit.u16InitCtrl_GlassUpdateWaitDebounce": [
+        "Uint16",
+        "Glass \ub3d9\uc791 \uc911 \ubd80\ud558\ud559\uc2b5 \uc644\ub8cc \ud6c4 debounce"
+    ],
+    "App_Function_gstGlaCtrlOperReinit.u16ReinitCtrl_CloseSwitchDebounce": [
+        "Uint16",
+        "\uc7ac\ucd08\uae30\ud654 \uc0c1\ud0dc\uc758 Close Switch Debounce \uac12"
+    ],
+    "App_Function_gstGlaCtrlOperReinit.u16ReinitCtrl_BouncebackDebounce": [
+        "Uint16",
+        "\uc7ac\ucd08\uae30\ud654 \uc0c1\ud0dc\uc758 BounceBack Debounce \uac12"
+    ],
+    "App_Function_gstGlaCtrlOperReinit.u16ReinitCtrl_CloseOFFONDebounce": [
+        "Uint16",
+        "\uc7ac\ucd08\uae30\ud654 \uc0c1\ud0dc\uc758 CloseOFFON Debounce \uac12"
+    ],
+    "App_Function_gstGlaCtrlOperReinit.u16ReinitCtrl_FullOpenWaitDebounce": [
+        "Uint16",
+        "\uc7ac\ucd08\uae30\ud654 \uc0c1\ud0dc\uc758 FullOpen Debounce \uac12"
+    ],
+    "App_Function_gstGlaCtrlOperReinit.u16ReinitCtrl_GlassUpdateWaitDebounce": [
+        "Uint16",
+        "\uc7ac\ucd08\uae30\ud654 \uc0c1\ud0dc\uc758 GlassUpdateWait Debounce \uac12"
+    ],
+    "App_Function_gstFaultMon.uBlind.flag.fBlind_TeachStatus": [
+        "uint8",
+        "Blind Teach Status Data"
+    ],
+    "App_Function_gstGlaCtrlOperReinit.u8Reinitial_HardStop_Detect": [
+        "uint8",
+        "Glass HardStop Detection Data"
+    ],
+    "App_Function_gstGlaCtrlOperPosFlt.enStMc_State": [
+        "enum",
+        "Position Fault Initial \uc0c1\ud0dc\uc758 \ub3d9\uc791\uc0c1\ud0dc\nGlaPosFlt_Init = 0,\nGlaPosFlt_CommWait,\nGlaPosFlt_GlassClosing,\nGlaPosFlt_BlindClosing,\nGlaPosFlt_GlassOpening,\nGlaPosFlt_BlindOpening,\nGlaPosFlt_Blind_Open_AndTILT,\nGlaPosFlt_Blind_TILT_Wait,\nGlaPosFlt_CLOSE_To_TILT,\nGlaPosFlt_TILT_To_CLOSE,\nGlaPosFlt_OPEN_To_TILT,\nGlaPosFlt_Blind_Open_AndTILT_CLOSE\nGlaPosFlt_BothClosePosition"
+    ],
+    "pp_Function_gstSwCtrl.enCommand_Status": [
+        "Uint8",
+        "Glass Command \uc785\ub825 \uc0c1\ud0dc"
+    ],
+    "ANTIHEATMONITOR_SEC_COUNT": [
+        "Macro(#define)",
+        "\ubaa8\ud130 \uacfc\uc5f4 \uce21\uc815\uc744 \uc704\ud55c \ubaa8\ud130 \ub3d9\uc791 \uc2dc\uac04"
+    ],
+    "App_Monitor_gstGlaAnHeatMon.u16FaultTimeLimit": [
+        "Uint16",
+        "Anti-heat Limit \ubaa8\ud130 \uad6c\ub3d9 \uc2dc\uac04"
+    ],
+    "App_Monitor_gstGlaAnHeatMon.u16RecTimeLimit": [
+        "Uint16",
+        "Anti-heat \ud574\uc81c \ubaa8\ud130 \uad6c\ub3d9 \uc2dc\uac04"
+    ],
+    "App_Monitor_gstFaultMon.uGlass.flag.fGlass_AntiHeat_Detection": [
+        "Uint8",
+        "Glass Anti-Heat Detection Data"
+    ],
+    "App_Function_gstGlaCtrlOperAnPinAf.u16WaitDebounce": [
+        "Uint16",
+        "Anti Pinch Detect \uc774\ud6c4 \uac10\uc18c\ub418\ub294 Debounce"
+    ],
+    "App_Function_gstGlaLINCom.enBliPositionArea": [
+        "Uint8",
+        "\ud1b5\uc2e0\uc744 \ud1b5\ud574 \ubc1b\ub294 Blind \uc704\uce58 \uc0c1\ud0dc"
+    ],
+    "App_Function_gstGlaCtrlOperComnErr.enStMc_State_gstGlaCtrlOperAnPinAf.u16WaitDebounce": [
+        "enGlassControlOperateCommunicationErrorStateMachineStatusIndex",
+        "GlaComnErr_Init\nGlaComnErr_CommWait\nGlaComnErr_Closing\nGlaComnErr_Opening\nGlaComnErr_OpeningCloseToTilt\nGlaComnErr_TiltingOpenToTilt\nGlaComnErr_TiltingTiltToClose\nGlaComnErr_TiltingCloseToTilt Debounce"
+    ],
+    "App_Function\n_gstGlaCtrlOperAnPinAf.enStMc_State": [
+        "enum",
+        "Anti-Pinch After \uc0c1\ud0dc\nGlaAnPinAf_Init = 0,\nGlaAnPinAf_CommWait,\nGlaAnPinAf_GlassClosing,\nGlaAnPinAf_BlindClosing,\nGlaAnPinAf_GlassOpening,\nGlaAnPinAf_BlindOpening,\nGlaAnPinAf_Blind_Open_AndTILT,\nGlaAnPinAf_Blind_TILT_Wait,\nGlaAnPinAf_CLOSE_To_TILT,\nGlaAnPinAf_TILT_To_CLOSE,\nGlaAnPinAf_OPEN_To_TILT,\nGlaAnPinAf_Blind_Open_AndTILT_CLOSE,\nGlaAnPinAf_Complete"
+    ],
+    "pFirst": [
+        "const uint8*",
+        ""
+    ],
+    "firstLen": [
+        "uint32",
+        ""
+    ],
+    "pSecond": [
+        "const uint8*",
+        ""
+    ],
+    "pEnd": [
+        "const uint8*",
+        ""
+    ],
+    "Result": [
+        "uint8",
+        ""
+    ],
+    "resultLen": [
+        "uint32",
+        ""
+    ],
+    "cCODE_SIZE_UNIT": [
+        "uint32",
+        ""
+    ],
+    "IncreaseData": [
+        "uint32",
+        ""
+    ],
+    "sbHashCalStartReq": [
+        "",
+        ""
+    ],
+    "sbHashStart": [
+        "",
+        ""
+    ],
+    "sbHashStart1": [
+        "",
+        ""
+    ],
+    "sbHashStart2": [
+        "",
+        ""
+    ],
+    "sbHashEnd": [
+        "",
+        ""
+    ],
+    "sbHashFinish": [
+        "",
+        ""
+    ],
+    "gbResult": [
+        "",
+        ""
+    ],
+    "App_Interface_gstGlaCtrl": [
+        "typedef struct",
+        "C_GLASS_CTRL\n \tenGlassOperate \t\t\t\tenOperate;\n\tenOperateModeStatus \t\tenOperateMode;\n\tenOperateTargetIndex \t\tenCommandTarget;\n\tenOperateTargetIndex \t\tenOperationTarget;\n\t\n\tuint16 \tu16AntiPinchEnableDebounce;\n\tuint8\tu8AntiPinchEnable;\n\n\tenum enStopStatus \t\t\tenStopModeBack;\n\tenGlassOperate \t\t\t\tenOperateBack;\n\tenOperateModeStatus \t\tenOperateModeBack;\n\tenOperateTargetIndex \t\tenCommandTargetBack;\n\t\n\tuint16 \tu16AntiPinchEnableDebounceBack;\n\tuint8\tu8AntiPinchEnableBack;"
+    ],
+    "App_Interface_gstFaultMon": [
+        "typedef struct",
+        "C_FAULT_MON\n\tU_GLASS_FAULT uGlass;\n\tU_BLIND_FAULT uBlind;\n\tU_GLASS_FAULT_BACK uGlassBack;\n\tU_BLIND_FAULT_BACK uBlindBack;"
+    ],
+    "App_Interface_gstGlaPosMon": [
+        "Uint16",
+        "Glass \uc704\uce58 \ud30c\uc545"
+    ],
+    "App_Interface_gstGlaAnHeatMon": [
+        "typedef struct",
+        "C_GLASS_CTRL_ANTIHEAT_MON\n\tuint8\t\tu8TotalTime;\n\tuint16\t\tu16AccTime;\n\tuint16\t\tu16FaultTimeLimit;\n\tuint16\t\tu16RecTimeLimit;\n\tuint8\t\tu8TotalTimeBack;\n\tuint16\t\tu16AccTimeBack;\n\tuint16\t\tu16FaultTimeLimitBack;\n\tuint16\t\tu16RecTimeLimitBack;"
+    ],
+    "App_Interface_gstGlaCtrlOperReinit": [
+        "typedef struct",
+        "C_GLASS_CTRL_OPER_REINIT\n\tenGlassReinitStateMachineStatusIndex\tenReinitCtrlStatus;\n\n\tuint16\tu16ReinitCtrl_CloseSwitchDebounce;\n\tuint8\tu8Reinitial_HardStop_Detect;\n\tuint16\tu16ReinitCtrl_BouncebackDebounce;\n\tuint16\tu16ReinitCtrl_CloseOFFONDebounce;\n\tuint16\tu16ReinitCtrl_FullOpenWaitDebounce;\n\tuint16\tu16ReinitCtrl_GlassUpdateWaitDebounce;\n\t\n\tenum enReinitStartCommandIndex\tenReinitial_Command;\n\tenum enReinitStartCommandIndex\tenReinitial_CommandBack;\n\tenReinitBlindStatusIndex\tenReintial_BlindStatus;\n\tenReinitBlindStatusIndex\tenReintial_BlindStatusBack;\n\n\tenGlassReinitStateMachineStatusIndex u8debug;"
+    ],
+    "App_Interface_gstGlaCtrlOperAuto": [
+        "typedef struct",
+        "C_GLASS_CTRL_OPER_AUTO\n\tenum enGlassTargetStateIndex enTargetSetState;\n\tenOperateTargetIndex enOperationTarget;\n\tenum enGlass_Command_Index\tenCommand;\n\tenum enGlassTargetStateIndex enTargetSetStateBack;\n\tenOperateTargetIndex enOperationTargetBack;\n\tenum enGlass_Command_Index\tenCommandBack;\n\tenum enGlassManualStateMachineStatusIndex\tenManuStMc_State;\n\tenum enGlassManualStateMachineStatusIndex\tenManuStMc_StateBack;"
+    ],
+    "App_Interface_gstSwCtrl": [
+        "typedef struct",
+        "C_SWITCH_CTRL\n\tenSwitchComm enCommand;\n\tenSwitchComm enCommandBack;\n\tenSwitchComm enCanCommand;\n\tenSwitchComm enCanCommandBack;\n\tenSwitchComm enCommand_Status;\n\tenSwitchComm enCommand_StatusBack;"
+    ],
+    "App_Interface_gstGlaMotorDrive": [
+        "typedef struct",
+        "C_GLASS_MOTOR_DRIVE\n\tuint16 u16PwmDuty;\n\tuint8 u8PwmDir;\n\tuint16 s8PresentDuty;\n\tuint16 u16CalcDuty;\n\tuint8 u8TimeCount;\n\tuint8 u8OpenStartDetect;\n\tuint8 u8CloseStartDetect;\n\tuint8 u8OpenSlowDetect;\n\tuint8 u8CloseSlowDetect;\n\tenOperationIndex enOperationBack;\n\tuint16 u16PwmDutyBack;\n\tuint8 u8PwmDirBack;\n\tuint16 s8PresentDutyBack;\n\tuint16 u16CalcDutyBack;\n\tuint8 u8TimeCountBack;\n\tuint8 u8OpenStartDetectBack;\n\tuint8 u8CloseStartDetectBack;\n\tuint8 u8OpenSlowDetectBack;\n\tuint8 u8CloseSlowDetectBack;"
+    ],
+    "gstCANcomm": [
+        "typedef struct",
+        "AppInp_C_CAN_COMM\nuint8\tu8CAN_IG;\t\n\tuint8\tu8CAN_HUCNTL;\n\tuint16 \tu16IgnDebounce;\n\tenIGNStatusINDEX blIgnStatus;\n\tenIGNStatusINDEX blIgnStatusBack;\n\tuint16 \tu16SleepDebounce;\n\tenSLEEPStatusINDEX blSleep;\n\tenSLEEPStatusINDEX blSleepBack;\n\tbool\tblTimeoutFlag;\n\tbool\tblHUCNTLFlag;\n\n\t/* Receive Message - ATS_05_00ms 0x38F */\n\tuint8 u8ATS05_RRSunBlind;\n\n\t/* Receive Message - BCM_02_200ms 0x3E0 */\n\tuint8 u8BCM20_BCM_Ign1InSta;\t\t\t\t\n\tuint8 u8BCM20_BCM_Ign2InSta;\t\t\t\t\n\n\t/* Receive Message - BCM_20_200ms 0xFF */\n\tuint8 u8BCM20_Window_AsstPwrWdwSunroofEnblSta;\n\n\t/* Receive Message - CLU_01_20ms_2 0x681AA02 */\n\tuint16 u16CLU01_CLU_DisSpdVal_KPH;\n\n\t/* Receive Message - DATC_01_20ms_3 0x5014503 */\n\tuint8 u8DATC01_DATC_OutTempSnsrVal;\n\n\t/* Receive Message - EMS_02_10ms_1 0x4010001 */\n\tuint8 u8EMS02_ENG_EngSta;\n\n\t/* Receive Message - HU_CNTL_E_01 0x4A1 */\n\tuint8 u8CNTL01_GlassCmdAVN;\n\tuint8 u8CNTL01_BlindCmdAVN;\n\tuint8 u8CNTL01_RrGlassCmdAVN;\n\tuint8 u8CNTL01_RrBlindCmdAVN;\n\n\t/* Receive Message - HU_MON_PE_01 0x4FE */\n\tuint16 u16MON01_HU_OptionInfo;\n\n\t/* Receive Message - HU_NAVI_PE_00 0x4DF */\n\tuint8 u8NAVI00_Navi_AirConditionWarning;\n\n\t/* Receive Message - RKE_01_00ms 0x4E4 */\n\tuint8 u8RKE01_RKE_WdwUpDnReq;\n\n\t/* Receive Message - SGU_01_200ms 0x2E6 */\n\tuint8 u8SGU01_SGU_BlindOpenReq;\n\n\t/* Receive Message - VCU_01_10ms_1 0xC03501 */\n\tuint8 u8VCU01_VCU_EvDrvRdySta;\n\n\n\t/* Transmit Message - RCM01 */\n\tuint8 u8RCM01_RCM_OptTyp;\n\tuint8 u8RCM01_RCM_SwStckDet;\n\tuint8 u8RCM01_RCM_TunnelOptType;\n\tuint8 u8RCM01_RCM_OHC_Cmd;\n\tuint8 u8RCM01_RCM_RmtSrfRValueSet;\n\n\t/* Transmit Message - RCM02 */\n\tuint16 \tu16RCM02_RCM_CurGlsHallSnsrCnt;\n\tuint8 \tu8RCM02_RCM_SunroofOpnSta;\n\tuint8 \tu8RCM02_RCM_GlsOpSta;\n\tuint8 \tu8RCM02_RCM_GlsInitSta;\n\tuint8 \tu8RCM02_RCM_GlsAntPchSta;\n\tuint8 \tu8RCM02_RCM_GlsMtrHiTempSta;\n\tuint8 \tu8RCM02_RCM_GlsMtRunTtlTime;\n\tuint8 \tu8RCM02_RCM_GlsPosSta;\n\tuint8 \tu8RCM02_RCM_GlsFltVal;\n\tuint8\tu8RCM02_RCM_GlsFltSta;\n\n\t/* Transmit Message - RCM03 */\n\tuint16\tu16RCM03_RCM_CurBldHallSnsrCnt;\n\tuint8 \tu8RCM03_RCM_BldOpSta;\n\tuint8 \tu8RCM03_RCM_BldInitSta;\n\tuint8 \tu8RCM03_RCM_BldAntPchSta;\n\tuint8 \tu8RCM03_RCM_BldMtrHiTempSta;\n\tuint8 \tu8RCM03_RCM_BldMtRunTtlTime;\n\tuint8\tu8RCM03_RCM_BldPosSta;\n\tuint8 \tu8RCM03_RCM_BldFltVal;\n\tuint8 \tu8RCM03_RCM_BldFltSta;"
+    ],
+    "gstSwMon": [
+        "typedef struct",
+        "C_SWITCH_MON\n\tuint8 u8SWStatus[SWITCH_TYPE_MAX];\n\tuint8 u8StuckStatus[SWITCH_TYPE_MAX];\t\n\tuint16 u16SWDebounce[SWITCH_TYPE_MAX];"
+    ],
+    "App_Interface_gstGlaLINCom": [
+        "typedef struct",
+        "C_GLASS_LIN_COMMNUNICATION\n\tuint8 \tu8Enable;\n\tuint8 \tu8EnableBack;\n\tenum enGlassCommniError_Status_INDEX enErrorStatus;\n\tenum enGlassBus_Status_INDEX enBus_Status;\n\tenBlindAreaStatus enBliPositionArea;\n\tenBlindAreaStatus enBliPositionAreaBack;\n\n\tuint16\tu16Timeout_Debounce;\n\tuint8\tu8Timeout_Enable;\n\tuint16\tu16RecvTimeout_Debounce;"
+    ],
+    "gb_OpenSta": [
+        "BYTE",
+        "\uc2a4\uc704\uce58 Open \uc0c1\ud0dc"
+    ],
+    "gb_CloseSta": [
+        "BYTE",
+        "\uc2a4\uc704\uce58 Close \uc0c1\ud0dc"
+    ],
+    "gb_TiltSta": [
+        "BYTE",
+        "\uc2a4\uc704\uce58 Tilt \uc0c1\ud0dc"
+    ],
+    "gb_OptionSta": [
+        "BYTE",
+        ""
+    ],
+    "gb_OpenStaBack": [
+        "BYTE",
+        "\uc774\uc804 \uc2a4\uc704\uce58 Open \uc0c1\ud0dc"
+    ],
+    "gb_CloseStaBack": [
+        "BYTE",
+        "\uc774\uc804 \uc2a4\uc704\uce58 Close \uc0c1\ud0dc"
+    ],
+    "gb_TiltStaBack": [
+        "BYTE",
+        "\uc774\uc804 \uc2a4\uc704\uce58 Tilt \uc0c1\ud0dc"
+    ],
+    "gb_OptionStaBack": [
+        "BYTE",
+        ""
+    ],
+    "gb_Option_E_StaBack": [
+        "BYTE",
+        ""
+    ],
+    "gbTestPortOut": [
+        "BYTE",
+        ""
+    ],
+    "RCM_CANRx_AppInterface": [
+        "typedef struct",
+        "ST_RCM_CANRx\n\tuint8 RCM_Window_AsstPwrWdwSunroofEnblSta;\n\tuint8 RCM_DATC_OutTempSnsrVal;\n\tuint8 RCM_C_BlindCmdAVN;\n\tuint8 RCM_C_GlassCmdAVN;\n\tuint8 RCM_RKE_WdwUpDnReq;\n\tuint8 RCM_ATS_RRSunBlind;\n\tuint8 RCM_BCM_Ign2InSta;\n\tuint8 RCM_BCM_Ign1InSta;\n\tuint16 RCM_CLU_DisSpdVal_KPH;\n\tuint8 RCM_ENG_EngSta;\n\tuint8 RCM_VCU_EvDrvRdySta;\n\tuint8 RCM_C_RrGlassCmdAVN;\n\tuint8 RCM_C_RrBlindCmdAVN;\n\tuint16 RCM_HU_OptionInfo;\n\tuint8 RCM_Navi_AirConditionWarning;\n\tuint8 RCM_SGU_BlindOpenReq;"
+    ],
+    "RCM_CANTx_AppInterface": [
+        "typedef struct",
+        "Blind\uc758 AppInterface \uc0c1\ud0dc\ub97c \ubc1b\uc544 CAN \uc1a1\uc2e0\n\tuint8 RCM_OptTyp;\n\tuint8 RCM_SwStckDet;\n\tuint8 RCM_OHC_Cmd;\n\tuint16 RCM_CurGlsHallSnsrCnt;\n\tuint8 RCM_SunroofOpnSta;\n\tuint8 RCM_GlsOpSta;\n\tuint8 RCM_GlsInitSta;\n\tuint8 RCM_GlsAntPchSta;\n\tuint8 RCM_GlsMtrHiTempSta;\n\tuint8 RCM_GlsMtRunTtlTime;\n\tuint8 RCM_GlsPosSta;\n\tuint8 RCM_GlsFltVal;\n\tuint8 RCM_GlsFltSta;\n\tuint16 RCM_CurBldHallSnsrCnt;\n\tuint8 RCM_BldOpSta;\n\tuint8 RCM_BldInitSta;\n\tuint8 RCM_BldAntPchSta;\n\tuint8 RCM_BldMtrHiTempSta;\n\tuint8 RCM_BldMtRunTtlTime;\n\tuint8 RCM_BldPosSta;\n\tuint8 RCM_BldFltVal;\n\tuint8 RCM_BldFltSta;\n\tuint8 RCM_TunnelOptType;"
+    ],
+    "RCM_LINRx_AppInterface": [
+        "typedef struct",
+        "ST_RCM_LINRx\n\tuint16 CANSIG_RCM_BldHallSnsrPlsCnt;\n\tuint8 CANSIG_RCM_BldOpSta;\n\tuint8 CANSIG_RCM_BldInitSta;\n\tuint8 CANSIG_RCM_BldAntPchSta;\n\tuint8 CANSIG_RCM_BldMtrHiTempSta;\n\tuint8 CANSIG_RCM_BldMtRunTtlTime;\n\tuint8 CANSIG_RCM_BldPosSta;\n\tuint8 CANSIG_RCM_BldFltVal;\n\tuint8 CANSIG_RCM_BldFltSta;\n\tuint16 Commni_Blind_Fault;\n\tuint8 Commni_Command_Target_Return;\n\tuint8 Commni_Blind_Position_Area;\n\tuint8 Commni_ReinitBlindStatus;\n\tuint8 Commni_OperateModeReturn;\n\tuint8 Commni_Keyang_reseved08;\n\tuint8 Commni_Keyang_reseved09;\n\tuint8 Commni_Keyang_reseved10;\n\tuint8 Commni_Keyang_reseved11;\n\tuint8 Commni_Keyang_reseved12;\n\tuint8 Commni_Keyang_reseved13;\n\tuint8 Commni_Keyang_reseved14;\n\tuint8 Commni_Error;\n\tuint8 CANVER_RCM_01;\n\tuint8 CANVER_RCM_02;\n\tuint8 CANVER_RCM_03;\n\tuint8 CANVER_RCM_04;\n\tuint8 CANVER_RCM_05;\n\tuint8 CANVER_RCM_06;\n\tuint8 CANVER_RCM_07;\n\tuint8 SlaveRespB0;\n\tuint8 SlaveRespB1;\n\tuint8 SlaveRespB2;\n\tuint8 SlaveRespB3;\n\tuint8 SlaveRespB4;\n\tuint8 SlaveRespB5;\n\tuint8 SlaveRespB6;\n\tuint8 SlaveRespB7;"
+    ],
+    "RCM_LINTx_AppInterface": [
+        "typedef struct",
+        "ST_RCM_LINTx\n\tuint16 Commni_Glass_Fault;\n\tuint8 Commni_Command_Target;\n\tuint8 Commni_Glass_Position_Area;\n\tuint8 Commni_ReinitCommand;\n\tuint8 Commni_ReinitStopCommand;\n\tuint8 Commni_OperateMode;\n\tuint8 Commni_Keyang_DebugState;\n\tuint8 LIN_Tx_reseved01;\n\tuint8 LIN_Tx_reseved02;\n\tuint16 LIN_Tx_reseved03;\n\tuint8 LIN_Tx_reseved04;\n\tuint8 LIN_Tx_reseved05;\n\tuint8 LIN_Tx_reseved06;\n\tuint8 LIN_Tx_reseved07;"
+    ],
+    "RCM_InterfaceOutput": [
+        "typedef struct",
+        "ST_RCM_Output\n\tuint16 RCM_MotorDriveDuty;\n\tuint8 RCM_MotorDirect;"
+    ],
+    "RCM_InterfaceInput": [
+        "typedef struct",
+        "ST_RCM_Input\n\tuint16 RCM_BatteryVoltage;\n\tuint8 RCM_ApplicationInit;\n\tuint8 RCM_gbComBatMode;\n\tuint8 RCM_gbIOBatMode;\n\tuint8 RCM_gbDiagBatMode;\n\tuint8 RCM_gbLPCondition;"
+    ],
+    "App_Interface_gstGlaMotorDrive.s8PresentDutyBack": [
+        "uint16",
+        "\ubaa8\ud130 \ucd9c\ub825\uc744 \uc704\ud55c \ub4c0\ud2f0\ube44 \uc124\uc815"
+    ],
+    "App_Interface_gstSwCtrl.enCommand_Status": [
+        "uint8",
+        "\uc2a4\uc704\uce58 command \uc0c1\ud0dc \uc800\uc7a5"
+    ],
+    "App_Interface_gstSwCtrl.enCommand": [
+        "uint8",
+        "\uc2a4\uc704\uce58 Command \uc0c1\ud0dc"
+    ],
+    "App_Interface_gstGlaLINCom.enErrorStatus": [
+        "Enum",
+        "LIN \ud1b5\uc2e0 \uc5d0\ub7ec \uc0c1\ud0dc\nErr_IDLE = 0,\nErrRx_Receive_Timeout,\nErrRx_Target_Return_Invaild,\nErrRx_Return_ID_Invaild,\nErrTx_Return_Timeout,\nErrTx_Interrupt_in_Transmitting,\nErrTx_Interrupt_in_Return_OK,\nErrTx_Interrupt_in_Return_Wait"
+    ],
+    "App_Interface_gstGlaLINCom.enBus_Status": [
+        "enum",
+        "AppInterface LIN \ud1b5\uc2e0 \ubc84\uc2a4 \uc624\ub958 \uc0c1\ud0dc"
+    ],
+    "App_Interface_gstGlaLINCom.u8Enable": [
+        "Uint8",
+        "LIN \ud1b5\uc2e0 Enable"
+    ],
+    "retVal": [
+        "Std_ReturnType",
+        "RET Vaule"
+    ],
+    "gbSleepCondition": [
+        "BYTE",
+        "Sleep \uc9c4\uc785 \uc870\uac74 \ubcc0\uc218"
+    ],
+    "gstCANcomm.blSleep": [
+        "uint8",
+        "Sleep \ubaa8\ub4dc \ud1b5\uc2e0"
+    ],
+    "RCM_CANRx_AppInterface.RCM_Window_AsstPwrWdwSunroofEnblSta": [
+        "",
+        ""
+    ],
+    "gbIVDCalcState": [
+        "",
+        ""
+    ],
+    "RetrunValue": [
+        "",
+        ""
+    ],
+    "gbCANRxTimer_CNTL01": [
+        "BYTE",
+        "AVN \uc2e0\ud638 Receive Timer \ubcc0\uc218"
+    ],
+    "gbCANRxTimer_NAVI00": [
+        "BYTE",
+        "NAVI \uc2e0\ud638 Receive Timer \ubcc0\uc218"
+    ],
+    "gbCANRxTimer_SGU01": [
+        "BYTE",
+        "SGU \uc2e0\ud638 Receive Timer \ubcc0\uc218"
+    ],
+    "gbRCM_C_BlindCmdAVNPrev": [
+        "BYTE",
+        "Blind AVN \uc2e0\ud638 Receive Timer \uc774\uc804 \uc800\uc7a5 \ubcc0\uc218"
+    ],
+    "gbRCM_C_GlassCmdAVNPrev": [
+        "BYTE",
+        "Glass AVN \uc2e0\ud638 Receive Timer \uc774\uc804 \uc800\uc7a5 \ubcc0\uc218"
+    ],
+    "gbRCM_Navi_AirConditionWarningPrev": [
+        "BYTE",
+        "NAVI \uc2e0\ud638(\ud130\ub110\ubaa8\ub4dc \uc218\uc2e0) \ud558\uc5ec \uacf5\uc870 \uc2dc\uc2a4\ud15c waring \uac12 \uc774\uc804 \ubcc0\uc218"
+    ],
+    "gbRCM_SGU_BlindOpenReqPrev": [
+        "BYTE",
+        "Blind SGU \uc2e0\ud638 open \ub3d9\uc791 \uc774\uc804 \ubcc0\uc218"
+    ],
+    "gbRCMGlaOperState": [
+        "BYTE",
+        "Glass \ub3d9\uc791 \uc0c1\ud0dc"
+    ],
+    "gstCANcomm.blIgnStatus": [
+        "uint8",
+        "\ube14\ub77c\uc778\ub4dc IGN \uc0c1\ud0dc"
+    ],
+    "gstCANcomm.u16IgnDebounce": [
+        "uint16",
+        "IGN \uc2e0\ud638 Debounce"
+    ],
+    "gstCANcomm.u16SleepDebounce": [
+        "uint16",
+        "Sleep \ubaa8\ub4dc Debounce"
+    ],
+    "gstCANcomm.blTimeoutFlag": [
+        "bool",
+        "\ube14\ub77c\uc778\ub4dc \ud1b5\uc2e0 timeout \ud50c\ub798\uadf8"
+    ],
+    "RCM_LINRx_AppInterface.CANSIG_RCM_BldOpSta": [
+        "uint8",
+        "Blind \ub3d9\uc791 \uc0c1\ud0dc \uc218\uc2e0"
+    ],
+    "App_Interface_gstGlaCtrl.enOperateMod": [
+        "uint8",
+        "Glass \ub3d9\uc791 \ubaa8\ub4dc App Interface"
+    ],
+    "gstCANcomm.u8RCM01_RCM_OptTyp": [
+        "uint8",
+        "RCM_OptTyp_FRGlass\nRCM_OptTyp_FRGlass_RRGlass"
+    ],
+    "gstCANcomm.u8RCM01_RCM_TunnelOptType": [
+        "uint8",
+        "\ud130\ub110\ubaa8\ub4dc \uc9c0\uc6d0 \uc5ec\ubd80"
+    ],
+    "gstCANcomm.u8RCM01_RCM_OHC_Cmd": [
+        "uint8",
+        "OHC Command \uc785\ub825\uac12"
+    ],
+    "gstCANcomm.u8RCM01_RCM_RmtSrfRValueSet": [
+        "uint8",
+        ""
+    ],
+    "App_Interface_gstGlaPosMon.enPositionArea": [
+        "uint8",
+        "Glass \uc704\uce58 \ud30c\uc545"
+    ],
+    "gstCANcomm.u16RCM02_RCM_CurGlsHallSnsrCnt": [
+        "Uint16",
+        "Glass Hall \uc704\uce58 \uac12 \ud30c\uc545"
+    ],
+    "gstCANcomm.u8RCM02_RCM_GlsInitSta": [
+        "uint8",
+        "Glass \ucd08\uae30 \uc0c1\ud0dc"
+    ],
+    "GLASS_COMMNI_TIMEOUT_MAX": [
+        "Macro(#define)",
+        "Glass \ud1b5\uc2e0 TimeOut Debounce \uac12"
+    ],
+    "RECEIVE_TIMEOUT_MAX": [
+        "Macro(#define)",
+        "\uc218\uc2e0 TimeOut Debounce \uac12"
+    ],
+    "gbBufferSeqNo": [
+        "uint8",
+        "Res \uc218\uc2e0 \ud655\uc778"
+    ],
+    "gwDataNo": [
+        "uint16",
+        "Data\uc804\uc1a1 \uc0c1\ud0dc \ud655\uc778"
+    ],
+    "gbLenth": [
+        "uint8",
+        "Rom \uacc4\uc0b0 \ubcc0\uc218"
+    ],
+    "ReadVersionBuf": [
+        "uint8",
+        "\ubc84\uc804 read \ubc84\ud37c"
+    ],
+    "ProgramSession": [
+        "uint8",
+        "\ud504\ub85c\uadf8\ub7a8 \uc138\uc158 \ubc84\ud37c"
+    ],
+    "RoutineRequest": [
+        "uint8",
+        "RoutineRequest \ubc84\ud37c"
+    ],
+    "AreaRequest_1": [
+        "uint8",
+        "AreaRequest_1 \ubc84\ud37c"
+    ],
+    "AreaRequest_2": [
+        "uint8",
+        "AreaRequest_2 \ubc84\ud37c"
+    ],
+    "AreaRequest_3": [
+        "uint8",
+        "AreaRequest_3 \ubc84\ud37c"
+    ],
+    "AreaRequest_4": [
+        "uint8",
+        "AreaRequest_4 \ubc84\ud37c"
+    ],
+    "CheckSumRequest": [
+        "uint8",
+        "CheckSumReques \ubc84\ud37c"
+    ],
+    "CheckSumRequest_1": [
+        "uint8",
+        "CheckSumRequest_1 \ubc84\ud37c"
+    ],
+    "CheckSumRequest_2": [
+        "uint8",
+        "CheckSumRequest_2 \ubc84\ud37c"
+    ],
+    "ResetRequest": [
+        "uint8",
+        "ResetRequest \ubc84\ud37c"
+    ],
+    "ReproEndBuf": [
+        "uint8",
+        "ResetRequest \ubc84\ud37c"
+    ],
+    "RomDataReq_DF": [
+        "uint8",
+        "ROM \ub370\uc774\ud130 \uc800\uc7a5 \ubc84\ud37c"
+    ],
+    "SlaveRes": [
+        "uint8",
+        "Slave"
+    ],
+    "ResPtr": [
+        "uint8*",
+        ""
+    ],
+    "ResPtrBuf": [
+        "uint8",
+        ""
+    ],
+    "gbBlindVersion": [
+        "uint8",
+        "\ube14\ub77c\uc778\ub4dc \ubc84\uc804 \ubc84\ud37c"
+    ],
+    "gbReprogramSeq": [
+        "uint8",
+        "\ub9ac\ud504\ub85c\uadf8\ub798\ubc0d \uc0c1\ud0dc"
+    ],
+    "gbLINSchedule": [
+        "uint8",
+        "LIN \ud1b5\uc2e0 \uc2a4\ucf00\uc974"
+    ],
+    "gbLINretry": [
+        "uint8",
+        "LIN \uc7ac \ud1b5\uc2e0 \uc0c1\ud0dc"
+    ],
+    "gbLINretryMascnt": [
+        "uint8",
+        "LIN \ud1b5\uc2e0 retry count"
+    ],
+    "gbSeqCount": [
+        "uint8",
+        "Seq count \ubcc0\uc218"
+    ],
+    "gbLINResDelay": [
+        "uint8",
+        "LIN Delay \ubcc0\uc218"
+    ],
+    "gbLINResDelayCnt": [
+        "uint8",
+        "LIN Delay Count"
+    ],
+    "gbCheckSumRequest": [
+        "uint8",
+        "CheckSumRequest"
+    ],
+    "gbCheckSumRequest_1": [
+        "uint8",
+        "CheckSumRequest"
+    ],
+    "gbCheckSumRequest_2": [
+        "uint8",
+        "CheckSumRequest"
+    ],
+    "gbResetRequest": [
+        "uint8",
+        "Reset Request"
+    ],
+    "AreaRequest": [
+        "uint8*",
+        "Area Request"
+    ],
+    "ROMDataRequest": [
+        "uint8*",
+        "ROM Data Request"
+    ],
+    "gbRxState": [
+        "uint8",
+        "Receive \uc0c1\ud0dc"
+    ],
+    "ROMDataReq": [
+        "Lin_PduType\n\ntypedef struct",
+        "Lin_FramePidType      Pid\nLin_FrameCsModelType  Cs; \nLin_FrameResponseType Drc; \nLin_FrameDlType       Dl; \nuint8*                SduPtr"
+    ],
+    "linStatus": [
+        "Enum",
+        "LIN \ud1b5\uc2e0 \uc0c1\ud0dc\nLIN_NOT_OK = 0,     \nLIN_TX_OK\nLIN_TX_BUSY\nLIN_TX_HEADER_ERROR\nLIN_TX_ERROR\nLIN_RX_OK\nLIN_RX_BUSY\nLIN_RX_ERROR\nLIN_RX_NO_RESPONSE\nLIN_OPERATIONAL\nLIN_CH_SLEEP"
+    ],
+    "AreaReq": [
+        "Lin_PduType",
+        "LIN Type"
+    ],
+    "SeqData": [
+        "uint8",
+        ""
+    ],
+    "RomDataReq_DF[]": [
+        "uint8",
+        "\ub86c \ub370\uc774\ud130 \uc601\uc5ed"
+    ],
+    "App_Interface_gstGlaLINCom.enBus_Statu": [
+        "Enum",
+        "LIN \ud1b5\uc2e0 \ubc84\uc2a4 \uc0c1\ud0dc\nGlaBus_IDLE = 0,\nGlaBus_Sending,\nGlaBus_Receiving,\nGlaBus_ReceiveOK"
+    ],
+    "App_Interface_gstFaultMon.uGlass.flag.fGlass_CommunicationError_Detection": [
+        "uint8",
+        "\ud1b5\uc2e0 \uc5d0\ub7ec detection data"
+    ],
+    "App_Interface_gstGlaLINCom.u8Timeout_Enable": [
+        "uint8",
+        "\ud1b5\uc2e0 Error \uac10\uc9c0 Enable"
+    ],
+    "App_Interface_gstGlaLINCom.u16Timeout_Debounce": [
+        "Uint16",
+        "\ub370\uc774\ud130 \uc218\uc2e0 Timeout Debounce \uac12"
+    ],
+    "App_Interface_gstGlaLINCom.u16RecvTimeout_Debounce": [
+        "Uint16",
+        "\ub370\uc774\ud130 \uc218\uc2e0 Timeout Debounce \uac12"
+    ],
+    "u8Data": [
+        "uint8",
+        "Data \ubcc0\uc218 \ucd08\uae30\ud654"
+    ],
+    "u16Data": [
+        "uint16",
+        "Data \ubcc0\uc218 \ucd08\uae30\ud654"
+    ],
+    "GLA_SLOPE_PARA": [
+        "Macro(#define)",
+        "slope plus or minus value"
+    ],
+    "GLA_DUTY_CALC_PARA": [
+        "Macro(#define)",
+        "\ub4c0\ud2f0\ube44 \uacc4\uc0b0 \ud30c\ub77c\ubbf8\ud130"
+    ],
+    "GLA_POSITION_OFFSET": [
+        "Macro(#define)",
+        "Glass \ud3ec\uc9c0\uc158 Offset"
+    ],
+    "GLA_TIME_COUNT_MAX_Start": [
+        "Macro(#define)",
+        "Glass \ucd08\uae30 \ub3d9\uc791 \uc2dc\uac04 Count \uc124\uc815"
+    ],
+    "App_Interface_gstGlaMotorDrive.u8TimeCount": [
+        "Uint8",
+        "\ubaa8\ud130 \ub3d9\uc791\uc744 \uc704\ud55c Count \uac12"
+    ],
+    "App_Interface_gstGlaMotorDrive.enOperation": [
+        "uint8",
+        "Glass \ubaa8\ud130 \ub3d9\uc791"
+    ],
+    "App_Interface_gstGlaMotorDrive.s8PresentDuty": [
+        "sint8",
+        "\ubaa8\ud130 \ub3d9\uc791\uc744 \uc704\ud55c \ub4c0\ud2f0\ube44"
+    ],
+    "u8OpenStartDetectPrv": [
+        "uint8",
+        "\ubaa8\ud130 Open \ub3d9\uc791 \uc774\uc804 \uac12"
+    ],
+    "u8CloseStartDetectPrv": [
+        "uint8",
+        "\ubaa8\ud130 Close \ub3d9\uc791 \uc774\uc804 \uac12"
+    ],
+    "RCM_InterfaceOutput.RCM_MotorDriveDuty": [
+        "uint16",
+        "\ubaa8\ud130 \ub3d9\uc791 \ud604\uc7ac \ud29c\ud2f0\ube44"
+    ],
+    "RCM_InterfaceOutput.RCM_MotorDirect": [
+        "Uint8",
+        "\ubaa8\ud130 \ub3d9\uc791 \uc0c1\ud0dc \ud0d0\uc9c0"
+    ],
+    "gwAutoInitialTimer": [
+        "WORD",
+        "Auto \ubaa8\ub4dc \ucd08\uae30 \ud0c0\uc774\uba38"
+    ],
+    "gbAutoInitialCount": [
+        "BYTE",
+        "Auto \ubaa8\ub4dc \ucd08\uae30 \uce74\uc6b4\ud130"
+    ],
+    "gbAutoInitialMode": [
+        "byte",
+        "Auto \ub3d9\uc791\uc744 \uc704\ud55c \uc2a4\uc704\uce58 \ucd08\uae30\ud654 \ub3d9\uc791 \ubaa8\ub4dc"
+    ],
+    "u8Swtich_Status": [
+        "Uint8",
+        "\uc2a4\uc704\uce58 \uc0c1\ud0dc"
+    ],
+    "u8Swtich_StuckStatus": [
+        "Uint8",
+        "\uc2a4\uc704\uce58 Stuck \uc0c1\ud0dc"
+    ],
+    "enSwitch_Status": [
+        "enum",
+        "enum enSwitch_Status\n{\n\tSwitch_OFF = 0,\n\tSwitch_TILT,\n\tSwitch_CLOSE,\n\tSwitch_CLOSE_TILT,\n\tSwitch_OPEN,\n\tSwitch_OPEN_TILT,\n\tSwitch_OPEN_CLOSE,\n\tSwitch_ALL\n};"
+    ],
+    "gstCANcomm.u8CNTL01_GlassCmdAVN": [
+        "uint8",
+        "Glass \uc74c\uc131 \ud1b5\uc2e0 Command"
+    ],
+    "enSWStatus": [
+        "Enum",
+        "\uc2a4\uc704\uce58 \uc0c1\ud0dc\nSwitch_OFF = 0,\nSwitch_TILT,\nSwitch_CLOSE,\nSwitch_CLOSE_TILT,\nSwitch_OPEN,\nSwitch_OPEN_TILT,\nSwitch_OPEN_CLOSE,\nSwitch_ALL"
+    ],
+    "result": [
+        "bool",
+        "\ud568\uc218 return"
+    ],
+    "SW_FILTER_TIME": [
+        "Macro(#define)",
+        "\uc2a4\uc704\uce58 \uc778\uc2dd \uc2dc\uac04"
+    ],
+    "SW_STUCK_TIME": [
+        "Macro(#define)",
+        "\uc2a4\uc704\uce58 \ub20c\ub9bc \uac80\ucd9c \uc2dc\uac04"
+    ],
+    "num": [
+        "Enum",
+        "\uc2a4\uc704\uce58 \ud0c0\uc785 \uc785\ub825 \ubcc0\uc218\nSWITCH_TYPE_OPEN = 0,\nSWITCH_TYPE_CLOSE,\nSWITCH_TYPE_TILT,\nSWITCH_TYPE_ENABLE,\t\nSWITCH_TYPE_A_SW_M,\t\nSWITCH_TYPE_MAX"
+    ],
+    "gstSwMon.u8SWStatus": [
+        "Uint8",
+        "\uc2a4\uc704\uce58 \uc0c1\ud0dc"
+    ],
+    "gstSwMon.u8StuckStatus": [
+        "Uint8",
+        "\uc2a4\uc704\uce58 \uc0c1\ud0dc"
+    ],
+    "gstSwMon.u16SWDebounce": [
+        "Uint16",
+        "\uc2a4\uc704\uce58 debounce"
+    ],
+    "MODE": [
+        "BYTE",
+        "\ubc30\ud130\ub9ac \uc815\uc0c1 \uc870\uac74 \uc5ec\ubd80\ub97c \ud310\ub2e8\ud558\ub294 \ubcc0\uc218"
+    ],
+    "Mode": [
+        "uint8",
+        "\uc548\ud2f0\ud540\uce58 \ubaa8\ub2c8\ud130\ub9c1 \uac10\uc9c0\uc5ec\ubd80\ub97c \uacb0\uc815\ud55c\ub2e4."
+    ]
+}

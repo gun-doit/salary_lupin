@@ -380,7 +380,7 @@ def convert_c_function(c_code):
             graph.edge(if_prev_node, else_node_id, label="False")
             
             # ELSE IF or ELSE문 분기점 갱신
-            IF_DIVIDE_POINT.append([node_id, bracket_lvl])
+            IF_DIVIDE_POINT.append([else_node_id, bracket_lvl])
 
             # 다음 노드의 코멘트를 TRUE로 변경
             label_comment = "True"

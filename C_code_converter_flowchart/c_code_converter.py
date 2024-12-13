@@ -58,15 +58,18 @@ def parse_c_comments(c_code):
             if '*/' in line:
                 comments_flag = False
             continue
-        
 
-        # # 변수 선언문 (초기화하지 않은 선언문은 건너뛰기)
-        if re.match(r'^[a-zA-Z_][a-zA-Z0-9_]*\s+[a-zA-Z_][a-zA-Z0-9_]*\s*;', line):
-            continue
-        
-        # 초기화된 변수 선언문 처리 (자료형 제외, 변수명과 초기값만 포함)
-        elif re.match(r'([a-zA-Z_][a-zA-Z0-9_]*\s+[a-zA-Z_][a-zA-Z0-9_]*\s*=\s*.*);', line):
-            continue
+
+        if not line.startswith("return"):
+
+            # # 변수 선언문 (초기화하지 않은 선언문은 건너뛰기)
+            if re.match(r'^[a-zA-Z_][a-zA-Z0-9_]*\s+[a-zA-Z_][a-zA-Z0-9_]*\s*;', line):
+                continue
+            
+            # 초기화된 변수 선언문 처리 (자료형 제외, 변수명과 초기값만 포함)
+            # elif re.match(r'([a-zA-Z_][a-zA-Z0-9_]*\s+[a-zA-Z_][a-zA-Z0-9_]*\s*=\s*.*);', line):
+            #     print(line)
+            #     continue
 
 
         if line.strip():
@@ -105,8 +108,8 @@ def parse_c_comments(c_code):
     if temp_line:
         statements.append(temp_line.strip())
 
-    # for i in statements:
-    #     print(i)
+    for i in statements:
+        print(i)
 
     return statements
 
@@ -185,6 +188,23 @@ def convert_c_function(c_code):
             graph.node(head_node, f'{line}', shape='box',style='filled', fillcolor=green)
             prev_node = head_node
             continue
+        
+        # 반환값
+        elif line.startswith("return"):
+            node_id = f'{line_num}_line_{line}'
+            graph.node(node_id, line, shape='box',style='filled', fillcolor=red)
+        
+            # 이전 IF문 분기점 삭제
+            prev_if_node = None
+            while len(IF_DIVIDE_POINT) > 0 and IF_DIVIDE_POINT[-1][1] >= bracket_lvl:
+                prev_if_node, lvl = IF_DIVIDE_POINT.pop()
+            
+            
+            if prev_if_node: graph.edge(prev_if_node, node_id, label="False")
+            graph.edge(prev_node, node_id, label=label_comment)
+
+            label_comment = ""
+            prev_node = node_id
 
         elif line.startswith("switch"):
             switch_condition = re.search(r'switch\s*\((.*?)\)', line).group(1)

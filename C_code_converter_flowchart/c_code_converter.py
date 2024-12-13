@@ -139,8 +139,8 @@ def convert_c_function(c_code):
     while_node_id = None
 
     # 스위치 처리
-    switch_flag = False
-    switch_node_id = 0
+    switch_flag = -1
+    SWITCH_NODE_ID = 0
     switch_value = ""
 
     bracket_lvl = 0
@@ -166,6 +166,13 @@ def convert_c_function(c_code):
                     prev_node = for_condition_id
                     
                     label_comment="False"
+
+                # 스위치문 종료 처리
+                    
+                if switch_flag == bracket_lvl:
+                    #스위치문 빠져나옴
+                    prev_node = SWITCH_NODE_ID
+                    switch_flag = -1
            
             continue
         # 첫 노드인 함수 이름 생성
@@ -188,7 +195,7 @@ def convert_c_function(c_code):
 
             #현재 스위치 문 저장
             switch_flag = bracket_lvl
-            switch_node_id = switch_node_id
+            SWITCH_NODE_ID = switch_node_id
 
             # 이전 IF문 분기점 삭제
             prev_if_node = None
@@ -209,7 +216,7 @@ def convert_c_function(c_code):
             node_id = f'{line_num}_switch_case_{case_condition}'
 
             #이전 노드 변경
-            prev_node = switch_node_id
+            prev_node = SWITCH_NODE_ID
             
             #노드 생성
             graph.node(node_id, f'{switch_value} == {case_condition}', shape="diamond", style='filled', fillcolor=red)
@@ -220,14 +227,9 @@ def convert_c_function(c_code):
 
         elif switch_flag and line.startswith("break"):
             # 모든 if, for문 정리
-            # IF_DIVIDE_POINT = []
+            IF_DIVIDE_POINT = []
             continue
         
-        elif switch_flag == bracket_lvl:
-            #스위치문 빠져나옴
-            prev_node = switch_node_id
-            head_node_id = switch_node_id
-            switch_flag = 0
 
         # WHILE
         elif line.startswith("while"):
@@ -369,8 +371,6 @@ def convert_c_function(c_code):
         
         # 그 외의 일반문은 네모로 처리
         elif line:
-            print(IF_DIVIDE_POINT, bracket_lvl)
-
             node_id = f'{line_num}_line_{line}'
             graph.node(node_id, line, shape='box',style='filled', fillcolor=blue)
         

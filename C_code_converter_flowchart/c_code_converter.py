@@ -137,6 +137,7 @@ def convert_c_function(c_code):
 
     FOR_DIVIDE_POINT = []
     IF_DIVIDE_POINT = []
+    IF_END_POINT = []
 
     while_flag = False
     while_node_id = None
@@ -160,6 +161,9 @@ def convert_c_function(c_code):
                     max_bracket_lvl = bracket_lvl
             elif '}' in line:
                 bracket_lvl -= 1
+
+                if len(IF_DIVIDE_POINT) > 0 and IF_DIVIDE_POINT[-1][1] == bracket_lvl:
+                    prev_nove, lvl = IF_DIVIDE_POINT.pop()
                 
                 # For문 종료 처리
                 if len(FOR_DIVIDE_POINT) > 0 and FOR_DIVIDE_POINT[-1][1] == bracket_lvl:
@@ -188,7 +192,75 @@ def convert_c_function(c_code):
             graph.node(head_node, f'{line}', shape='box',style='filled', fillcolor=green)
             prev_node = head_node
             continue
+
+        # IF 조건문 처리
+        elif line.startswith("if"):
+            if_condition = re.search(r'\((.*)\)', line).group(1)
+            if_node_id = f'{line_num}_if_{if_condition}'
+
+            # IF문 노드 생성
+            graph.node(if_node_id, f"{if_condition}", shape='diamond',style='filled', fillcolor=red)
+                
+            # 이전 IF문 분기점 삭제
+            # prev_if_node = None
+            # while len(IF_DIVIDE_POINT) > 0 and IF_DIVIDE_POINT[-1][1] >= bracket_lvl:
+            #     prev_if_node, lvl = IF_DIVIDE_POINT.pop()
+
+            # IF문 분기점 생성
+            IF_DIVIDE_POINT.append([if_node_id, bracket_lvl])
+
+            # 이전 분기점 and 이전 노드와 연결
+            # if prev_if_node: graph.edge(prev_if_node, if_node_id, label="False")
+            graph.edge(prev_node, if_node_id)
+
+            # 이전 노드 갱신
+            prev_node = if_node_id
+
+            # 다음 노드의 코멘트를 TRUE로 변경
+            label_comment = "True"
+
+        # ELSE IF 조건문 처리
+        elif line.startswith("else if"):
+            else_if_conditon = re.search(r'\((.*)\)', line).group(1)
+            else_if_node_id = f'{line_num}_else_if_{else_if_conditon}'
+            
+            # ELSE IF문 노드 생성
+            graph.node(else_if_node_id, f"{else_if_conditon}", shape='diamond',style='filled', fillcolor=red)
+
+
+            # 이전 노드와 연결 코멘트는 False
+            if if_prev_node, tmp = IF_DIVIDE_POINT.pop()
+            graph.edge(if_prev_node, else_if_node_id, label="False")
+            
+            # IF문 분기점 갱신
+            IF_DIVIDE_POINT.append([else_if_node_id, bracket_lvl])
+
+            # 이전 노드 갱신
+            prev_node = else_if_node_id
+
+            # 다음 노드의 코멘트를 TRUE로 변경
+            label_comment = "True"           
         
+        # ELSE 조건문 처리
+        elif line.startswith("else"):
+            # 노드 생성
+            else_node_id = f'{line_num}_else'
+
+            # ELSE문 노드 생성
+            graph.node(else_node_id, f'else', shape='diamond',style='filled', fillcolor=red)
+
+            # 이전 노드와 연결 코멘트는 False
+            if_prev_node, tmp = IF_DIVIDE_POINT.pop()
+            graph.edge(if_prev_node, else_node_id, label="False")
+            
+            # ELSE IF or ELSE문 분기점 갱신
+            IF_DIVIDE_POINT.append([else_node_id, bracket_lvl])
+
+            # 다음 노드의 코멘트를 TRUE로 변경
+            label_comment = "True"
+            
+            # 이전 노드 갱신
+            prev_node = else_node_id
         # 반환값
         elif line.startswith("return"):
             node_id = f'{line_num}_line_{line}'
@@ -204,9 +276,11 @@ def convert_c_function(c_code):
             graph.edge(prev_node, node_id, label=label_comment)
 
             label_comment = ""
-            prev_node = node_id
+            prev_node = node_id 
 
-        elif line.startswith("switch"):
+        # elif len(IF_DIVIDE_POINT) > 0 and IF_DIVIDE_POINT[-1][1] == bracket_lvl - 1:
+             
+        if line.startswith("switch"):
             switch_condition = re.search(r'switch\s*\((.*?)\)', line).group(1)
             switch_parsing_name = switch_condition.strip()
             
@@ -319,74 +393,7 @@ def convert_c_function(c_code):
 
             prev_node = for_condition_id
 
-        # IF 조건문 처리
-        elif line.startswith("if"):
-            if_condition = re.search(r'\((.*)\)', line).group(1)
-            if_node_id = f'{line_num}_if_{if_condition}'
-
-            # IF문 노드 생성
-            graph.node(if_node_id, f"{if_condition}", shape='diamond',style='filled', fillcolor=red)
-                
-            # 이전 IF문 분기점 삭제
-            prev_if_node = None
-            while len(IF_DIVIDE_POINT) > 0 and IF_DIVIDE_POINT[-1][1] >= bracket_lvl:
-                prev_if_node, lvl = IF_DIVIDE_POINT.pop()
-
-            # IF문 분기점 생성
-            IF_DIVIDE_POINT.append([if_node_id, bracket_lvl])
-
-            # 이전 분기점 and 이전 노드와 연결
-            if prev_if_node: graph.edge(prev_if_node, if_node_id, label="False")
-            graph.edge(prev_node, if_node_id)
-
-            # 이전 노드 갱신
-            prev_node = if_node_id
-
-            # 다음 노드의 코멘트를 TRUE로 변경
-            label_comment = "True"
-
-        # ELSE IF 조건문 처리
-        elif line.startswith("else if"):
-            else_if_conditon = re.search(r'\((.*)\)', line).group(1)
-            else_if_node_id = f'{line_num}_else_if_{else_if_conditon}'
-            
-            # ELSE IF문 노드 생성
-            graph.node(else_if_node_id, f"{else_if_conditon}", shape='diamond',style='filled', fillcolor=red)
-
-
-            # 이전 노드와 연결 코멘트는 False
-            if_prev_node, tmp = IF_DIVIDE_POINT.pop()
-            graph.edge(if_prev_node, else_if_node_id, label="False")
-            
-            # IF문 분기점 갱신
-            IF_DIVIDE_POINT.append([else_if_node_id, bracket_lvl])
-
-            # 이전 노드 갱신
-            prev_node = else_if_node_id
-
-            # 다음 노드의 코멘트를 TRUE로 변경
-            label_comment = "True"           
         
-        # ELSE 조건문 처리
-        elif line.startswith("else"):
-            # 노드 생성
-            else_node_id = f'{line_num}_else'
-
-            # ELSE문 노드 생성
-            graph.node(else_node_id, f'else', shape='diamond',style='filled', fillcolor=red)
-
-            # 이전 노드와 연결 코멘트는 False
-            if_prev_node, tmp = IF_DIVIDE_POINT.pop()
-            graph.edge(if_prev_node, else_node_id, label="False")
-            
-            # ELSE IF or ELSE문 분기점 갱신
-            IF_DIVIDE_POINT.append([else_node_id, bracket_lvl])
-
-            # 다음 노드의 코멘트를 TRUE로 변경
-            label_comment = "True"
-            
-            # 이전 노드 갱신
-            prev_node = else_node_id
             
         
         # 그 외의 일반문은 네모로 처리

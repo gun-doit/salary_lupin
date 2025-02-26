@@ -43,6 +43,9 @@ except:
 text_widget = scrolledtext.ScrolledText(root, wrap=tk.WORD, width=50, height=20)
 text_widget.pack(expand=True, fill="both")
 
+# 🔹 줄 간격 설정 (spacing1: 단락 위, spacing2: 줄 간격, spacing3: 단락 아래)
+text_widget.tag_configure("spacing", spacing1=5, spacing2=2, spacing3=5)
+
 # 폰트 적용
 text_widget.configure(font=custom_font, padx=10, pady=10)
 
@@ -55,14 +58,14 @@ def check_clipboard():
 
             text_widget.configure(state="normal")
             text_widget.delete("1.0", tk.END)
-            text_widget.insert(tk.END, translated_text)
+            text_widget.insert(tk.END, translated_text, "spacing")
             text_widget.configure(state="disabled")
 
             check_clipboard.previous_text = clipboard_text
     except Exception as e:
         text_widget.configure(state="normal")
         text_widget.delete("1.0", tk.END)
-        text_widget.insert(tk.END, "번역 오류 발생")
+        text_widget.insert(tk.END, "번역 오류 발생", "spacing")
         text_widget.configure(state="disabled")
 
     root.after(1000, check_clipboard)

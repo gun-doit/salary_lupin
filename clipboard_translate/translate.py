@@ -3,9 +3,7 @@ import sys
 import tkinter as tk
 import tkinter.font as tkFont
 import pyperclip
-import time
 from deep_translator import GoogleTranslator
-from tkinter import scrolledtext
 from ctypes import windll
 
 # ✅ 실행 파일 내부에서 폰트 경로 설정
@@ -39,15 +37,15 @@ try:
 except:
     custom_font = tkFont.Font(root=root, family="Arial", size=14)  # 대체 폰트 적용
 
-# 텍스트 박스 (스크롤 가능)
-text_widget = scrolledtext.ScrolledText(root, wrap=tk.WORD, width=50, height=20)
-text_widget.pack(expand=True, fill="both")
+# 스크롤바 숨기기 위한 설정
+text_widget = tk.Text(root, wrap=tk.WORD, width=50, height=20)
+text_widget.pack(expand=True, fill="both", padx=10, pady=10)
 
-# 🔹 줄 간격 설정 (spacing1: 단락 위, spacing2: 줄 간격, spacing3: 단락 아래)
-text_widget.tag_configure("spacing", spacing1=5, spacing2=2, spacing3=5)
+# 텍스트 박스에 폰트 적용
+text_widget.configure(font=custom_font)
 
-# 폰트 적용
-text_widget.configure(font=custom_font, padx=10, pady=10)
+# 스크롤바 숨기기 (위젯은 사용하지만 UI에서는 보이지 않도록 설정)
+text_widget.config(yscrollcommand=lambda f, l: None, xscrollcommand=lambda f, l: None)  # 스크롤 동작은 유지하되 UI에 표시하지 않음
 
 # 클립보드 감시 함수
 def check_clipboard():
@@ -55,21 +53,47 @@ def check_clipboard():
         clipboard_text = pyperclip.paste()
         if clipboard_text and clipboard_text != check_clipboard.previous_text:
             translated_text = translator.translate(clipboard_text)
+            
 
             text_widget.configure(state="normal")
             text_widget.delete("1.0", tk.END)
-            text_widget.insert(tk.END, translated_text, "spacing")
+            text_widget.insert(tk.END, translated_text)
             text_widget.configure(state="disabled")
 
             check_clipboard.previous_text = clipboard_text
     except Exception as e:
         text_widget.configure(state="normal")
         text_widget.delete("1.0", tk.END)
-        text_widget.insert(tk.END, "번역 오류 발생", "spacing")
+        text_widget.insert(tk.END, "번역 오류 발생")
         text_widget.configure(state="disabled")
 
     root.after(1000, check_clipboard)
 
 check_clipboard.previous_text = ""
 check_clipboard()
+
+# 폰트 크기 조정 함수
+def increase_font_size():
+    current_size = custom_font.cget("size")
+    new_size = current_size + 2  # 2 포인트 증가
+    custom_font.config(size=new_size)
+    text_widget.configure(font=custom_font)
+
+def decrease_font_size():
+    current_size = custom_font.cget("size")
+    new_size = max(8, current_size - 2)  # 최소 폰트 크기를 8로 설정
+    custom_font.config(size=new_size)
+    text_widget.configure(font=custom_font)
+
+# 버튼 추가 (폰트 크기 조절)
+font_size_frame = tk.Frame(root)
+font_size_frame.pack(pady=10)
+
+decrease_button = tk.Button(font_size_frame, text="폰트 작게", command=decrease_font_size)
+decrease_button.pack(side=tk.LEFT, padx=10)
+
+increase_button = tk.Button(font_size_frame, text="폰트 크게", command=increase_font_size)
+increase_button.pack(side=tk.LEFT)
+
+
 root.mainloop()

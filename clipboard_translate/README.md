@@ -14,9 +14,7 @@
 **bash**
 복사
 편집
-pip install pyperclip
-pip install deep-translator
-pip install pyinstaller
+pip install pyperclip deep-translator
 ### 2. 폰트 파일 준비
 NanumGothic.ttf 폰트 파일이 필요합니다. 이 폰트를 프로그램의 실행 폴더에 배치하거나, 폰트 파일 경로를 코드에 맞게 설정합니다.
 
@@ -27,7 +25,8 @@ NanumGothic.ttf 폰트 파일이 필요합니다. 이 폰트를 프로그램의 
 복사
 편집
 python translate.py
-4. EXE 파일 실행
+### 4. EXE 파일 실행
+dist/*.exe
 이 프로그램은 pyinstaller를 사용하여 EXE 파일로 변환할 수 있습니다. EXE 파일을 실행하려면, 먼저 spec 파일을 수정한 후 아래 명령어로 EXE 파일을 빌드합니다.
 
 **bash**

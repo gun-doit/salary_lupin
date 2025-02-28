@@ -14,14 +14,12 @@ Types if import:
 IMPORTANT: Do NOT post this list to the issue-tracker. Use it as a basis for
             tracking down the missing module yourself. Thanks!
 
-missing module named grp - imported by shutil (delayed, optional), tarfile (optional), pathlib (delayed, optional), subprocess (delayed, conditional, optional)
 missing module named pwd - imported by posixpath (delayed, conditional, optional), shutil (delayed, optional), tarfile (optional), pathlib (delayed, optional), subprocess (delayed, conditional, optional), netrc (delayed, conditional), getpass (delayed)
-missing module named _frozen_importlib_external - imported by importlib._bootstrap (delayed), importlib (optional), importlib.abc (optional)
-excluded module named _frozen_importlib - imported by importlib (optional), importlib.abc (optional)
+missing module named grp - imported by shutil (delayed, optional), tarfile (optional), pathlib (delayed, optional), subprocess (delayed, conditional, optional)
 missing module named posix - imported by os (conditional, optional), posixpath (optional), shutil (conditional), importlib._bootstrap_external (conditional)
 missing module named resource - imported by posix (top-level)
-missing module named pypdf - imported by deep_translator.base (delayed)
-missing module named docx2txt - imported by deep_translator.base (delayed)
+missing module named _frozen_importlib_external - imported by importlib._bootstrap (delayed), importlib (optional), importlib.abc (optional)
+excluded module named _frozen_importlib - imported by importlib (optional), importlib.abc (optional)
 missing module named _scproxy - imported by urllib.request (conditional)
 missing module named termios - imported by getpass (optional)
 missing module named simplejson - imported by requests.compat (conditional, optional)
@@ -44,6 +42,8 @@ missing module named 'html5lib.treebuilders' - imported by bs4.builder._html5lib
 missing module named 'html5lib.constants' - imported by bs4.builder._html5lib (top-level)
 missing module named html5lib - imported by bs4.builder._html5lib (top-level)
 missing module named openai - imported by deep_translator.chatgpt (delayed)
+missing module named pypdf - imported by deep_translator.base (delayed)
+missing module named docx2txt - imported by deep_translator.base (delayed)
 missing module named AppKit - imported by pyperclip (delayed, conditional, optional)
 missing module named Foundation - imported by pyperclip (delayed, conditional, optional)
 missing module named PyQt5 - imported by pyperclip (delayed, conditional, optional)

@@ -85,8 +85,13 @@ dist/clipboard_translator.exe: EXE 파일 (빌드 후 생성).
 폰트 파일: NanumGothic.ttf 폰트 파일이 프로그램 폴더에 있어야 합니다.
 클립보드 권한: 일부 운영 체제에서는 클립보드 접근 권한을 요구할 수 있습니다.
 인터넷 연결: 번역을 위해 인터넷 연결이 필요합니다.
+
 기여 방법
-이 프로젝트는 오픈 소스로 제공됩니다. 사용자가 기능을 추가하거나 개선할 수 있습니다. 기여 방법은 Pull Request를 통해 가능합니다.
+이 프로젝트는 오픈 소스로 제공됩니다. 사용자가 기능을 추가하거나 개선할 수 있습니다.
 
 라이선스
 이 프로젝트는 MIT 라이선스 하에 배포됩니다.
+
+pyinstaller --onefile --windowed --icon=logo.ico translate.py
+
+pyinstaller --onefile --windowed --icon=logo.ico clipboard_translator.spec

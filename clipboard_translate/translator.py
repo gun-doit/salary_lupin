@@ -5,6 +5,8 @@ from PySide6.QtWidgets import QApplication, QMainWindow, QTextEdit, QToolBar, QT
 from PySide6.QtGui import QAction, QFont, QFontDatabase
 from PySide6.QtCore import QTimer
 
+newline_word = ['.']
+
 class MyApp(QMainWindow):
     def __init__(self):
         super().__init__()
@@ -69,8 +71,15 @@ class MyApp(QMainWindow):
             self.previous_text = clipboard_text
             self.update_translate_text(clipboard_text)
 
+    def process_text(self, process_text):
+        process_text = process_text.replace('\r\n', ' ')
+        for word in newline_word:
+            process_text = process_text.replace(word, f'{word}\r\n')
+        return process_text
+
     def update_translate_text(self, new_text):
         """클립보드 내용이 변경되었을 때 번역 후 업데이트"""
+        new_text = self.process_text(new_text)
         translated_text = self.translator.translate(new_text)
         self.text_edit.setText(f"{translated_text}")
 

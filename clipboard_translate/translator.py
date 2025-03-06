@@ -5,7 +5,7 @@ from PySide6.QtWidgets import QApplication, QMainWindow, QTextEdit, QToolBar, QT
 from PySide6.QtGui import QAction, QFont, QFontDatabase
 from PySide6.QtCore import QTimer
 
-newline_word = ['.']
+newline_word = ['The', 'Each', 'To', 'When', 'Where', 'Note', 'A', '1.', '2.', '3.', '4.', '5.', '6.', '7.', '8.', '9.', '10.','•']
 
 class MyApp(QMainWindow):
     def __init__(self):
@@ -74,7 +74,7 @@ class MyApp(QMainWindow):
     def process_text(self, process_text):
         process_text = process_text.replace('\r\n', ' ')
         for word in newline_word:
-            process_text = process_text.replace(word, f'{word}\r\n')
+            process_text = process_text.replace(word, f'\r\n{word}')
         return process_text
 
     def update_translate_text(self, new_text):

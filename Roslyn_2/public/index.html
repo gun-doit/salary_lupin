@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Markdown 뷰어</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://cdn.jsdelivr.net/gh/sun-typeface/SUIT@2/fonts/static/woff2/SUIT.css" rel="stylesheet">
+
+  <style>
+    body {
+      font-family: 'SUIT', sans-serif;
+    }
+  </style>
+  <script type="module">
+    let isPopState = false;
+    const openFolders = new Set();
+    // 트리 구조를 서버에서 받아오는 함수
+    async function fetchDocs() {
+      try {
+        const response = await fetch('/api/docs', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({})  // 빈 객체로 POST 요청
+        });
+
+        const tree = await response.json(); // 트리 구조를 JSON 형식으로 받기
+        const fileListElement = document.getElementById('file-list');
+        fileListElement.innerHTML = ''; // 기존 목록 초기화
+
+        // 트리 구조를 화면에 표시
+        displayTree(fileListElement, tree);
+      } catch (error) {
+        console.error('파일 목록을 가져오는 데 오류가 발생했습니다:', error);
+      }
+    }
+
+    
+    // .md 파일의 내용을 서버에서 가져오는 함수
+    window.fetchFileContent = async function fetchFileContent(filename, skipPushState = false) {
+      try {
+        const response = await fetch('/api/docs/item', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({ filename }) // 파일 이름을 body로 보냄
+        });
+
+        const content = await response.text();
+        const markdown_content = transformMarkdown(content); // 마크다운 변환
+
+        // 변환된 HTML를 메인 콘텐츠에 삽입
+        const mainElement = document.querySelector('main');
+        mainElement.innerHTML = `<markdown>${markdown_content}</markdown>`; // 변환된 HTML 삽입
+
+        // 브라우저 히스토리 업데이트 (뒤로 가기 가능하도록)
+        if (!skipPushState) {
+          window.history.pushState({ filename }, '', `#${filename}`);
+        }
+      } catch (error) {
+        console.error('파일 내용을 가져오는 데 오류가 발생했습니다:', error);
+      }
+    }
+
+    // 트리 구조를 HTML로 표시하는 함수
+    function displayTree(container, tree, depth = 0, parentPath = '') {
+      container.innerHTML = ''; // 리렌더링을 위한 초기화
+
+      tree.forEach(item => {
+        const div = document.createElement('div');
+        const currentPath = parentPath + '/' + item.name;
+
+        div.style.marginLeft = `${depth * 20}px`;
+
+        if (item.type === 'folder') {
+          div.classList.add('folder');
+          div.textContent = item.name;
+
+          const childrenContainer = document.createElement('folder-content');
+          const isOpen = openFolders.has(currentPath);
+
+          childrenContainer.style.display = isOpen ? 'block' : 'none';
+          if (isOpen) div.classList.add('open');
+
+          div.addEventListener('click', (e) => {
+            e.stopPropagation(); // 중첩 클릭 방지
+            const isVisible = childrenContainer.style.display === 'block';
+            childrenContainer.style.display = isVisible ? 'none' : 'block';
+
+            if (isVisible) {
+              openFolders.delete(currentPath);
+              div.classList.remove('open');
+            } else {
+              openFolders.add(currentPath);
+              div.classList.add('open');
+            }
+          });
+
+          container.appendChild(div);
+          container.appendChild(childrenContainer);
+          displayTree(childrenContainer, item.children, depth + 1, currentPath);
+        } else if (item.type === 'file') {
+          div.classList.add('file');
+          item.name = item.name.replace(".md", "");
+          div.innerHTML = `<fileButton href="#" onclick="fetchFileContent('${item.path}'); setSelectedFile(this)">${item.name}</fileButton>`;
+          container.appendChild(div);
+        }
+      });
+    }
+    // 파일 선택
+    window.setSelectedFile = function setSelectedFile(element) {
+      // 기존 선택 제거
+      document.querySelectorAll('.file.selected').forEach(el => el.classList.remove('selected'));
+
+      // 선택된 파일에 selected 클래스 부여 (부모 div에)
+      element.parentElement.classList.add('selected');
+    }
+
+
+    // transform-markdown.js
+    function transformMarkdown(mdText) {
+      let html = mdText;
+
+      // 코드 블록 처리: ```언어\n내용\n``` → <pre><code class="language-언어">내용</code></pre>
+      html = html.replace(/```(\w+)?([\s\S]*?)```/g, (match, lang, code) => {
+        const languageClass = lang ? ` class="language-${lang}"` : '';
+        code = code.trim();
+        return `<pre><code${languageClass}>${code.replace(/</g, "&lt;").replace(/>/g, "&gt;")}</code></pre>`;
+      });
+
+      // 인용문 처리: > 인용문 → <blockquote>
+      html = html.replace(/^> (.*$)/gim, '<blockquote>$1</blockquote>');
+      html = html.replace(/^---\s*$/gm, '<hr>');
+
+      // 리스트 처리: - 항목 → <ul><li>항목</li></ul>
+      html = html.replace(/^- (.*$)/gim, '<ul><li>$1</li></ul>');
+
+      // 제목 처리
+      html = html.replace(/^### (.*$)/gim, '<h3>$1</h3>');
+      html = html.replace(/^## (.*$)/gim, '<h2>$1</h2>');
+      html = html.replace(/^# (.*$)/gim, '<h1>$1</h1>');
+
+      // 굵은 글씨 처리: **텍스트** → <strong>텍스트</strong>
+      html = html.replace(/\*\*(.*?)\*\*/gim, '<strong>$1</strong>');
+
+      // 줄바꿈 처리 (단 <pre> 안의 내용은 건드리지 않음)
+      html = html.replace(/(?<!<\/pre>)\n/g, '<br>');
+
+      // 링크 처리: [텍스트](URL) → <a href="URL">텍스트</a>
+      html = html.replace(/\[([^\]]+)\]\(([^\)]+)\)/g, (match, linkText, linkUrl) => {
+        return `<a href="#" onclick="fetchFileContent('${linkUrl}'); return false;">${linkText}</a>`;
+      });
+
+      return html;
+    }
+
+
+    // 드래그 핸들러
+    window.addEventListener('DOMContentLoaded', () => {
+      const sidebar = document.getElementById('sidebar');
+      const resizer = document.getElementById('resizer');
+
+      let isDragging = false;
+
+      resizer.addEventListener('mousedown', (e) => {
+        isDragging = true;
+        document.body.style.cursor = 'ew-resize';
+      });
+
+      document.addEventListener('mousemove', (e) => {
+        if (!isDragging) return;
+        const newWidth = e.clientX;
+        if (newWidth > 100 && newWidth < 600) { // 최소/최대 폭 제한
+          sidebar.style.width = newWidth + 'px';
+        }
+      });
+
+      document.addEventListener('mouseup', () => {
+        isDragging = false;
+        document.body.style.cursor = 'default';
+      });
+    });
+
+    document.addEventListener("DOMContentLoaded", function () {
+      const searchInput = document.getElementById("search-input");
+      const fileList = document.getElementById("file-list");
+
+      searchInput.addEventListener("input", function () {
+        const query = this.value.toLowerCase();
+
+        Array.from(fileList.children).forEach(item => {
+          const text = item.textContent.toLowerCase();
+          item.style.display = text.includes(query) ? "block" : "none";
+        });
+      });
+    });
+
+
+    window.onload = fetchDocs;
+
+    const main_content = fetchFileContent("../public/main.md"); // 마크다운 변환
+    const mainElement = document.querySelector('main');
+    mainElement.innerHTML = `<markdown>${main_content}</markdown>`; // 변환된 HTML 삽입
+
+
+    // 뒤로/앞으로 가기 시 처리
+    window.addEventListener('popstate', (event) => {
+      if (event.state && event.state.filename) {
+        // popstate로부터 호출되었음을 알려주기 위해 skipPushState를 true로 전달
+        fetchFileContent(event.state.filename, true);
+      }
+    });
+
+    // 초기 페이지 로드 시
+    window.addEventListener('load', () => {
+      const hash = location.hash;
+      if (hash) {
+        const filename = hash.substring(1);
+        fetchFileContent(filename, true);
+      }
+    });
+  </script>
+</head>
+
+<body>
+
+  <header>
+    <p onclick="fetchFileContent('../public/main.md')">RobustDevDocs v1.0</p>
+  </header>
+
+  <div class="container">
+    <nav id="sidebar">
+      <input type="text" id="search-input" placeholder="검색..." />
+      <fileList id="file-list"></fileList>
+    </nav>
+    <div id="resizer"></div> <!-- 추가된 divider -->
+    <main>
+      <!-- 선택된 .md 파일 내용 -->
+    </main>
+  </div>
+
+
+</body>
+
+</html>

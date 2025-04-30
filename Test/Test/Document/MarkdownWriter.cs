@@ -24,9 +24,9 @@ public static class MarkdownWriter
 
     public static void quote(this List<String> Line, string text) => Line.Add($"> {text}");
     public static void newLine(this List<String> Line) => Line.Add("");
-    public static void bold(this List<String> Line, string text) => Line.Add($"** {text} **");
+    public static void bold(this List<String> Line, string text) => Line.Add($"**{text}**");
     public static void indent(this List<String> Line, string text) => Line.Add($"- {text}");
-
+    public static void divider(this List<String> Line) => Line.Add("---");
     public static string islink(this List<String> Line, string text)
     {
         // class

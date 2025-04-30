@@ -8,15 +8,18 @@ using System.Linq;
 using System.Reflection.Metadata;
 using Test.Document;
 
+
 public class Analyzer
 {
     public static Dictionary<string, string> ClassDictionary = new();
-    /// <summary>
-    /// .cs 파일 분석
-    /// </summary>
-    /// <param name="file"></param>
-    /// <param name="projectRoot"></param>
-    /// <param name="outputDir"></param>
+    public string[] PrimitiveType { get; } = {
+    "bool", "byte", "sbyte",
+    "char", "decimal", "double",
+    "float", "int", "uint",
+    "long", "ulong", "short",
+    "ushort", "string", "object"
+};
+
     public void AnalyzeFile(string file, string projectRoot, string outputDir)
     {
         var code = File.ReadAllText(file);
@@ -34,19 +37,17 @@ public class Analyzer
         var className = classDeclaration.Identifier.Text;
         var classSummary = GetSummaryComment(classDeclaration);
         var classSignature = GetClassDeclaration(classDeclaration);
-   
+
         Markdown.h1(className);
         Markdown.text($"Path: {file}");
         Markdown.text($"네임스페이스 : {nameSpace}");
-        Markdown.newLine();
+        Markdown.divider();
 
         if (!string.IsNullOrEmpty(classSummary))
         {
             Markdown.quote(classSummary);
-            Markdown.newLine();
         }
 
-        Markdown.h2("Class Declaration");
         Markdown.code(classSignature);
 
         // Constructor
@@ -57,9 +58,11 @@ public class Analyzer
             Markdown.h2("Constructor");
             foreach (var ctor in constructors)
             {
-                Markdown.code(ctor.ToFullString());
+                var constructorSignature = ctor.NormalizeWhitespace().ToFullString().Split(new[] { '{' }, 2)[0].Trim(); // 바디 제외 선언문만
+                Markdown.code(constructorSignature);
             }
         }
+
 
         // Methods
         var methods = classDeclaration.Members.OfType<MethodDeclarationSyntax>().ToList();
@@ -74,14 +77,14 @@ public class Analyzer
                 var methodSummary = GetSummaryComment(method);
                 var methodDeclaration = GetMethodDeclaration(method);
 
-                Markdown.h3(methodName);
+                //Markdown.h3(methodName);
 
+                Markdown.code(methodDeclaration);
                 if (!string.IsNullOrEmpty(methodSummary))
                 {
                     Markdown.quote(methodSummary);
                 }
 
-                Markdown.code(methodDeclaration);
 
                 var paramComments = GetParamComments(method);
 
@@ -94,7 +97,13 @@ public class Analyzer
                         var paramType = param.Type?.ToString();
 
                         if (PrimitiveType.Contains(paramType))
-                        Markdown.indent($"{paramName} ({paramType})");
+                        {
+                            Markdown.indent($"{paramName} ({paramType})");
+                        }
+                        else
+                        {
+                            Markdown.indent($"{paramName} ([{paramType}])({paramType}.md)");
+                        }
 
                         if (paramComments.TryGetValue(paramName, out var comment) && !string.IsNullOrWhiteSpace(comment))
                         {

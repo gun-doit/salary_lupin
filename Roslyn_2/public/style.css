@@ -1,0 +1,293 @@
+
+* {
+  box-sizing: border-box;
+
+  /* SUIT 폰트 설정 */
+  font-family: 'SUIT', 'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #333;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* 상단바 */
+header {
+  height: 60px;
+  background-color: #333;
+  color: white;
+  padding: 15px 20px;
+  text-align: left;
+  flex-shrink: 0;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+
+  p{
+    color: white;
+  }
+  p:hover{
+    cursor: pointer;
+  }
+}
+
+/* 전체 레이아웃 */
+.container {
+  display: flex;
+  flex: 1;
+  height: 0;
+  /* 높이 계산 위해 필요 */
+  overflow: hidden;
+}
+
+/* 사이드바 */
+nav {
+  min-width: 300px;
+  background-color: #f4f4f4;
+  padding: 20px;
+  border-right: 1px solid #ccc;
+  overflow-y: auto;
+  -ms-overflow-style: none;
+  /* IE & Edge */
+  scrollbar-width: none;
+  /* Firefox */
+}
+
+nav::-webkit-scrollbar {
+  display: none;
+  /* Chrome, Safari */
+}
+
+/* 메인 컨텐츠 */
+main {
+  flex: 1;
+  padding: 20px;
+  overflow-y: auto;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+main::-webkit-scrollbar {
+  display: none;
+}
+
+/* 파일 목록 스타일 */
+fileList {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin: 0;
+  padding: 0;
+}
+
+.folder {
+  width: min(max-content, 100%);
+  height: 40px;
+  padding: 4px 6px;
+  background-color: #e0e0e0;
+  color: #333;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+folder-content div{
+  padding-bottom: 4px;
+  box-sizing: border-box;
+}
+
+.folder::before {
+  content: "📁";
+  margin-right: 2px;
+}
+
+.folder.open {
+  background-color: #f4f4f4;
+}
+
+.folder:hover {
+  cursor: pointer;
+}
+.file.selected fileButton {
+  background-color: #40dfff7a;
+  color: #007acc;
+}
+
+fileButton::before {
+  content: "📜";
+  margin-right: 2px;
+}
+
+fileButton {
+  width: min(max-content, 100%);
+  height: 40px;
+  padding: 4px 6px;
+  background-color: #e0e0e0;
+  color: #333;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  transition: background-color 0.2s;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+
+  a {
+    color: inherit;
+    /* 부모의 색을 상속 */
+    text-decoration: none;
+    /* 밑줄 제거 */
+    display: inline-block;
+    /* 링크를 블록처럼 다루기 */
+    padding: 0;
+    /* 불필요한 여백 없애기 */
+  }
+}
+
+fileButton:hover {
+  cursor: pointer;
+  background-color: #40dfff7a;
+  text-decoration: none;
+}
+
+
+
+
+/* 드래그 핸들러 */
+#sidebar {
+  width: 200px;
+  background-color: #f4f4f4;
+  padding: 20px;
+  border-right: 1px solid #ccc;
+  overflow-y: auto;
+  scrollbar-width: none;
+}
+
+#sidebar::-webkit-scrollbar {
+  display: none;
+}
+
+#resizer {
+  width: 5px;
+  cursor: ew-resize;
+  background-color: #ccc;
+}
+
+main {
+  flex: 1;
+  padding: 20px;
+  overflow-y: auto;
+  scrollbar-width: none;
+}
+
+main::-webkit-scrollbar {
+  display: none;
+}
+
+
+
+/* 마크 다운 css*/
+markdown {
+  display: block;
+  font-family: 'Segoe UI', sans-serif;
+  line-height: 1.2;
+  color: #333;
+  padding: 20px;
+  overflow-y: auto;
+
+  /* 헤더 스타일 */
+  h1 {
+    font-size: 2em;
+    border-bottom: 2px solid #ccc;
+    padding-bottom: 0.2em;
+    margin-bottom: 0;
+  }
+
+  h2 {
+    font-size: 1.5em;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 0.2em;
+    margin-bottom: 0.2em;
+  }
+
+  h3 {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin: 0;
+  }
+
+  /* 리스트 스타일 */
+  ul {
+    padding-left: 20px;
+  }
+
+  ul li {
+    margin-bottom: 0.5em;
+  }
+
+  /* 인용문 */
+  blockquote {
+    border-left: 4px solid #ccc;
+    padding: 5px;
+    padding-left: 15px;
+    margin: 1em 0;
+    color: #666;
+    background-color: #f9f9f9;
+  }
+
+  /* 굵은 텍스트 */
+  strong {
+    font-weight: bold;
+  }
+
+  /* 코드 블럭 */
+  pre {
+    background: #f4f4f4;
+    padding: 10px;
+    overflow-x: auto;
+    border-radius: 5px;
+  }
+
+  code {
+    font-family: Consolas, monospace;
+    background-color: #eee;
+    border-radius: 3px;
+  }
+
+  /* 코드 블럭 내 코드 (syntax highlighting을 위해 class 부여 가능) */
+  pre code {
+    background: none;
+    padding: 0;
+    color: #222;
+    white-space: pre-wrap;  /* 줄바꿈 허용 */
+    word-wrap: break-word;  /* 긴 단어 줄바꿈 */
+    overflow-x: hidden;   
+  }
+
+  /* 줄바꿈 처리용 <br> */
+  br {
+    display: block;
+    content: '';
+    margin-bottom: 0;
+  }
+
+}
+
+/* 검색창 */
+#search-input {
+  width: 100%;
+  padding: 6px 10px;
+  margin-bottom: 8px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}

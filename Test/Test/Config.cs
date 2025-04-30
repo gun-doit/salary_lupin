@@ -10,7 +10,6 @@ namespace Test;
 
 public class Config
 {
-
     public string ProjectRoot { get; set; }
     public string OutputDir { get; set; }
     public string CssPath { get; set; }

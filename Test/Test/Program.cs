@@ -2,6 +2,7 @@
 using System;
 using Test;
 
+namespace TEST;
 class Program
 {
     static void Main(string[] args)
